@@ -1,8 +1,6 @@
 require('../../initialize')
-require('../../initialize').beforeAll
-require('../../initialize').afterAll
+require('../../initialize').page
 
-// require('../../initialize').removeFile
 
 let dir= path.join(__dirname,'../../Renders/Unit/'+resolusi)
 fs.readdir(dir, (err, files) => {
@@ -16,9 +14,8 @@ fs.readdir(dir, (err, files) => {
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
-        // slowMo: 40,
-        // executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-        args: [ '--ignore-certificate-errors' ]
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
+        args: [ '--ignore-certificate-errors','--no-sandbox']
     })
     page = await browser.newPage()
     await page.authenticate({ 
@@ -36,11 +33,6 @@ beforeAll(async() => {
     confirm_password = confirm_pass
     await page.setUserAgent(useragent)
 },90000)
-
-
-afterAll(async() => {
-    await browser.close()
-})
 
 describe('Unit register',() => {
 
@@ -177,5 +169,6 @@ describe('Unit register',() => {
         })
         pageTitle = await page.title();
         await expect(pageTitle).toMatch('Dashboard | PINA')
+        await browser.close()
     },90000)
 })

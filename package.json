@@ -7,7 +7,7 @@
     "resultDir": "Renders/jest-stare"
   },
   "scripts": {
-    "test": "jest nutea/leaderboard --collectCoverageFrom=//*.js --runInBand --reporters default jest-stare"
+    "test": "jest pinaa/pinaa --collectCoverageFrom=//*.js --runInBand --reporters default jest-stare"
   },
   "keywords": [],
   "author": "",

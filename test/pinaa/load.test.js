@@ -39,7 +39,6 @@ function unique_codes() {
       //go to the random true code 
       const values = Object.values(result)
       return randomValue = values[parseInt(Math.random() * values.length)]
-
 }
 
 beforeAll(async() => {
