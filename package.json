@@ -1,0 +1,25 @@
+{
+  "name": "ppt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest-stare": {
+    "resultDir": "Renders/jest-stare"
+  },
+  "scripts": {
+    "test": "jest nutea/leaderboard --collectCoverageFrom=//*.js --runInBand --reporters default jest-stare"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "jest-stare": "^1.25.0",
+    "json-query": "^2.2.2",
+    "puppeteer": "^2.0.0",
+    "puppeteer-firefox": "^0.5.0",
+    "request-promise": "^4.2.5"
+  }
+}
