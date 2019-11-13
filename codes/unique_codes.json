@@ -1,0 +1,4508 @@
+[
+	{
+		"code": "00050b60",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "000cc583",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "000fed96",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "001e3ff6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "001f12e4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "001f43f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "002201bf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00246579",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "002468b6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00250fff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "002967cd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "002c7887",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00319bd1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00367d10",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "005975e5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "005c04ae",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "005fb282",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00608197",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "006612cd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "006c6b42",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0071ce9f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0076b3a2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00798ca4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "007c5ace",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0085b507",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "008d12de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0092b21a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0093d401",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0094c372",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "009dc613",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "009f7953",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00b7a90b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00b81bc6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00bf4522",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00d8257b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00d834dc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00ddaa27",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00e4e962",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00e56161",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00f5d974",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00fa24a6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "00ff195e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "010170ca",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0104daef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01066417",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0106cc9b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "011542f8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0121d93e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01329015",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01343cae",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "013b3398",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "013babac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01441b30",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "014d3f10",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "014e6ad9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "016855c9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "017075a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0171655f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0174c39e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0178721b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01862c4c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "018b61a6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "018dd910",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0196a1e3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "019af718",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "019c627d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01a8f33b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01b94c90",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01ba8f4c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01bbc52f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01bfd60f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01c886ba",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01cd56a5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01d28f80",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01d3d742",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01d4ace1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01de5ad8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01e67414",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01e6f390",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01ec0396",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01ec995a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01ecda7b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01fba23b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "01ff0ecf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02015fb6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0202ffb2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "020414dc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0207ce68",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02081a0b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "021863c4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0219ef70",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "021c9249",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "021e42a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0228b72c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0229dcef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "022bda8d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02305731",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "023e462a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "023fa403",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "024ad11d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02522bc1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "025da5cf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "025fad3e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "026973dc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "026f43de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0271eea9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02737f5c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "027484d6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "027abe5f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "028ae130",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02920cd2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0292d316",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02954eb0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "029d13c1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02a82331",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02aa56ef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02abf8bf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02b3c8a6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02bbcdfe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02beb8fa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02c12915",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02d141cc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02d5fe98",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02d6732f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02e23533",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02e413bc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02e9e2e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02f6ee65",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02fa9ad2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02fbc1bd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02fd9f96",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "02fe141c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "030d3e88",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "030d6ee0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "031060f5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03108ded",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03122271",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0315a89d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0326c644",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0328e67b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "032ab159",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "032d1cea",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "032d96a1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0332eef5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0336fae4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0339a6c3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0339d111",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "033f731c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "034b08b8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03510cbf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0352fbc1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0357b7c4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0372ca42",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0377ace5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "038ac4fc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "038f99a5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0390a28a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03967b0b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0396ff51",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0397ddca",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03985f65",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0398b6ba",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "039fecd9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03a0b3cb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03a13d63",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03b58f52",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03b5aaf8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03bb9206",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03becde8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03c5eac3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03c9a31f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03caf6f9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03d0111d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03d5c6b5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03d627b5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03d8d9c9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03dfe688",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03e1cbbb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03e8fa17",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "03ec6981",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "040e17f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "040efa1c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0418ff5f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04196b09",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0420dbcd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0423e37e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04243d7b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04311aa3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0431c991",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04325d21",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "043bf68d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "043c32ad",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0441fa55",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04442138",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0453af69",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "045a267a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "045b81ab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0462f4e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0464116f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04696651",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0473e838",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04743870",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04748706",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04785f49",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "047b77f0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "047e904e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04952b97",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0495a741",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "049b128c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "049b7b95",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04a1ea6b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04a53961",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04a714da",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04b6834f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04b7ef9f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04bcd20b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04bf3bb3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04c0a06d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04c8f1f5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04ca64de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04cc9810",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04cebb85",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04d2e161",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04d51834",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04d785fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04d810e5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04e08f16",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04edbd5d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04f2bfac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04f3e1b0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04f78923",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04fc84d1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04ff9acd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "04ffe8ab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05065562",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05087669",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "050ed192",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05110636",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05114977",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0511828e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0517891c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05193ae7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0526c105",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0535e31f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0540371a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05438693",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0549a9d7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0555185e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "055ccbcb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0562aa58",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0564c128",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0566acac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0569dc4f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05725fdf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05741aee",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05752cfd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "057abaf9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05978314",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05a8fbff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05afb774",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05b3664c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05b4c624",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05b96f27",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05bd219e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05c00583",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05c1c2c9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05c2e9f2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05cc0022",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05d008e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05dbf15d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05eca9bd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05f1aa44",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05f33690",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "05f57a45",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0607467a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "060a30e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "061276b4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0614c9a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "064cf2ad",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0651ead3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "065214b4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0661684f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06634fdb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06662d89",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0669945a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "066d01f0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "067022d0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0671b89f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0673eaca",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "067b8645",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06876adc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0691ded7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "069a6fa2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06a7f452",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06b01fd1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06b85a9d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06b92035",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06b9d7a2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06bc401e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06bd7298",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06bd89cd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06cc0912",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06cce51c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06e13603",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06e4a009",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06e9262b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06f8ad9b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "06ff1aad",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07010f95",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "070682e0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0708b80c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0709e673",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0710d932",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "071647bf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07168c92",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "071bee07",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "072121a9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07286e69",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "072cb99a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "073414be",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "073fca71",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07412144",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0746d930",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0747a7cf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "074c9e34",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0756f444",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "076261b4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0766d09a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0767a73d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0768e60d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07699de0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07708933",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07720a4b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07770bbd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "077755b2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07777329",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07781a2c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "077a839c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "078bfd90",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0796f9a0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "079a95cb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07a0934a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07a217f6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07a57186",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07a78dec",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07b6dcb7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07b902d8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07b9d8e4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07be542b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07bfdb06",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07c7546c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07cad5f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07d33a69",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07daa268",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07e47c2c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07eb1584",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07f14923",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07f27ca2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07f2cdbf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07f4293e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "07fa9383",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0800488c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08010367",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08032a43",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08032d94",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08069a01",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "080d335b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "080e88ed",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "081656d3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "081c3cdf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "081c8abb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "081f99e9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0820ff7e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0825e563",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0826634b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0826f343",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08271e5f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08334ed4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "083d06b9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "083e341a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "084ad686",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "084b8e41",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "084f5842",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08610b1c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0861b4dc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0864262a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "087020a1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0876a763",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0877a8e3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08801e20",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08845720",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0885a887",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "088d7dda",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "088f089e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "089cfdca",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08a18582",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08a1bd54",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08a22793",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08a3401a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08a9b8a6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08aa831b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08ab43b4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08bc62fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08be0cea",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08c425e5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08c86adc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08cc5585",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08ccbe66",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08d7ad99",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08e0c552",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08e5b809",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08ec86ed",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08fdc7bd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "08fe8c5a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "090a65a4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "090fc39e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0911add8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "091a6418",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "091ab4de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "091f3508",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0923c9fd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09261b2a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0927d4b7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0928c71a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "092a2437",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "092acae7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "092ed4ae",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0934783a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0936d9fd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "093a3e5a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "093edd14",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09444df2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09446039",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09537555",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09621d6c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0967f579",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09682641",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0968fad2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "096aa367",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "096aa78c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09701f81",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "097a7344",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "097e8da5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0989fbc7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "098bf6c8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "098ee172",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "098fa947",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "099169dc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09950597",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09971463",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09a20af3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09a5ae93",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09ac1b20",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09ac2662",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09acf4ef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09ad4256",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09b2c033",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09b56dbf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09b8d49a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09be2f62",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09c0594a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09c077c1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09c42ba8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09c4bc61",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09c9dd3c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09cda3d5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09d3aa96",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09d822c2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09e220ea",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09e58683",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09e5e4eb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09e87abb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09e9ce16",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09ec4c99",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "09faa935",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a03c045",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a064cb7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a0901e1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a173ed9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a187b50",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a1f7cff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a20506e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a22b366",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a24fdce",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a258887",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a2a3a3a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a2b22cd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a2c0b3d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a2f2968",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a2fd020",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a3169ac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a37c0c8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a395299",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a40baff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a42227f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a44baa4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a467f82",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a4ce742",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a533917",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a556ce4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a56f7b9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a598c06",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a5c667e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a60f865",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a66bf68",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a6a039b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a6b6c17",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a6e5361",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a700e02",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a7541fb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a7fd3f8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a831fc2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a86ad96",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a871609",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a8b7839",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a90896f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a98a99a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0a9f6f95",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aa150df",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aa385f1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aa3c870",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aa5022b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aaa1708",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aace40c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0aaff999",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ab4dbb8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ab58921",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ab73926",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0abc3ec6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0abf1342",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ac0a7e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ac18688",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ac2d517",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ac69a60",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0acaca9e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ad975f3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0adfc497",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ae1f07a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ae5e0b7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ae8a9b4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0af3840b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0af7ac0b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0afede70",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b07b37e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b09466c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b09ff6f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b0c4886",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b119655",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b1337aa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b1626a2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b20138a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b2688cb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b27e758",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b2a9282",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b2ae74e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b2e6e50",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b35f586",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b416c74",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b4271f3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b486096",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b4dc5f3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b4e2664",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b558b1e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b5c1cf0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b61ac03",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b64720e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b6536ef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b681603",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b6e5196",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b6fac87",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b707155",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b7380a3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b761d4b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b7710d6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b7ca6a4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b7d5903",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b8988a2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b8b2507",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0b9e1d9f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ba17374",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ba39b89",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ba6b8b6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ba8b41c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bb4c58a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bc3cf6e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bc8eef0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bd3ef8c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bd4a738",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0be13b21",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0be23d77",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0be67464",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bf56576",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0bf7bba5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c0f16ea",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c100e95",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c103fd1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c1b90a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c1ebd2e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c1fbfc3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c1fefda",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c21fab9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c26a7cf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c3cec7b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c45deb5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c4a1afa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c4a980a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c50872a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c544fff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c548955",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c56c61e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c5a8a9b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c5b7622",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c613823",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c651cfa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c6a5d6f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c6cddd3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c707adf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c790cd8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c795020",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c7bc6a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c807d7a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c8343cf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c970bf8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c979aa2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0c9ed5fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ca0aefa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ca412de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cac019c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cb10291",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cc1eaff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cc280d9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cc5cd74",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cc66835",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ccff87d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cd28b8d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cd6548a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cdee808",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cdfba2c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cdff926",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ce11a11",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ce44dbd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ceeda10",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0cef87d1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d017198",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d02af97",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d052124",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d09b14d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d144e9c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d1b596d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d1b8e84",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d2b10be",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d3126f2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d3442a2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d387e5f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d3981fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d3d7bc5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d447c7a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d4781f6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d483940",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d53cae5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d5e5b51",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d5fcb53",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d647430",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d6d641f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d73b6f2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d7c9601",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d7f9ec6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d81cf72",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d8205a3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d82d7e7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d83e881",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d862293",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d92a105",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d933294",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d954a32",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0d9cc9b7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0da0d1e3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0da2920d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0da5843d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0da6ea04",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0daa9b8d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dacb22f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dadfcdb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0db06436",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0db2b24b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0db7ef32",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dbde1ed",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dc7dc42",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dcc74b6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dd04278",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dd43441",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dd7589f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ddb5c98",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ddd3905",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0de17e2a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0de20b06",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0de35f6d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0df3045b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0df4c863",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0dfe10ab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e043fde",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e0578d2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e07c585",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e09dc16",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e1864fc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e1e2713",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e2135ab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e22a5e6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e28d6ec",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e29a501",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e2baa84",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e309c0c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e376215",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e3ba416",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e43022e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e451727",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e45a34a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e464364",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e472dac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e4c6766",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e4d54df",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e58f125",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e597fb4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e6f0945",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e6ff651",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e73c51c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e7a83b2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e7dfd6a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e7efc5e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e7fd42b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e85eeac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e891dfb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0e956050",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ea31216",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0eacd169",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0eb1ea27",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ebe570b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ec1a1a5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ec64065",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ec82c83",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ece8b79",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ed2c1ab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ed49841",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0edfb11c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ee15f89",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ee21f13",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ee9b554",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0eecbebc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ef06836",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0efd1173",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0eff0bd0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f05ed92",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f0f29cf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f119023",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f140c2b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f1c6aa2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f1caaaa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f20d4aa",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f25afb6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f26008d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f26314d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f2a3c77",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f311e2c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f344b04",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f3b3a95",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f451d82",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f459765",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f45c14f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f4707ec",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f4c35e6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f4d6648",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f4e137c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f4e5a26",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f50ecab",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f57137a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f58388d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f5d3c49",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f60c392",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f63268d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f6dbc63",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f6eadb0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f736436",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f85e5c4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f8b63a5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0f9ba7bf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fa0e419",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fa95609",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fab9db3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fb4f99c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fbbffd5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fc2ad71",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fc72b5c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fcf3d52",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fd15b15",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fd48a00",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fd4f2f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fe736f4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0fed3969",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ff0851b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ff30fef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "0ff9cbc2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "100ceedb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "100d9d79",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10109152",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "101297a6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1014fd05",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "101dcf10",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "102118d1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1025743e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1026bf3c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1027d2e9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "102c9202",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10319f2f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1035bd61",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1036318c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "103aa2de",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "103cfc8d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1041f591",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10448fb9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1049a4b3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1049c4a1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "104c93f1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "104dff8a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "105186a7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1051ae63",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10554b39",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "105776bf",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "105905f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10599b2e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "105a174b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1069056a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1074ea1c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "107640ac",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1079100c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "108d7b1d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "108f984a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10998974",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10a18c40",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10a6721e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10a81ec7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10a9c462",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10ab3ea7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10ac8326",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10b370fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10b3f45b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10bb50cc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10bb997c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10bdb526",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10c69731",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10e87539",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10e9ac83",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "10ff429e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "110c50b7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "110cccc3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "110d71b0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "110fe3ea",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1111c33b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1113318f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "111dffbe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "112526a4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "112fe2b8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "113a741e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "113d81d1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1143c108",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11474f6b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1147d450",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "114b8e19",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1151769b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1151ffdd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "115d57ba",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11614a7c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11645b41",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "116ca08e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "116d26e6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "116ed430",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11747c58",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1178e68b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "117c6f63",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1181c95f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11857365",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1186146e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1187f856",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11963c4b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "119b45ee",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "119ea104",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11a0ad82",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11b44737",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11b6435e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11b6f59e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11b87262",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11c8859c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11cff504",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11da83b5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11e0bf52",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11e3f5d4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11ec0eba",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "11f0918d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "120446df",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12073d35",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1208795c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1214d461",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "121f776d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1220e7a4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12237700",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1234d2bc",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12363307",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12395921",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "123e7cf7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "124e8584",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12564a8b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1256f22a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1257a6db",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "125adc55",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "125e38e6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "126b3165",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "126f821e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "127ca122",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "127dd966",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12a5901e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12a795e9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12a87b58",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12a8de2a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12ad38ef",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12adcda0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12b1efc1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12b2d29d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12b926f4",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12be5701",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12bf6d12",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12d42d93",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12e5a80c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12f0a819",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12fa0870",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "12ffe74c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1309a2fd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13138710",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1314c233",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "131968ec",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13250bb8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13268e20",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "132f84c3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13315982",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1335eee3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "133b4e77",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13402ae0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13403fb5",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13462a0e",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "134957b9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13551020",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "135fb71f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "136390d3",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1367df61",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "136a8eeb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "136bf2fe",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "136eaad1",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "137468bd",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13820f52",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1382a205",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1384ef26",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13902ab0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "139bb645",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "139e8eee",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13a2571c",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13a78e88",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13a9f15d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13b280f8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13bc2989",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13be9cff",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13c10b33",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13cb084f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13ccdc5b",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13d2d2ba",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13ddca3a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13ddddf0",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13e134e2",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13e73494",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13e850fb",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "13ed685d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "140399d6",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1405c538",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "140ad07d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1418253d",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "14199291",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "142bba55",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "142bbfde",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "142e5611",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1432a38a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1432c70f",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1432e285",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "143b32ce",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "144436b9",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1449cd8a",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "144d5f14",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1453ac69",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "145f05e8",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "146eb117",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "14726327",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "147a96f7",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "147e56da",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "1482f045",
+		"period": "TFAKE1"
+	},
+	{
+		"code": "code",
+		"period": "period"
+	},
+	{
+		"code": "001cb4b7",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0053f18b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "00b7ee62",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "00ed2255",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "00f69327",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "017660b7",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "018fe31f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "01a615df",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "01e45cf8",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "02537090",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "028575f0",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0289320b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "02b95501",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0341950d",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "03668992",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "037adaf3",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0389f578",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "03e68dd6",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "040ceb90",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "041a3206",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "049eec02",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "04bfc658",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "04c253b2",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "04da5cf2",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0506989f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "055d737a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0583d7cd",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "05b83d61",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "05d8d0e5",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "067cdfb6",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "06a22e43",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "06cb6e51",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "07094b6e",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "07311140",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "076962fe",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "077b738c",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0815626d",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0827fc74",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "08693df5",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "086c3d6f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "08b53fbe",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "08d0dfcf",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "091ae639",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "092bf556",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "092d6d86",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "093d307d",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "09a6ce0b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "09ddf95f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "09de75f5",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "09ebf656",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a19cdbb",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a464257",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a61b5e3",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a67df5d",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a67f5ac",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0a80aad0",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0ad28fa8",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0af32669",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0b00ed4a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0b75e04e",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0b992345",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0bc10a9b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0bfea7dd",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0c03f22b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0c79f77d",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0c98d48f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0ca2de8e",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0cc9492e",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0d1b0a54",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0d5ab68a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0db19303",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0db4b94a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0db980c1",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0de75852",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0e3751bb",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0e4fcf55",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0e8d202b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0ea5f860",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0ef758b6",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0f36b99a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0f45c2ad",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0f5e1320",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0fafb38b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "0fcd7eef",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "103ffa06",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "104caf0c",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "1066561e",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "1082e706",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "10ec8e4b",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "114a0dc2",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "11d1ae99",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "12008372",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "1225e9d8",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "124b6669",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "12af4204",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "12e23e01",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "12e6d51f",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "134ed8f9",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "13aafe3a",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "13b2a626",
+		"period": "GFAKE1"
+	},
+	{
+		"code": "code",
+		"period": "period"
+	},
+	{
+		"code": "06a5a678",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "07e33fab",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "0a59e905",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "2915abf0",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "2fb23d21",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "385706cf",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "47688793",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "62d2d7b9",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "8afb8cd7",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "8b467be1",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "8ea99fe9",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "a17f7601",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "aaacfdab",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "b3b856c2",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "b8593d5e",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "cccde90e",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "d2bacbf8",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "d9e3d5da",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "e7629420",
+		"period": "KFAKE1"
+	},
+	{
+		"code": "fbb27118",
+		"period": "KFAKE1"
+	},
+
+	{
+		"code": "f13e36e2",
+		"period": "MFAKE1"
+	},
+	{
+		"code": "e7629420",
+		"period": "MFAKE1"
+	},
+	{
+		"code": "4c5adf48",
+		"period": "MFAKE1"
+	},
+
+	{
+		"code": ""
+	}
+]
+

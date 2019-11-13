@@ -1,6 +1,7 @@
 // PREPEARING
 require('../../initialize')
 require('../../initialize').page
+require('../../initialize').browser
 
 const CHAR_SETS = {
   A: '0123456789',
@@ -42,7 +43,7 @@ function unique_codes() {
 
 }
 
-let dir= path.join(__dirname,'../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -73,19 +74,18 @@ beforeAll(async() => {
     password = password
     confirm_password = confirm_pass
     await page.setUserAgent(useragent)
-  });
+  },90000);
 
 afterAll(async() => {
     await browser.close()
 })
   // START TO TESTING
-  describe("skenario 1",() => {
-
+  describe("e2e testing",() => {
     test("Input code", async() => { 
         await page.waitFor(3000)
         await page.goto('https://nukrazytea.mrmbdg.com/')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get nutea.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get nutea.png'),
             fullpage: true,
             waitUntil :'networkidle2'
         })
@@ -100,19 +100,19 @@ afterAll(async() => {
         await expect(setuju).toMatch('Setuju');   
         await page.waitFor(3000)  
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post input unique_code.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input unique_code.png'),
             fullpage: true,
             waitUntil :'networkidle2'
         })
     },100000)
 
-    test("registrasi user", async() => { 
+    test("registrasi user through input code", async() => { 
       await page.waitFor(3000)
       await page.goto('https://nukrazytea.mrmbdg.com/register')
       await page.waitForSelector('input[name="name"]', {visible: true,timeout: 60000});
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get register nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get register nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -125,13 +125,13 @@ afterAll(async() => {
       await page.click('button[type="submit"]')
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
       const request = page.url()
       const cookie = await page.cookies(request)
-      fs.writeFileSync('./nutea',JSON.stringify(cookie), function(err) {
+      fs.writeFileSync(__dirname+'/nutea',JSON.stringify(cookie), function(err) {
           if (err) {
             console.log(err);
           }
@@ -142,7 +142,7 @@ afterAll(async() => {
       await page.waitFor(3000)
       await page.goto('https://nukrazytea.mrmbdg.com/login')
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get login nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -151,7 +151,7 @@ afterAll(async() => {
       await page.click('button[type="submit"]') 
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post login nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post login nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -161,7 +161,7 @@ afterAll(async() => {
       await page.waitFor(3000)
       await page.goto('https://nukrazytea.mrmbdg.com/profil')
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get profil nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get profil nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -171,7 +171,7 @@ afterAll(async() => {
       await page.waitForSelector('input[id="unique_code"]', {visible: true,timeout: 60000});
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get token profil nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get token profil nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -181,11 +181,33 @@ afterAll(async() => {
       await page.click('button[id="submitCode"]')
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post token profil nutea.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post token profil nutea.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
-    },90000)    
+    },90000)
+    
+    test("go to profile based on cookie", async() => {  
+      const client = await page.target().createCDPSession();
+      await client.send('Network.clearBrowserCookies');
+      await client.send('Network.clearBrowserCache');
+      file = fs.readFileSync(__dirname+'/nutea','utf8',(err,data) => {
+        if(data) {  
+            console.log(data)   
+            return data
+        }
+      })
+      inusers = JSON.parse(file)
+      await page.setCookie(...inusers);
+      await page.goto('https://nukrazytea.mrmbdg.com/profil')
+      await page.waitFor(3000)
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/cookie is working.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      }) 
+    },90000)
+
   });
 
   

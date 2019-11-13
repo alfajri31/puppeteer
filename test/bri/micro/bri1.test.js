@@ -1,4 +1,4 @@
-require('../../initialize')
+require('../../../initialize')
 
 CHAR_SETS = {
     A: '123456789',

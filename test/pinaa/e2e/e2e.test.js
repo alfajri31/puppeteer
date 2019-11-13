@@ -14,8 +14,8 @@ fs.readdir(dir, (err, files) => {
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
-        executablePath: path.join(__dirname,'../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
-        args: [ '--ignore-certificate-errors','--no-sandbox']
+        // executablePath: path.join(__dirname,'../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
+        args: [ '--ignore-certificate-errors','--no-sandbox'],
     })
     page = await browser.newPage()
     await page.authenticate({ 
@@ -159,16 +159,45 @@ describe('Unit register',() => {
             }
             return json;
           });
-        console.log(localStorageData)
+        // console.log(localStorageData)
         const myString1 = JSON.stringify(localStorageData)
         const myString2 = myString1.replace(/\\/g, '');
-        fs.writeFileSync('./pina',myString2, function(err) {
+        const myString3 = myString2.replace(/"{"/g,'{"')
+        const myString4 = myString3.replace(/}"/g,'}')
+        const myString5 = myString4.replace(/"}"/g,'}"')
+        fs.writeFileSync('./pina',myString5, function(err) {
             if (err) {
               console.log(err);
             }
         })
         pageTitle = await page.title();
         await expect(pageTitle).toMatch('Dashboard | PINA')
-        await browser.close()
     },90000)
+
+    test("go to profile based on cookie", async() => {  
+        const client = await page.target().createCDPSession();
+        await client.send('Network.clearBrowserCookies');
+        await client.send('Network.clearBrowserCache');
+        file = fs.readFileSync('./pina','utf8',(err,data) => {
+          if(data) {  
+              console.log(data)   
+              return data
+          }
+        })
+        inusers = JSON.parse(file)
+  
+      await page.evaluateOnNewDocument (
+        ({inusers}) => {
+          console.log(JSON.stringify(inusers.session_auth)) //lihat di log browser 
+          localStorage.setItem('session_auth',JSON.stringify(inusers.session_auth));
+          localStorage.setItem('us',JSON.stringify(inusers.us))
+        },{inusers});
+        await page.goto('http://pinaapp.id/dashboard')
+        await page.waitFor(3000)
+        await page.screenshot({
+          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/cookie is working.png'),
+          fullpage: true,
+          waitUntil :'networkidle2'
+        }) 
+      },90000)
 })
