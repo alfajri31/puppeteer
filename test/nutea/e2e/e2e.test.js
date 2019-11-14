@@ -77,8 +77,8 @@ beforeAll(async() => {
 
 afterAll(async() => {
     await browser.close()
-    const shell = require('shelljs');
-    shell.exec('pkill node')
+    // const shell = require('shelljs');
+    // shell.exec('pkill node')
 })
   // START TO TESTING
   describe("e2e testing",() => {
@@ -110,7 +110,7 @@ afterAll(async() => {
       await expect(pageTitle).toMatch('NuKrazy - Prize')
     },100000)
 
-    test("user register through input code", async() => { 
+    test.skip("user register through input code", async() => { 
       await page.waitForFunction(
         'document.querySelector("body").innerText.includes("Daftar")',{timeout: 5000}
       );
@@ -149,8 +149,49 @@ afterAll(async() => {
     },100000)
 
     test("too many ivalid codes", async() => {
+      await page.goto('https://nukrazytea.mrmbdg.com/')
+      await page.type('input[id="unique_code"]','4c5adf48')
+      await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="submitCode"]')
+      await page.waitFor(3000)
+      await page.type('input[id="unique_code"]','4c5adf48')
+      await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="submitCode"]')
+      await page.waitFor(3000)
+      await page.type('input[id="unique_code"]','4c5adf48')
+      await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="submitCode"]')
+      await page.waitFor(3000)
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input code too many invalid code.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      })
+      await page.waitForFunction(
+        'document.querySelector("body").innerText.includes("Too many invalid code wait in 10 minutes")',{timeout: 5000}
+      );
+    },90000)
 
-    })
+    test('wrong formated code', async() => {
+      await page.goto('https://nukrazytea.mrmbdg.com/')
+      await page.type('input[id="unique_code"]','4c5adf48s')
+      await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="submitCode"]')
+      await page.waitForFunction(
+        'document.querySelector("body").innerText.includes("Wrong Format")',{timeout: 5000}
+      );
+      await page.waitFor(3000)
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input code wrong format.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      })
+
+    },90000)
 
     
     test("go to profile based on cookie", async() => {  

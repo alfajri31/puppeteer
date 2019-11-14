@@ -26,6 +26,7 @@
     "lighthouse": "^5.6.0",
     "puppeteer": "^2.0.0",
     "puppeteer-firefox": "^0.5.0",
+    "puppeteer-loadtest": "^1.0.5",
     "request-promise": "^4.2.5",
     "shelljs": "^0.8.3"
   }

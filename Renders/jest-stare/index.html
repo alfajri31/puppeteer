@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">2 passed, 2 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 2 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">5 passed, 5 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">4 passed, 6 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,16 +115,16 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 0,
-  &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 2,
-  &quot;numPassedTests&quot;: 5,
+  &quot;numFailedTestSuites&quot;: 1,
+  &quot;numFailedTests&quot;: 1,
+  &quot;numPassedTestSuites&quot;: 1,
+  &quot;numPassedTests&quot;: 4,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 0,
+  &quot;numPendingTests&quot;: 1,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 2,
-  &quot;numTotalTests&quot;: 5,
+  &quot;numTotalTests&quot;: 6,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1573641900200,
+  &quot;startTime&quot;: 1573652936321,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: null,
-      &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 4,
-      &quot;numPendingTests&quot;: 0,
+      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › too many ivalid codes\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for function failed: timeout 5000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 171 | \u001b[39m        waitUntil \u001b[33m:\u001b[39m\u001b[32m&#39;networkidle2&#39;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 172 | \u001b[39m      })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 173 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 174 | \u001b[39m        \u001b[32m&#39;document.querySelector(\&quot;body\&quot;).innerText.includes(\&quot;Too many invalid code wait in 10 minutes\&quot;)&#39;\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 175 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 176 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new WaitTask (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:549:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:454:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js\u001b[2m:657:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js\u001b[2m:1144:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:173:18)\u001b[2m\u001b[22m\n&quot;,
+      &quot;numFailingTests&quot;: 1,
+      &quot;numPassingTests&quot;: 3,
+      &quot;numPendingTests&quot;: 1,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1573641957777,
-        &quot;start&quot;: 1573641902722
+        &quot;end&quot;: 1573653015677,
+        &quot;start&quot;: 1573652937482
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -164,13 +164,13 @@
         &quot;updated&quot;: 0,
         &quot;uncheckedKeys&quot;: []
       },
-      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js&quot;,
+      &quot;testFilePath&quot;: &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js&quot;,
       &quot;testResults&quot;: [
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 19345,
+          &quot;duration&quot;: 21642,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing user input the code&quot;,
           &quot;location&quot;: null,
@@ -182,31 +182,45 @@
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 16809,
+          &quot;duration&quot;: 0,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing user register through input code&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
           &quot;title&quot;: &quot;user register through input code&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
+          &quot;duration&quot;: 30635,
+          &quot;failureMessages&quot;: [
+            &quot;TimeoutError: waiting for function failed: timeout 5000ms exceeded\n    at new WaitTask (&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:549:28)\n    at DOMWorld.waitForFunction (&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:454:12)\n    at Frame.waitForFunction (&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js:657:28)\n    at Page.waitForFunction (&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js:1144:29)\n    at Object.&lt;anonymous&gt; (&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:173:18)&quot;
+          ],
           &quot;fullName&quot;: &quot;e2e testing too many ivalid codes&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
           &quot;title&quot;: &quot;too many ivalid codes&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 6678,
+          &quot;duration&quot;: 12543,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing wrong formated code&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;wrong formated code&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 7484,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing go to profile based on cookie&quot;,
           &quot;location&quot;: null,
@@ -225,8 +239,8 @@
       &quot;numPendingTests&quot;: 0,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1573642018964,
-        &quot;start&quot;: 1573641958279
+        &quot;end&quot;: 1573653054033,
+        &quot;start&quot;: 1573653015780
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -237,13 +251,13 @@
         &quot;updated&quot;: 0,
         &quot;uncheckedKeys&quot;: []
       },
-      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;perform.test.js&quot;,
+      &quot;testFilePath&quot;: &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;perform.test.js&quot;,
       &quot;testResults&quot;: [
         {
           &quot;ancestorTitles&quot;: [
             &quot;E2E Automation Test&quot;
           ],
-          &quot;duration&quot;: 50972,
+          &quot;duration&quot;: 35146,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;E2E Automation Test test performance use lighthouse&quot;,
           &quot;location&quot;: null,
@@ -263,7 +277,7 @@
   &quot;changedFilesWithAncestor&quot;: false,
   &quot;collectCoverage&quot;: false,
   &quot;collectCoverageFrom&quot;: null,
-  &quot;coverageDirectory&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;coverage&quot;,
+  &quot;coverageDirectory&quot;: &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;coverage&quot;,
   &quot;coverageReporters&quot;: [
     &quot;json&quot;,
     &quot;text&quot;,
@@ -297,17 +311,17 @@
       {}
     ],
     [
-      &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;jest-stare&#x2F;lib&#x2F;index.js&quot;,
+      &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;jest-stare&#x2F;lib&#x2F;index.js&quot;,
       {}
     ]
   ],
-  &quot;rootDir&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&quot;,
+  &quot;rootDir&quot;: &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&quot;,
   &quot;runTestsByPath&quot;: false,
   &quot;skipFilter&quot;: false,
   &quot;testFailureExitCode&quot;: 1,
   &quot;testPathPattern&quot;: &quot;nutea&#x2F;e2e&#x2F;&quot;,
   &quot;testResultsProcessor&quot;: null,
-  &quot;testSequencer&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;@jest&#x2F;test-sequencer&#x2F;build&#x2F;index.js&quot;,
+  &quot;testSequencer&quot;: &quot;&#x2F;home&#x2F;fajri&#x2F;projects&#x2F;automation&#x2F;ppt&#x2F;node_modules&#x2F;@jest&#x2F;test-sequencer&#x2F;build&#x2F;index.js&quot;,
   &quot;updateSnapshot&quot;: &quot;new&quot;,
   &quot;useStderr&quot;: false,
   &quot;verbose&quot;: null,
