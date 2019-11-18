@@ -39,7 +39,7 @@ afterAll(async() => {
 
 
 describe('E2E Automation Test', () => {
-    test('test performance use lighthouse', async() => {
+    test('test performance home use lighthouse', async() => {
         await page.goto('https://nutea.co.id/',{waitUntil : 'networkidle2'}) 
         const report = await lighthouse(page.url(), opts, config).then(results => {
             return results;

@@ -1,4 +1,4 @@
-require('../../../initialize')
+require('../../initialize')
 
 CHAR_SETS = {
     A: '123456789',
@@ -21,7 +21,7 @@ function randChar(charType) {
 }
 
 
-let dir= path.join(__dirname,'../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -32,7 +32,7 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
-        headless: headless,
+        headless: false,
         // slowMo: 20,
         // executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         args: [ '--ignore-certificate-errors' ]
@@ -95,7 +95,7 @@ afterAll(async() => {
       await page.waitFor(5000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 1.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 1.png'),
         fullpage: true
       })
       await page.click('label[for="selfie_scan"]')
@@ -339,7 +339,7 @@ afterAll(async() => {
       await page.waitFor(5000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 2.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 2.png'),
         fullpage: true
       })
 
@@ -398,7 +398,7 @@ afterAll(async() => {
         await page.waitFor(5000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 3.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 3.png'),
           fullpage: true
         })
 
@@ -506,7 +506,7 @@ afterAll(async() => {
         await page.waitFor(5000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 4.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 4.png'),
           fullpage: true
         })
 

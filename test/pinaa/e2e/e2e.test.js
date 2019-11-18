@@ -2,7 +2,7 @@ require('../../initialize')
 require('../../initialize').page
 
 
-let dir= path.join(__dirname,'../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -37,9 +37,9 @@ beforeAll(async() => {
 describe('Unit register',() => {
 
     test('register success', async() => {
-        await page.goto('http://pinaapp.id/register')
+        await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get register-successfully.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get register-successfully.png'),
             fullpage: true
         }) 
         await page.type('input[name="email"]',name+'@mailinator.com')
@@ -49,7 +49,7 @@ describe('Unit register',() => {
         await page.click('input[id="cb"]')
         await page.click('a[class="button full"]')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register-successfully.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register-successfully.png'),
             fullpage: true
         })
         pageTitle = await page.title();
@@ -65,7 +65,7 @@ describe('Unit register',() => {
         await page.click('input[id="cb"]')
         await page.click('a[class="button full"]')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register - wrong format email.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register - wrong format email.png'),
             fullpage: true
         })
         pageTitle = await page.title();
@@ -73,15 +73,14 @@ describe('Unit register',() => {
     },90000)
 
     test('register without checklist TnC', async() => {
-        
-        await page.goto('http://pinaapp.id/register')
+        await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.type('input[name="email"]',name+'@mailinator.com')
         await page.type('input[name="name"]',name)
         await page.type('input[name="password"]',password)
         await page.type('input[name="confirm password"]',confirm_password)
         await page.click('a[class="button full"]')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register - tnc not checklisted.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register - tnc not checklisted.png'),
             fullpage: true
         })
         pageTitle = await page.title();
@@ -90,14 +89,14 @@ describe('Unit register',() => {
 
     test('register with different confirm password', async() => {
         
-        await page.goto('http://pinaapp.id/register')
+        await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.type('input[name="email"]',name+'@mailinator.com')
         await page.type('input[name="name"]',name)
         await page.type('input[name="password"]',password)
         await page.type('input[name="confirm password"]','abc123')
         await page.click('a[class="button full"]')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register - without different confirm password.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register - without different confirm password.png'),
             fullpage: true
         })
         pageTitle = await page.title();
@@ -106,10 +105,10 @@ describe('Unit register',() => {
 
     test('register without fill form fields', async() => {
         
-        await page.goto('http://pinaapp.id/register')
+        await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.click('a[class="button full"]')   
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register - without fill form fields.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register - without fill form fields.png'),
             fullpage: true
         })
         pageTitle = await page.title();
@@ -117,7 +116,7 @@ describe('Unit register',() => {
     },90000)
 
     test('duplicate register', async() => {  
-        await page.goto('http://pinaapp.id/register')
+        await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.type('input[name="email"]',name+'@mailinator.com')
         await page.type('input[name="name"]',name)
         await page.type('input[name="password"]',password)
@@ -125,7 +124,7 @@ describe('Unit register',() => {
         await page.click('input[id="cb"]')
         await page.click('a[class="button full"]')
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post register - duplicate register.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register - duplicate register.png'),
             fullpage: true,
         })
         pageTitle = await page.title();
@@ -133,24 +132,33 @@ describe('Unit register',() => {
     },90000)
 
     test('login success', async() => {
-        await page.goto('http://pinaapp.id/login/')
+        await page.goto('http://pinaapp.id/login/',{waitUntil:'networkidle2'})
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get login-successfully.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login-successfully.png'),
             fullpage: true,
         })
         await page.type('input[name="email"]',name+'@mailinator.com')
         await page.type('input[name="password"]',password)
         await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/get login-successfully[static].png'),
+            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login-successfully[static].png'),
             fullpage: true
         })
         await page.click('a[class="button full"]') 
-        await page.waitForSelector('a[class="button capitalize"]', {visible: true,timeout: 60000});
-        await page.waitFor(3000)
-        await page.screenshot({
-            path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/post login-successfully.png'),
-            fullpage: true
-        })
+        try {
+            await page.waitForSelector('a[class="button capitalize"]', {visible: true,timeout: 60000});
+            await page.waitFor(3000)
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post login-successfully.png'),
+                fullpage: true
+            })
+        }
+        catch(err) {
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post login-successfull error.png'),
+                fullpage: true
+            })
+        }
+       
         const localStorageData = await page.evaluate(() => {
             let json = {};
             for (let i = 0; i < localStorage.length; i++) {
@@ -165,7 +173,7 @@ describe('Unit register',() => {
         const myString3 = myString2.replace(/"{"/g,'{"')
         const myString4 = myString3.replace(/}"/g,'}')
         const myString5 = myString4.replace(/"}"/g,'}"')
-        fs.writeFileSync('./pina',myString5, function(err) {
+        fs.writeFileSync(__dirname+'/pina',myString5, function(err) {
             if (err) {
               console.log(err);
             }
@@ -178,7 +186,7 @@ describe('Unit register',() => {
         const client = await page.target().createCDPSession();
         await client.send('Network.clearBrowserCookies');
         await client.send('Network.clearBrowserCache');
-        file = fs.readFileSync('./pina','utf8',(err,data) => {
+        file = fs.readFileSync(__dirname+'/pina','utf8',(err,data) => {
           if(data) {  
               console.log(data)   
               return data
@@ -192,12 +200,12 @@ describe('Unit register',() => {
           localStorage.setItem('session_auth',JSON.stringify(inusers.session_auth));
           localStorage.setItem('us',JSON.stringify(inusers.us))
         },{inusers});
-        await page.goto('http://pinaapp.id/dashboard')
+        await page.goto('http://pinaapp.id/dashboard',{waitUntil:'networkidle2'})
         await page.waitFor(3000)
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/cookie is working.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/cookie is working.png'),
           fullpage: true,
-          waitUntil :'networkidle2'
+          waitUntil :'domcontentloaded'
         }) 
       },90000)
 })

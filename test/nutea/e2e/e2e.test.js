@@ -84,7 +84,7 @@ afterAll(async() => {
   describe("e2e testing",() => {
     test("user input the code", async() => { 
         await page.waitFor(3000)
-        await page.goto('https://nukrazytea.mrmbdg.com/')
+        await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil:'domcontentloaded'})
         await page.screenshot({
             path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get nutea.png'),
             fullpage: true,
@@ -110,9 +110,9 @@ afterAll(async() => {
       await expect(pageTitle).toMatch('NuKrazy - Prize')
     },100000)
 
-    test.skip("user register through input code", async() => { 
+    test("user register through input code", async() => { 
       await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("Daftar")',{timeout: 5000}
+        'document.querySelector("body").innerText.includes("Daftar")',{timeout: 10000}
       );
       await page.waitFor(3000)
       await page.click('a[href="/register"]')
@@ -148,41 +148,53 @@ afterAll(async() => {
       await expect(pageTitle).toMatch('NuKrazy - Game')
     },100000)
 
+    test('user logout after register through input code', async() => {
+      await page.click('div[class="avatar -ml-5"]')
+      await page.waitFor(3000)
+      await page.click('a[data-request="onLogout"]')   
+      await page.waitFor(3000)
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post logout through input code.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      })   
+    },90000)
+
     test("too many ivalid codes", async() => {
-      await page.goto('https://nukrazytea.mrmbdg.com/')
+      await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil: 'domcontentloaded'})
       await page.type('input[id="unique_code"]','4c5adf48')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.click('button[id="submitCode"]')
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.type('input[id="unique_code"]','4c5adf48')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.click('button[id="submitCode"]')
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.type('input[id="unique_code"]','4c5adf48')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.click('button[id="submitCode"]')
-      await page.waitFor(3000)
+      await page.waitFor(5000)
       await page.screenshot({
         path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input code too many invalid code.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
       await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("Too many invalid code wait in 10 minutes")',{timeout: 5000}
+        'document.querySelector("body").innerText.includes("Too many invalid code wait in 10 minutes")',{timeout: 10000}
       );
     },90000)
 
     test('wrong formated code', async() => {
-      await page.goto('https://nukrazytea.mrmbdg.com/')
-      await page.type('input[id="unique_code"]','4c5adf48s')
+      await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil: 'domcontentloaded'})
+      await page.type('input[id="unique_code"]','13ccdc5bs')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
       await page.waitFor(3000)
       await page.click('button[id="submitCode"]')
       await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("Wrong Format")',{timeout: 5000}
+        'document.querySelector("body").innerText.includes("Wrong Format")',{timeout: 10000}
       );
       await page.waitFor(3000)
       await page.screenshot({
@@ -190,10 +202,42 @@ afterAll(async() => {
         fullpage: true,
         waitUntil :'networkidle2'
       })
-
     },90000)
 
-    
+    test('login through input code', async() => {
+      await page.waitFor(3000)
+      await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil:'domcontentloaded'})
+      await page.screenshot({
+          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get nutea.png'),
+          fullpage: true,
+          waitUntil :'networkidle2'
+      })
+      await page.type('input[id="unique_code"]',unique_codes())
+      console.log(unique_codes())
+      await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="submitCode"]')
+      await page.waitForSelector('button[id="setujuPopupTerm"]', {visible: true,timeout: 60000});
+      await page.waitFor(3000)
+      await page.click('button[id="setujuPopupTerm"]')
+      const setuju = await page.$eval('button[id="setujuPopupTerm"]', el => el.innerText);
+      await expect(setuju).toMatch('Setuju');   
+      await page.waitFor(3000)  
+      pageTitle = await page.title()
+      await expect(pageTitle).toMatch('NuKrazy - Prize')
+      await page.waitForFunction(
+        'document.querySelector("body").innerText.includes("Daftar")',{timeout: 10000}
+      );
+      await page.waitFor(3000)
+      await page.click('a[href="/login"]')  
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login through input code.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      })
+    },90000)
+
+
     test("go to profile based on cookie", async() => {  
       const client = await page.target().createCDPSession();
       await client.send('Network.clearBrowserCookies');
