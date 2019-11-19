@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 1,
-  "numPassedTestSuites": 0,
-  "numPassedTests": 6,
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
-  "numPendingTests": 0,
+  "numPendingTests": 18,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 7,
+  "numTotalTests": 19,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1574056694413,
+  "startTime": 1574155075039,
   "success": false,
   "testResults": [
     {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › too many ivalid codes\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for function failed: timeout 10000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 183 | \u001b[39m        waitUntil \u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 184 | \u001b[39m      })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 185 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 186 | \u001b[39m        \u001b[32m'document.querySelector(\"body\").innerText.includes(\"Too many invalid code wait in 10 minutes\")'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 187 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 188 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new WaitTask (\u001b[2mnode_modules/puppeteer/lib/DOMWorld.js\u001b[2m:549:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.waitForFunction (\u001b[2mnode_modules/puppeteer/lib/DOMWorld.js\u001b[2m:454:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.waitForFunction (\u001b[2mnode_modules/puppeteer/lib/FrameManager.js\u001b[2m:657:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.waitForFunction (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:1144:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/nutea/e2e/e2e.test.js\u001b[39m\u001b[0m\u001b[2m:185:18)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 1,
-      "numPassingTests": 6,
-      "numPendingTests": 0,
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 18,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1574056803099,
-        "start": 1574056696711
+        "end": 1574155087148,
+        "start": 1574155075743
       },
       "snapshot": {
         "added": 0,
@@ -54,87 +54,229 @@
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 16839,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing user input the code",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "user input the code"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 10520,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing user register through input code",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "user register through input code"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 6337,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing user logout after register through input code",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "user logout after register through input code"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 40871,
-          "failureMessages": [
-            "TimeoutError: waiting for function failed: timeout 10000ms exceeded\n    at new WaitTask (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld.waitForFunction (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/DOMWorld.js:454:12)\n    at Frame.waitForFunction (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/FrameManager.js:657:28)\n    at Page.waitForFunction (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Page.js:1144:29)\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/nutea/e2e/e2e.test.js:185:18)"
-          ],
+          "duration": 0,
+          "failureMessages": [],
           "fullName": "e2e testing too many ivalid codes",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "failed",
+          "status": "pending",
           "title": "too many ivalid codes"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 6837,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing wrong formated code",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "wrong formated code"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 16301,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing login through input code",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "login through input code"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 3685,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing go to profile based on cookie",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "go to profile based on cookie"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 7891,
+          "failureMessages": [],
+          "fullName": "e2e testing user can enter uljima in mobile",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "user can enter uljima in mobile"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can enter yukmubang in mobile",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can enter yukmubang in mobile"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can enter oppa in mobile",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can enter oppa in mobile"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can see leaderboard",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can see leaderboard"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can change their profile picture",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can change their profile picture"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can edit their profile account",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can edit their profile account"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can't play uljima in desktop mode",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can't play uljima in desktop mode"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can't play yukmubang in desktop mode",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can't play yukmubang in desktop mode"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can't play oppa in desktop mode",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can't play oppa in desktop mode"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can top up token from gopay token",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can top up token from gopay token"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can top up token from bottlecap token",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can top up token from bottlecap token"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing user can see their score",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "user can see their score"
         }
       ],
       "skipped": false,

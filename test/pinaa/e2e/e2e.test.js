@@ -13,7 +13,7 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
-        headless: headless,
+        headless: true,
         // executablePath: path.join(__dirname,'../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         args: [ '--ignore-certificate-errors','--no-sandbox'],
     })
@@ -34,6 +34,9 @@ beforeAll(async() => {
     await page.setUserAgent(useragent)
 },90000)
 
+afterAll(async() => {
+    await browser.close()
+})
 describe('Unit register',() => {
 
     test('register success', async() => {

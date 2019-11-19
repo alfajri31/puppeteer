@@ -38,7 +38,7 @@ module.exports = {
     width: width = 375,
     hegith: height = 812,
     resolusi: resolusi = 'Mobile',
-    useragent: useragent ='Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+    useragent: useragent ="Mozilla\/5.0 (Linux; Android 7.1.2; Redmi 5A) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/77.0.3865.116 Mobile Safari\/537.36",
     headless : headless = true,
 }
 
@@ -50,8 +50,7 @@ Desktop : 1366 x 768
 Tablet :
 Retina :
 
-user agent : Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1
-user agent : Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; SCH-I535 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+user agent Android : Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; SCH-I535 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
 user agent : Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36
 user agent : Opera/9.80 (Android 4.1.2; Linux; Opera Mobi/ADR-1305251841) Presto/2.11.355 Version/12.10
 */

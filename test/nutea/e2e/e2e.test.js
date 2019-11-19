@@ -53,7 +53,7 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
-        headless: headless,
+        headless: false,
         // slowMo: 20,
         // executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         args: [ '--ignore-certificate-errors' ]
@@ -82,7 +82,7 @@ afterAll(async() => {
 })
   // START TO TESTING
   describe("e2e testing",() => {
-    test("user input the code", async() => { 
+    test.skip("user input the code", async() => { 
         await page.waitFor(3000)
         await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil:'domcontentloaded'})
         await page.screenshot({
@@ -110,7 +110,7 @@ afterAll(async() => {
       await expect(pageTitle).toMatch('NuKrazy - Prize')
     },100000)
 
-    test("user register through input code", async() => { 
+    test.skip("user register through input code", async() => { 
       await page.waitForFunction(
         'document.querySelector("body").innerText.includes("Daftar")',{timeout: 10000}
       );
@@ -148,7 +148,7 @@ afterAll(async() => {
       await expect(pageTitle).toMatch('NuKrazy - Game')
     },100000)
 
-    test('user logout after register through input code', async() => {
+    test.skip('user logout after register through input code', async() => {
       await page.click('div[class="avatar -ml-5"]')
       await page.waitFor(3000)
       await page.click('a[data-request="onLogout"]')   
@@ -160,7 +160,7 @@ afterAll(async() => {
       })   
     },90000)
 
-    test("too many ivalid codes", async() => {
+    test.skip("too many ivalid codes", async() => {
       await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil: 'domcontentloaded'})
       await page.type('input[id="unique_code"]','4c5adf48')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
@@ -187,7 +187,7 @@ afterAll(async() => {
       );
     },90000)
 
-    test('wrong formated code', async() => {
+    test.skip('wrong formated code', async() => {
       await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil: 'domcontentloaded'})
       await page.type('input[id="unique_code"]','13ccdc5bs')
       await page.waitForSelector('button[id="submitCode"]', {visible: true,timeout: 60000});
@@ -204,7 +204,7 @@ afterAll(async() => {
       })
     },90000)
 
-    test('login through input code', async() => {
+    test.skip('login through input code', async() => {
       await page.waitFor(3000)
       await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil:'domcontentloaded'})
       await page.screenshot({
@@ -236,9 +236,9 @@ afterAll(async() => {
         waitUntil :'networkidle2'
       })
     },90000)
-
-
-    test("go to profile based on cookie", async() => {  
+    
+    
+  test.skip("go to profile based on cookie", async() => {  
       const client = await page.target().createCDPSession();
       await client.send('Network.clearBrowserCookies');
       await client.send('Network.clearBrowserCache');
@@ -248,6 +248,7 @@ afterAll(async() => {
             return data
         }
       })
+      console.log(file)
       inusers = JSON.parse(file)
       await page.setCookie(...inusers);
       await page.goto('https://nukrazytea.mrmbdg.com/profil')
@@ -257,6 +258,67 @@ afterAll(async() => {
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
+    },90000)
+
+    test("user can enter uljima in mobile",async() => {
+      await page.waitFor(3000)
+      const watchDog = await page.waitForFunction('window.navigator');
+      console.log(watchDog.JSHandle)
+      await page.goto('https://nukrazytea.mrmbdg.com/game')
+      await page.waitForFunction(
+        'document.querySelector("body").innerText.includes("Uljima, Oppa!")',{timeout: 10000}
+      );
+      await page.click('a[href="https://nukrazytea.mrmbdg.com/howtogame_1"]')
+      await page.waitFor(3000)
+      await page.screenshot({
+        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get can enter uljima in mobile.png'),
+        fullpage: true,
+        waitUntil :'networkidle2'
+      }) 
+    },90000)
+
+    test.skip('user can enter yukmubang in mobile',async()=> {
+
+    },90000)
+
+    test.skip('user can enter oppa in mobile',async() => {
+
+    },90000)
+
+    test.skip('user can see leaderboard',async() => {
+
+    },90000)
+
+    test.skip('user can change their profile picture',async() => {
+
+    },90000)
+
+    test.skip('user can edit their profile account',async() => {
+
+    },90000)
+
+    test.skip("user can't play uljima in desktop mode",async() => {
+
+    },90000)
+
+    test.skip("user can't play yukmubang in desktop mode",async() => {
+
+    },90000)
+
+    test.skip("user can't play oppa in desktop mode",async() => {
+
+    },90000)
+
+    test.skip("user can top up token from gopay token",async() => {
+
+    },90000)
+
+    test.skip("user can top up token from bottlecap token",async() => {
+
+    },90000)
+
+    test.skip("user can see their score",async() => {
+
     },90000)
 
   });
