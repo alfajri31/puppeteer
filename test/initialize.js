@@ -38,7 +38,7 @@ module.exports = {
     width: width = 375,
     hegith: height = 812,
     resolusi: resolusi = 'Mobile',
-    useragent: useragent ="Mozilla\/5.0 (Linux; Android 7.1.2; Redmi 5A) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/77.0.3865.116 Mobile Safari\/537.36",
+    useragent: useragent ="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Safari/537.36",
     headless : headless = true,
 }
 
