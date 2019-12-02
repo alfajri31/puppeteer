@@ -13,10 +13,10 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
-        headless: false,
+        headless: headless,
 
         args: [ '--ignore-certificate-errors','--no-sandbox'],
-        
+
     })
     page = await browser.newPage()
     await page.authenticate({ 
@@ -40,7 +40,7 @@ afterAll(async() => {
 })
 describe('Unit register',() => {
 
-    test('register success', async() => {
+    test.skip('register success', async() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.screenshot({
             path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get register-successfully.png'),
@@ -60,7 +60,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Login | PINA')
     },90000)
 
-    test('email with wrong format', async() => {
+    test.skip('email with wrong format', async() => {
         await page.goto('http://pinaapp.id/register')
         await page.goBack();
         await page.goForward();
@@ -78,7 +78,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Register | PINA')
     },90000)
 
-    test('register without checklist TnC', async() => {
+    test.skip('register without checklist TnC', async() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
@@ -95,7 +95,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Register | PINA')
     },90000)
 
-    test('register with different confirm password', async() => {
+    test.skip('register with different confirm password', async() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
@@ -112,7 +112,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Register | PINA')
     },90000)
 
-    test('register without fill the form fields', async() => {
+    test.skip('register without fill the form fields', async() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
@@ -125,7 +125,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Register | PINA')
     },90000)
 
-    test('duplicate the register', async() => {  
+    test.skip('duplicate the register', async() => {  
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
@@ -143,7 +143,7 @@ describe('Unit register',() => {
         await expect(pageTitle).toMatch('Registrasi | PINA')
     },90000)
 
-    test('login success', async() => {
+    test.skip('login success', async() => {
         await page.goto('http://pinaapp.id/login/',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
@@ -228,107 +228,163 @@ describe('Unit register',() => {
       test("verify account with checklist npwp",async() => {
         await page.goBack();
         await page.goForward();
-        await page.waitForFunction(
-            'document.querySelector("body").innerText.includes("Verify Account")',{timeout: 20000}
-        );
-        await page.click('a[class="button no-margin"]')
-        await page.waitForFunction(
-            'document.querySelector("body").innerText.includes("Your ID")',{timeout: 20000}
-        );
-        await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get verify a count- successsfully.png'),
-            fullpage: true,
-            waitUntil :'domcontentloaded'
-        }) 
-        await page.click('label[for="cb"]') 
-        await page.waitFor(1500)
-        //input ktp etc ...
-        let filePath = path.join(process.cwd()+'/pictures/sample1.png');
-        let futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-ktp"]')
-        let fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
-
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-selfie-ktp"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
-
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-ttd"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
-
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-npwp"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
-
-        await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account with checklist npwp- static.png'),
-            fullpage: true,
-            waitUntil :'domcontentloaded'
-        }) 
-        await page.click('a[class="button yellow full"]')
-        await page.waitFor(2000)
-        await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account with checklist npwp - successfully.png'),
-            fullpage: true,
-            waitUntil :'domcontentloaded'
-        }) 
-        pageTitle = await page.title();
-        await expect(pageTitle).toMatch('PINA')
+        try {
+            await page.waitForFunction(
+                'document.querySelector("body").innerText.includes("Verify Account")',{timeout: 20000}
+            );
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get notif for verify account.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            await page.click('a[class="button no-margin"]')
+        }
+        catch(err) {
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get notif for verify account - error.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            fail('it should not reach here');
+        }
+    
+        try {
+            await page.waitForFunction(
+                'document.querySelector("body").innerText.includes("Your ID")',{timeout: 20000}
+            );
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get verify account.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            await page.click('label[for="cb"]') 
+            await page.waitFor(1500)
+    
+            //input ktp etc ...
+            filePath = path.join(process.cwd()+'/pictures/sample1.png');
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-ktp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-selfie-ktp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-ttd"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-npwp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account with checklist npwp- static.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            await page.click('a[class="button yellow full"]')
+            await page.waitFor(2000)
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account with checklist npwp - successfully.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            pageTitle = await page.title();
+            await expect(pageTitle).toMatch('PINA')
+        }
+        catch(err) {
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input verify account with checklist - error.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            fail('it should not reach here');
+        }
+       
       },90000)
 
       test("post verify account without checklisted npwp",async() => {
         await page.goto('http://pinaapp.id/verification/upload')
         await page.goBack();
         await page.goForward();
-        await page.waitForFunction(
-            'document.querySelector("body").innerText.includes("Your ID")',{timeout: 20000}
-        );
-        //input ktp etc ...
-        let filePath = path.join(process.cwd()+'/pictures/sample1.png');
-        let futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-ktp"]')
-        let fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
+        try {
+            await page.waitForFunction(
+                'document.querySelector("body").innerText.includes("Your ID")',{timeout: 20000}
+            );
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get verify account without checklisted - successfully.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+        }
+        catch(err) {
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get verify account without checklisted - error.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            fail('it should not reach here');
+        }
 
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-selfie-ktp"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
+        try {
+              //input ktp etc ...
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-ktp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-selfie-ktp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-ttd"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
+    
+            futureFileChooser = page.waitForFileChooser();
+            await page.click('label[for="item-upload-npwp"]')
+            fileChooser = await futureFileChooser;
+            await fileChooser.accept([filePath]);
+            await page.waitFor(2000)
 
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-ttd"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account without checklist npwp  - static.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            await page.click('a[class="button yellow full"]')
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account without checklist npwp - successfully.png'),  
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            pageTitle = await page.title();
+            await expect(pageTitle).toMatch('PINA')
 
-        futureFileChooser = page.waitForFileChooser();
-        await page.click('label[for="item-upload-npwp"]')
-        fileChooser = await futureFileChooser;
-        await fileChooser.accept([filePath]);
-        await page.waitFor(2000)
+        }
+        catch(err) {
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input verify account without checkliste - error.png'),
+                fullpage: true,
+                waitUntil :'domcontentloaded'
+            }) 
+            fail('it should not reach here');
+        }
 
-        await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account without checklist npwp  - static.png'),
-            fullpage: true,
-            waitUntil :'domcontentloaded'
-        }) 
-        await page.click('a[class="button yellow full"]')
-        await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post verify account without checklist npwp - successfully.png'),
-            fullpage: true,
-            waitUntil :'domcontentloaded'
-        }) 
-        pageTitle = await page.title();
-        await expect(pageTitle).toMatch('PINA')
+        
+       
       },90000)
 })

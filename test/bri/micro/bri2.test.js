@@ -108,29 +108,29 @@ afterAll(async() => {
       await page.waitFor(3000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 1.png'),
+        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 1_priv.png'),
         fullpage: true
       })
 
+      filePath = path.join(process.cwd()+'/pictures/sample1.png');
+      console.log(filePath)
+      futureFileChooser = page.waitForFileChooser();
       await page.click('label[for="selfie_scan"]')
+      fileChooser = await futureFileChooser;
+      await fileChooser.accept([filePath]);
 
-      await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="selfie_scan"] > span', {
-        visible: true,
-      });
-
+      console.log(filePath)
+      futureFileChooser = page.waitForFileChooser();
       await page.click('label[for="ktp_scan"]')
+      fileChooser = await futureFileChooser;
+      await fileChooser.accept([filePath]);
 
-      await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="ktp_scan"] > span', {
-        visible: true,
-      });
-
+      console.log(filePath)
+      futureFileChooser = page.waitForFileChooser();
       await page.click('label[for="npwp_scan"]')
-
-      await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="npwp_scan"] > span', {
-        visible: true,
-      });
-
-  
+      fileChooser = await futureFileChooser;
+      await fileChooser.accept([filePath]);
+      
       await page.type('input[name="nama_lengkap"]','el'+' '+name)
       await page.type('input[name="nama_pada_kartu"]',name)
 
@@ -347,7 +347,7 @@ afterAll(async() => {
     },900000)
 
 
-      test('fill form step 2', async() => {
+      test('fill form step second', async() => {
 
         await page.waitForSelector('input[id="inputFamilyName"]', 
         {
@@ -358,7 +358,7 @@ afterAll(async() => {
         await page.waitFor(3000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 2.png'),
+        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 2+priv.png'),
         fullpage: true
       })
 
@@ -407,7 +407,7 @@ afterAll(async() => {
 
       },900000)
 
-      test('fill step 3', async() => {
+      test('fill step third', async() => {
 
         await page.waitForSelector('input[id="inputWorkName"]', 
         {
@@ -418,7 +418,7 @@ afterAll(async() => {
         await page.waitFor(3000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 3.png'),
+          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 3_priv.png'),
           fullpage: true
         })
 
@@ -515,7 +515,7 @@ afterAll(async() => {
 
       },90000)
 
-      test('fill form step 4', async() => {
+      test('fill form step fourth', async() => {
 
         await page.waitForSelector('input[name="cc_nama_bank_1"]', 
         {
@@ -525,7 +525,7 @@ afterAll(async() => {
         await page.waitFor(5000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 4.png'),
+          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 4+priv.png'),
           fullpage: true
         })
 

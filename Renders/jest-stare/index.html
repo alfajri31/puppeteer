@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">4 passed, 21 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">2 passed, 10 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -116,15 +116,15 @@
 }</div>
         <div class="d-none" id="test-results">{
   &quot;numFailedTestSuites&quot;: 1,
-  &quot;numFailedTests&quot;: 5,
+  &quot;numFailedTests&quot;: 1,
   &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 4,
+  &quot;numPassedTests&quot;: 2,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 12,
+  &quot;numPendingTests&quot;: 7,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 21,
+  &quot;numTotalTests&quot;: 10,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1574944003361,
+  &quot;startTime&quot;: 1575284672521,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › user input the code\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\&quot;NuKrazy - Prize\&quot;\u001b[39m\n    Received string:    \u001b[31m\&quot;NuKrazy - Nu Krazy Battle\&quot;\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 106 | \u001b[39m        })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 107 | \u001b[39m        pageTitle \u001b[33m&#x3D;\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 108 | \u001b[39m      await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m&#39;NuKrazy - Prize&#39;\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 109 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m100000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 110 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 111 | \u001b[39m    test(\u001b[32m\&quot;user register through input code\&quot;\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m&#x3D;&gt;\u001b[39m { \u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:108:31)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › user register through input code\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for function failed: timeout 10000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 112 | \u001b[39m      await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 113 | \u001b[39m      await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 114 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 115 | \u001b[39m        \u001b[32m&#39;document.querySelector(\&quot;body\&quot;).innerText.includes(\&quot;Daftar\&quot;)&#39;\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 116 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 117 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitFor(\u001b[35m3000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new WaitTask (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:549:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:454:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js\u001b[2m:657:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js\u001b[2m:1144:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:114:18)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › too many ivalid codes\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for function failed: timeout 10000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 232 | \u001b[39m        waitUntil \u001b[33m:\u001b[39m\u001b[32m&#39;networkidle2&#39;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 233 | \u001b[39m      })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 234 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 235 | \u001b[39m        \u001b[32m&#39;document.querySelector(\&quot;body\&quot;).innerText.includes(\&quot;Too many invalid code wait in 10 minutes\&quot;)&#39;\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 236 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 237 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new WaitTask (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:549:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:454:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js\u001b[2m:657:28)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.waitForFunction (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js\u001b[2m:1144:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:234:18)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › login through input code\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\&quot;NuKrazy - Prize\&quot;\u001b[39m\n    Received string:    \u001b[31m\&quot;NuKrazy - Nu Krazy Battle\&quot;\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 278 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitFor(\u001b[35m3000\u001b[39m)  \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 279 | \u001b[39m      pageTitle \u001b[33m&#x3D;\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 280 | \u001b[39m      await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m&#39;NuKrazy - Prize&#39;\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 281 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 282 | \u001b[39m        \u001b[32m&#39;document.querySelector(\&quot;body\&quot;).innerText.includes(\&quot;Daftar\&quot;)&#39;\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 283 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:280:31)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › login through home\u001b[39m\u001b[22m\n\n    Evaluation failed: DOMException: Failed to execute &#39;querySelector&#39; on &#39;Document&#39;: &#39;3000&#39; is not a valid selector.\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[2m__puppeteer_evaluation_script__\u001b[2m:1:33\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext._evaluateInternal (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js\u001b[2m:122:13)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ElementHandle.evaluateHandle (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;JSHandle.js\u001b[2m:64:42)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ElementHandle.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ElementHandle.$ (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;JSHandle.js\u001b[2m:437:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ElementHandle.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.$ (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:121:34)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js\u001b[2m:1067:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:299:16)\u001b[2m\u001b[22m\n&quot;,
-      &quot;numFailingTests&quot;: 5,
-      &quot;numPassingTests&quot;: 4,
-      &quot;numPendingTests&quot;: 12,
+      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mUnit register › post verify account without checklisted npwp\u001b[39m\u001b[22m\n\n    Failed: \&quot;it should not reach here\&quot;\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 382 | \u001b[39m                waitUntil \u001b[33m:\u001b[39m\u001b[32m&#39;domcontentloaded&#39;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 383 | \u001b[39m            }) \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 384 | \u001b[39m            fail(\u001b[32m&#39;it should not reach here&#39;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m            \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 385 | \u001b[39m        }\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 386 | \u001b[39m       \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 387 | \u001b[39m      }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Env.fail (\u001b[2mnode_modules&#x2F;jest-jasmine2&#x2F;build&#x2F;jasmine&#x2F;Env.js\u001b[2m:778:61)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;pinaa&#x2F;e2e&#x2F;e2e.test.js\u001b[39m\u001b[0m\u001b[2m:384:13)\u001b[2m\u001b[22m\n&quot;,
+      &quot;numFailingTests&quot;: 1,
+      &quot;numPassingTests&quot;: 2,
+      &quot;numPendingTests&quot;: 7,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1574944148443,
-        &quot;start&quot;: 1574944006428
+        &quot;end&quot;: 1575284728492,
+        &quot;start&quot;: 1575284674182
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -164,109 +164,99 @@
         &quot;updated&quot;: 0,
         &quot;uncheckedKeys&quot;: []
       },
-      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js&quot;,
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;pinaa&#x2F;e2e&#x2F;e2e.test.js&quot;,
       &quot;testResults&quot;: [
         {
           &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
+            &quot;Unit register&quot;
           ],
-          &quot;duration&quot;: 13428,
-          &quot;failureMessages&quot;: [
-            &quot;Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\&quot;NuKrazy - Prize\&quot;\u001b[39m\nReceived string:    \u001b[31m\&quot;NuKrazy - Nu Krazy Battle\&quot;\u001b[39m\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:108:31)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
-          ],
-          &quot;fullName&quot;: &quot;e2e testing user input the code&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;user input the code&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 11186,
-          &quot;failureMessages&quot;: [
-            &quot;TimeoutError: waiting for function failed: timeout 10000ms exceeded\n    at new WaitTask (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:549:28)\n    at DOMWorld.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:454:12)\n    at Frame.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js:657:28)\n    at Page.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js:1144:29)\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:114:18)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
-          ],
-          &quot;fullName&quot;: &quot;e2e testing user register through input code&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;user register through input code&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 29328,
+          &quot;duration&quot;: 1,
           &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user register through free trial&quot;,
+          &quot;fullName&quot;: &quot;Unit register register success&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;user register through free trial&quot;
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;register success&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
+            &quot;Unit register&quot;
           ],
-          &quot;duration&quot;: 42407,
-          &quot;failureMessages&quot;: [
-            &quot;TimeoutError: waiting for function failed: timeout 10000ms exceeded\n    at new WaitTask (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:549:28)\n    at DOMWorld.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:454:12)\n    at Frame.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;FrameManager.js:657:28)\n    at Page.waitForFunction (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js:1144:29)\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:234:18)&quot;
-          ],
-          &quot;fullName&quot;: &quot;e2e testing too many ivalid codes&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;too many ivalid codes&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 10997,
+          &quot;duration&quot;: 0,
           &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing wrong formated code&quot;,
+          &quot;fullName&quot;: &quot;Unit register email with wrong format&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;wrong formated code&quot;
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;email with wrong format&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
+            &quot;Unit register&quot;
           ],
-          &quot;duration&quot;: 14589,
-          &quot;failureMessages&quot;: [
-            &quot;Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\&quot;NuKrazy - Prize\&quot;\u001b[39m\nReceived string:    \u001b[31m\&quot;NuKrazy - Nu Krazy Battle\&quot;\u001b[39m\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:280:31)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
-          ],
-          &quot;fullName&quot;: &quot;e2e testing login through input code&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;login through input code&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 5684,
-          &quot;failureMessages&quot;: [
-            &quot;Error: Evaluation failed: DOMException: Failed to execute &#39;querySelector&#39; on &#39;Document&#39;: &#39;3000&#39; is not a valid selector.\n    at __puppeteer_evaluation_script__:1:33\n    at ExecutionContext._evaluateInternal (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js:122:13)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)\n  -- ASYNC --\n    at ExecutionContext.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:111:15)\n    at ElementHandle.evaluateHandle (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;JSHandle.js:64:42)\n    at ElementHandle.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:112:23)\n    at ElementHandle.$ (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;JSHandle.js:437:31)\n    at ElementHandle.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:112:23)\n    at DOMWorld.$ (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:121:34)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)\n  -- ASYNC --\n    at Frame.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:111:15)\n    at Page.click (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js:1067:29)\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;nutea&#x2F;e2e&#x2F;e2e.test.js:299:16)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
-          ],
-          &quot;fullName&quot;: &quot;e2e testing login through home&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;login through home&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 4402,
+          &quot;duration&quot;: 0,
           &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing go to profile based on cookie&quot;,
+          &quot;fullName&quot;: &quot;Unit register register without checklist TnC&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;register without checklist TnC&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Unit register&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Unit register register with different confirm password&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;register with different confirm password&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Unit register&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Unit register register without fill the form fields&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;register without fill the form fields&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Unit register&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Unit register duplicate the register&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;duplicate the register&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Unit register&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Unit register login success&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;login success&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Unit register&quot;
+          ],
+          &quot;duration&quot;: 5146,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Unit register go to profile based on cookie&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
           &quot;status&quot;: &quot;passed&quot;,
@@ -274,159 +264,29 @@
         },
         {
           &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
+            &quot;Unit register&quot;
           ],
-          &quot;duration&quot;: 4574,
+          &quot;duration&quot;: 13695,
           &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can enter uljima in mobile&quot;,
+          &quot;fullName&quot;: &quot;Unit register verify account with checklist npwp&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
           &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;user can enter uljima in mobile&quot;
+          &quot;title&quot;: &quot;verify account with checklist npwp&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
+            &quot;Unit register&quot;
           ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can enter yukmubang in mobile&quot;,
+          &quot;duration&quot;: 31800,
+          &quot;failureMessages&quot;: [
+            &quot;Error: Failed: \&quot;it should not reach here\&quot;\n    at Env.fail (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;jest-jasmine2&#x2F;build&#x2F;jasmine&#x2F;Env.js:778:61)\n    at fail (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;jest-jasmine2&#x2F;build&#x2F;jasmine&#x2F;jasmineLight.js:149:23)\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;pinaa&#x2F;e2e&#x2F;e2e.test.js:384:13)&quot;
+          ],
+          &quot;fullName&quot;: &quot;Unit register post verify account without checklisted npwp&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can enter yukmubang in mobile&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can enter oppa in mobile&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can enter oppa in mobile&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can see leaderboard&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can see leaderboard&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can change their profile picture&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can change their profile picture&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can edit their profile account&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can edit their profile account&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can&#39;t play uljima in desktop mode&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can&#39;t play uljima in desktop mode&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can&#39;t play yukmubang in desktop mode&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can&#39;t play yukmubang in desktop mode&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can&#39;t play oppa in desktop mode&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can&#39;t play oppa in desktop mode&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can top up token from gopay token&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can top up token from gopay token&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can top up token from bottlecap token&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can top up token from bottlecap token&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user can see their score&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user can see their score&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing user logout after register through input code&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;user logout after register through input code&quot;
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;title&quot;: &quot;post verify account without checklisted npwp&quot;
         }
       ],
       &quot;skipped&quot;: false,
@@ -461,7 +321,7 @@
   &quot;maxWorkers&quot;: 1,
   &quot;noStackTrace&quot;: false,
   &quot;nonFlagArgs&quot;: [
-    &quot;nutea&#x2F;e2e&#x2F;&quot;
+    &quot;pinaa&#x2F;e2e&#x2F;&quot;
   ],
   &quot;notify&quot;: false,
   &quot;notifyMode&quot;: &quot;failure-change&quot;,
@@ -482,7 +342,7 @@
   &quot;runTestsByPath&quot;: false,
   &quot;skipFilter&quot;: false,
   &quot;testFailureExitCode&quot;: 1,
-  &quot;testPathPattern&quot;: &quot;nutea&#x2F;e2e&#x2F;&quot;,
+  &quot;testPathPattern&quot;: &quot;pinaa&#x2F;e2e&#x2F;&quot;,
   &quot;testResultsProcessor&quot;: null,
   &quot;testSequencer&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;@jest&#x2F;test-sequencer&#x2F;build&#x2F;index.js&quot;,
   &quot;updateSnapshot&quot;: &quot;new&quot;,

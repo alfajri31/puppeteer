@@ -34,11 +34,15 @@ module.exports = {
     inusers : this.inusers,
     file : this.file,
     list : this.list,
+    filePath : this.filePath,
+    futureFileChooser : this.futureFileChooser,
+    fileChooser : this.fileChooser,
+
     no : no = 0,
     width: width = 375,
     hegith: height = 812,
     resolusi: resolusi = 'Mobile',
-    useragent: useragent ="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.90 Safari/537.36",
+    useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
 }
 
