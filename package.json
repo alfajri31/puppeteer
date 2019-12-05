@@ -7,15 +7,15 @@
     "resultDir": "Renders/jest-stare"
   },
   "scripts": {
-    "test": "concurrently 'npm run milo' 'npm run nutea' 'npm run bri' 'npm run pinaa' 'npm run pinaaperform'npm run nutealoadgethome' 'npm run nutealoadgetregister'",
+    "test": "concurrently 'npm run milo' 'npm run nutea' 'npm run bri' 'npm run pinaa' 'npm run pinaaperform'npm run nutealoadgethome' 'npm run nutealoadgetregister' 'npm run cerelac' ",
     "milo": "jest milo/e2e/ --runInBand --reporters default jest-stare",
     "nutea": "jest nutea/e2e/ --runInBand  --reporters default jest-stare",
     "bri": "jest bri/micro/bri1 --runInBand --reporters default jest-stare",
-    "pinaa": "jest pinaa/e2e/ --runInBand --reporters default jest-stare",    
+    "pinaa": "jest pinaa/e2e/ --runInBand --reporters default jest-stare",
     "pinaaperform": "jest pinaa/perform/ --runInBand --reporters default jest-stare",
-    "nutealoadhome" : "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
-    "nutealoadregister" : "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200"
-
+    "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
+    "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",
+    "cerelac": "jest cerelac/micro/ --runInBand --reporters default jest-stare"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
     "lighthouse": "^5.6.0",
     "puppeteer": "^2.0.0",
     "puppeteer-firefox": "^0.5.0",
+    "puppeteer-full-page-screenshot": "^1.0.4",
     "puppeteer-loadtest": "^1.0.5",
     "request-promise": "^4.2.5",
     "shelljs": "^0.8.3"

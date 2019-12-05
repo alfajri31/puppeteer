@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 1,
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
   "numPassedTestSuites": 0,
-  "numPassedTests": 2,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
-  "numPendingTests": 7,
+  "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 10,
+  "numTotalTests": 0,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,156 +26,8 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1575284672521,
+  "startTime": 1575537104917,
   "success": false,
-  "testResults": [
-    {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mUnit register › post verify account without checklisted npwp\u001b[39m\u001b[22m\n\n    Failed: \"it should not reach here\"\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 382 | \u001b[39m                waitUntil \u001b[33m:\u001b[39m\u001b[32m'domcontentloaded'\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 383 | \u001b[39m            }) \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 384 | \u001b[39m            fail(\u001b[32m'it should not reach here'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m            \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 385 | \u001b[39m        }\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 386 | \u001b[39m       \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 387 | \u001b[39m      }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Env.fail (\u001b[2mnode_modules/jest-jasmine2/build/jasmine/Env.js\u001b[2m:778:61)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/e2e.test.js\u001b[39m\u001b[0m\u001b[2m:384:13)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 1,
-      "numPassingTests": 2,
-      "numPendingTests": 7,
-      "numTodoTests": 0,
-      "perfStats": {
-        "end": 1575284728492,
-        "start": 1575284674182
-      },
-      "snapshot": {
-        "added": 0,
-        "fileDeleted": false,
-        "matched": 0,
-        "unchecked": 0,
-        "unmatched": 0,
-        "updated": 0,
-        "uncheckedKeys": []
-      },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/e2e.test.js",
-      "testResults": [
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 1,
-          "failureMessages": [],
-          "fullName": "Unit register register success",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "register success"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register email with wrong format",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "email with wrong format"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register register without checklist TnC",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "register without checklist TnC"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register register with different confirm password",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "register with different confirm password"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register register without fill the form fields",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "register without fill the form fields"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register duplicate the register",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "duplicate the register"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "Unit register login success",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "login success"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 5146,
-          "failureMessages": [],
-          "fullName": "Unit register go to profile based on cookie",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "go to profile based on cookie"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 13695,
-          "failureMessages": [],
-          "fullName": "Unit register verify account with checklist npwp",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "verify account with checklist npwp"
-        },
-        {
-          "ancestorTitles": [
-            "Unit register"
-          ],
-          "duration": 31800,
-          "failureMessages": [
-            "Error: Failed: \"it should not reach here\"\n    at Env.fail (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmine/Env.js:778:61)\n    at fail (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:149:23)\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/e2e.test.js:384:13)"
-          ],
-          "fullName": "Unit register post verify account without checklisted npwp",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "failed",
-          "title": "post verify account without checklisted npwp"
-        }
-      ],
-      "skipped": false,
-      "leaks": false
-    }
-  ],
+  "testResults": [],
   "wasInterrupted": false
 }

@@ -8,6 +8,7 @@ module.exports = {
     faker : faker = require('faker'),
     cheerio : cheerio = require('cheerio'),
     request : request = require('request-promise'),
+    fullPageScreenshot :  fullPageScreenshot = require('puppeteer-full-page-screenshot'),
     browser : this.browser,
     page : this.page,
     lead : lead = {
@@ -40,10 +41,17 @@ module.exports = {
 
     no : no = 0,
     width: width = 375,
-    hegith: height = 812,
-    resolusi: resolusi = 'Mobile',
+    height : height = 812,
+    curr_height : this.curr_height,
+    resolusi: resolusi = 'Retina',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
+    src_height : async function () {
+        curr_height = await page.waitForFunction('document.body.scrollHeight')
+        return height = await page.evaluate((curr_height) => {
+            return curr_height
+        },curr_height)
+    }
 }
 
 
