@@ -42,15 +42,29 @@ module.exports = {
     no : no = 0,
     width: width = 375,
     height : height = 812,
-    curr_height : this.curr_height,
-    resolusi: resolusi = 'Retina',
+    scrollHeight : this.scrollHeight,
+    innerHeight : this.innerHeight,
+    clientHeight : this.clientHeight,
+    value : this.value,
+    resolusi: resolusi = 'Desktop',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
     src_height : async function () {
-        curr_height = await page.waitForFunction('document.body.scrollHeight')
-        return height = await page.evaluate((curr_height) => {
-            return curr_height
-        },curr_height)
+        scrollHeight = await page.waitForFunction('document.body.scrollHeight');
+        innerHeight = await page.waitForFunction('innerHeight');
+
+            return value = await page.evaluate((scrollHeight,innerHeight)=>{
+             
+                    if (scrollHeight == innerHeight) {
+                        return  innerHeight
+                    }
+                    else {
+                        return scrollHeight
+                    } 
+             
+           
+            },scrollHeight,innerHeight)
+        
     }
 }
 
@@ -60,9 +74,13 @@ resolution
 Iphone X : 375 x 812
 Desktop : 1366 x 768
 Tablet :
-Retina :
+Retina : 2048 = 1073
 
 user agent Android : Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; SCH-I535 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
 user agent : Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36
 user agent : Opera/9.80 (Android 4.1.2; Linux; Opera Mobi/ADR-1305251841) Presto/2.11.355 Version/12.10
+
+src height
+jika innerheight != scrollHeight maka pilih innerHeight 
+jika sama maka pilih scrollHeight
 */
