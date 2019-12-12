@@ -7,8 +7,9 @@
     "resultDir": "Renders/jest-stare"
   },
   "scripts": {
-    "test": "concurrently 'npm run milo' 'npm run nutea' 'npm run bri' 'npm run pinaa' 'npm run pinaaperform'npm run nutealoadgethome' 'npm run nutealoadgetregister' 'npm run cerelac' ",
-    "milo": "jest milo/e2e/ --runInBand --reporters default jest-stare",
+    "test": "concurrently 'npm run miloperm' 'npm run nutea' 'npm run bri' 'npm run pinaa' 'npm run pinaaperform'npm run nutealoadgethome' 'npm run nutealoadgetregister' 'npm run cerelac' 'npm run milo'",
+    "miloperm": "jest milo/perform/ --runInBand --reporters default jest-stare",
+    "milo" :  "jest milo/micro/ --runInBand --reporters default jest-stare",
     "nutea": "jest nutea/e2e/ --runInBand  --reporters default jest-stare",
     "bri": "jest bri/micro/bri1 --runInBand --reporters default jest-stare",
     "pinaa": "jest pinaa/e2e/ --runInBand --reporters default jest-stare",

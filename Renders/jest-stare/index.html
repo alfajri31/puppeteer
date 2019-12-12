@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 0 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 2 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -110,22 +110,21 @@
         <div class="d-none" id="test-summary"></div>
         <div class="d-none" id="test-config">{
   &quot;additionalResultsProcessors&quot;: [],
-  &quot;log&quot;: false,
   &quot;resultDir&quot;: &quot;Renders&#x2F;jest-stare&#x2F;&quot;,
   &quot;resultHtml&quot;: &quot;index.html&quot;,
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 0,
-  &quot;numFailedTests&quot;: 0,
+  &quot;numFailedTestSuites&quot;: 1,
+  &quot;numFailedTests&quot;: 1,
   &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 0,
+  &quot;numPassedTests&quot;: 1,
   &quot;numPendingTestSuites&quot;: 0,
   &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 0,
+  &quot;numTotalTests&quot;: 2,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -143,9 +142,61 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1575884184363,
+  &quot;startTime&quot;: 1576148307818,
   &quot;success&quot;: false,
-  &quot;testResults&quot;: [],
+  &quot;testResults&quot;: [
+    {
+      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › testing responsive\u001b[39m\u001b[22m\n\n    JSHandles can be evaluated only in the context they were created!\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 54 | \u001b[39m        innerHeight \u001b[33m&#x3D;\u001b[39m await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[32m&#39;innerHeight&#39;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 55 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 56 | \u001b[39m            \u001b[36mreturn\u001b[39m value \u001b[33m&#x3D;\u001b[39m await page\u001b[33m.\u001b[39mevaluate((scrollHeight\u001b[33m,\u001b[39minnerHeight)\u001b[33m&#x3D;&gt;\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                                      \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 57 | \u001b[39m                    \u001b[36mif\u001b[39m (scrollHeight \u001b[33m&#x3D;&#x3D;\u001b[39m innerHeight) {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 58 | \u001b[39m                        \u001b[36mreturn\u001b[39m  innerHeight\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 59 | \u001b[39m                    }\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.convertArgument (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js\u001b[2m:144:17)\u001b[2m\u001b[22m\n\u001b[2m          at Array.map (&lt;anonymous&gt;)\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext._evaluateInternal (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js\u001b[2m:110:25)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.evaluate (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js\u001b[2m:48:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.evaluate (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js\u001b[2m:112:20)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.evaluate (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js\u001b[2m:863:43)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.evaluate (\u001b[2mnode_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.src_height (\u001b[2mtest&#x2F;initialize.js\u001b[2m:56:39)\u001b[2m\u001b[22m\n&quot;,
+      &quot;numFailingTests&quot;: 1,
+      &quot;numPassingTests&quot;: 1,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1576148316973,
+        &quot;start&quot;: 1576148308525
+      },
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0,
+        &quot;uncheckedKeys&quot;: []
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;milo&#x2F;micro&#x2F;res.test.js&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 5457,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing testing responsive&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;testing responsive&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 57,
+          &quot;failureMessages&quot;: [
+            &quot;Error: JSHandles can be evaluated only in the context they were created!\n    at ExecutionContext.convertArgument (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js:144:17)\n    at Array.map (&lt;anonymous&gt;)\n    at ExecutionContext._evaluateInternal (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js:110:25)\n    at ExecutionContext.evaluate (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;ExecutionContext.js:48:23)\n    at ExecutionContext.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:112:23)\n    at DOMWorld.evaluate (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;DOMWorld.js:112:20)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)\n  -- ASYNC --\n    at Frame.&lt;anonymous&gt; (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:111:15)\n    at Page.evaluate (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;Page.js:863:43)\n    at Page.evaluate (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;puppeteer&#x2F;lib&#x2F;helper.js:112:23)\n    at Object.src_height (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;initialize.js:56:39)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
+          ],
+          &quot;fullName&quot;: &quot;e2e testing testing responsive&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;title&quot;: &quot;testing responsive&quot;
+        }
+      ],
+      &quot;skipped&quot;: false,
+      &quot;leaks&quot;: false
+    }
+  ],
   &quot;wasInterrupted&quot;: false
 }</div>
         <div class="d-none" id="test-global-config">{
@@ -174,7 +225,7 @@
   &quot;maxWorkers&quot;: 1,
   &quot;noStackTrace&quot;: false,
   &quot;nonFlagArgs&quot;: [
-    &quot;pinaa&#x2F;e2e&#x2F;&quot;
+    &quot;milo&#x2F;micro&#x2F;&quot;
   ],
   &quot;notify&quot;: false,
   &quot;notifyMode&quot;: &quot;failure-change&quot;,
@@ -195,7 +246,7 @@
   &quot;runTestsByPath&quot;: false,
   &quot;skipFilter&quot;: false,
   &quot;testFailureExitCode&quot;: 1,
-  &quot;testPathPattern&quot;: &quot;pinaa&#x2F;e2e&#x2F;&quot;,
+  &quot;testPathPattern&quot;: &quot;milo&#x2F;micro&#x2F;&quot;,
   &quot;testResultsProcessor&quot;: null,
   &quot;testSequencer&quot;: &quot;&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;@jest&#x2F;test-sequencer&#x2F;build&#x2F;index.js&quot;,
   &quot;updateSnapshot&quot;: &quot;new&quot;,

@@ -13,6 +13,8 @@ fs.readdir(dir, (err, files) => {
     }
 })
 
+let uniq = Math.floor(Math.random() * 100)
+
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
@@ -49,8 +51,8 @@ describe('Unit register',() => {
                 fullpage: true
             })
         })
-        await page.type('input[name="email"]',name+'@mailinator.com')
-        await page.type('input[name="name"]',name)
+        await page.type('input[name="email"]',name+uniq+'@mailinator.com')
+        await page.type('input[name="name"]',name+uniq)
         await page.type('input[name="password"]',password)
         await page.type('input[name="confirm password"]',confirm_password)
         await page.click('input[id="cb"]')
@@ -220,6 +222,7 @@ describe('Unit register',() => {
             }
             return json;
           });
+          
         // console.log(localStorageData)
         const myString1 = JSON.stringify(localStorageData)
         const myString2 = myString1.replace(/\\/g, '');
@@ -249,7 +252,7 @@ describe('Unit register',() => {
           }
         })
         inusers = JSON.parse(file)
-      await page.evaluateOnNewDocument (
+        await page.evaluateOnNewDocument (
         ({inusers}) => {
           console.log(JSON.stringify(inusers.session_auth)) //lihat di log browser 
           localStorage.setItem('session_auth',JSON.stringify(inusers.session_auth));
@@ -322,9 +325,7 @@ describe('Unit register',() => {
                 fullpage: true,
                 waitUntil :'domcontentloaded',
             }) 
-        })
-
-      
+        })  
         await page.click('a[class="button yellow full"]')
         await page.waitFor(2000)
 
@@ -336,9 +337,6 @@ describe('Unit register',() => {
                 waitUntil :'domcontentloaded',
             }) 
         })
-
-
-       
         pageTitle = await page.title();
         await expect(pageTitle).toMatch('PINA')
       },90000)
@@ -350,7 +348,6 @@ describe('Unit register',() => {
         await page.waitForFunction(
             'document.querySelector("body").innerText.includes("Your ID")',{timeout: 20000}
         );
-
         await init.src_height().then(async (value)=>{
             await page.setViewport({width: width,height : value})
             await page.screenshot({
@@ -360,8 +357,6 @@ describe('Unit register',() => {
             }) 
     
         })
-
- 
           //input ktp etc ...
           futureFileChooser = page.waitForFileChooser();
           await page.click('label[for="item-upload-ktp"]')
@@ -400,8 +395,8 @@ describe('Unit register',() => {
                 waitUntil :'domcontentloaded'
             }) 
         })
-          pageTitle = await page.title();
-          await expect(pageTitle).toMatch('PINA')
+        pageTitle = await page.title();
+        await expect(pageTitle).toMatch('PINA')
        
       },90000)
 

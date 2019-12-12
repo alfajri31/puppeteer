@@ -46,7 +46,7 @@ module.exports = {
     innerHeight : this.innerHeight,
     clientHeight : this.clientHeight,
     value : this.value,
-    resolusi: resolusi = 'Desktop',
+    resolusi: resolusi = 'Mobile',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
     src_height : async function () {
@@ -54,15 +54,12 @@ module.exports = {
         innerHeight = await page.waitForFunction('innerHeight');
 
             return value = await page.evaluate((scrollHeight,innerHeight)=>{
-             
                     if (scrollHeight == innerHeight) {
                         return  innerHeight
                     }
                     else {
                         return scrollHeight
                     } 
-             
-           
             },scrollHeight,innerHeight)
         
     }
