@@ -2,13 +2,13 @@
   "numFailedTestSuites": 1,
   "numFailedTests": 1,
   "numPassedTestSuites": 0,
-  "numPassedTests": 1,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 2,
+  "numTotalTests": 1,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1576148307818,
+  "startTime": 1576480518353,
   "success": false,
   "testResults": [
     {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › testing responsive\u001b[39m\u001b[22m\n\n    JSHandles can be evaluated only in the context they were created!\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 54 | \u001b[39m        innerHeight \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[32m'innerHeight'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 55 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 56 | \u001b[39m            \u001b[36mreturn\u001b[39m value \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mevaluate((scrollHeight\u001b[33m,\u001b[39minnerHeight)\u001b[33m=>\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                                      \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 57 | \u001b[39m                    \u001b[36mif\u001b[39m (scrollHeight \u001b[33m==\u001b[39m innerHeight) {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 58 | \u001b[39m                        \u001b[36mreturn\u001b[39m  innerHeight\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 59 | \u001b[39m                    }\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.convertArgument (\u001b[2mnode_modules/puppeteer/lib/ExecutionContext.js\u001b[2m:144:17)\u001b[2m\u001b[22m\n\u001b[2m          at Array.map (<anonymous>)\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext._evaluateInternal (\u001b[2mnode_modules/puppeteer/lib/ExecutionContext.js\u001b[2m:110:25)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.evaluate (\u001b[2mnode_modules/puppeteer/lib/ExecutionContext.js\u001b[2m:48:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.evaluate (\u001b[2mnode_modules/puppeteer/lib/DOMWorld.js\u001b[2m:112:20)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.evaluate (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:863:43)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.evaluate (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.src_height (\u001b[2mtest/initialize.js\u001b[2m:56:39)\u001b[2m\u001b[22m\n",
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › testing responsive\u001b[39m\u001b[22m\n\n    TimeoutError: Navigation timeout of 30000 ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 75 | \u001b[39m  describe(\u001b[32m\"e2e testing\"\u001b[39m\u001b[33m,\u001b[39m() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 76 | \u001b[39m    test(\u001b[32m\"testing responsive\"\u001b[39m\u001b[33m,\u001b[39m async () \u001b[33m=>\u001b[39m { \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 77 | \u001b[39m      await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://cerelac.mrmbdg.com/risenutri.php'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 78 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 79 | \u001b[39m        \u001b[32m'document.querySelector(\"body\").innerText.includes(\"Dengan Tekstur yang Pas\")'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 80 | \u001b[39m      )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Promise.then (\u001b[2mnode_modules/puppeteer/lib/LifecycleWatcher.js\u001b[2m:142:21)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:675:49)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/cerelac/micro/res.test.js\u001b[39m\u001b[0m\u001b[2m:77:18)\u001b[2m\u001b[22m\n",
       "numFailingTests": 1,
-      "numPassingTests": 1,
+      "numPassingTests": 0,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1576148316973,
-        "start": 1576148308525
+        "end": 1576480551071,
+        "start": 1576480518807
       },
       "snapshot": {
         "added": 0,
@@ -48,27 +48,15 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/milo/micro/res.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/cerelac/micro/res.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 5457,
-          "failureMessages": [],
-          "fullName": "e2e testing testing responsive",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing responsive"
-        },
-        {
-          "ancestorTitles": [
-            "e2e testing"
-          ],
-          "duration": 57,
+          "duration": 30007,
           "failureMessages": [
-            "Error: JSHandles can be evaluated only in the context they were created!\n    at ExecutionContext.convertArgument (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/ExecutionContext.js:144:17)\n    at Array.map (<anonymous>)\n    at ExecutionContext._evaluateInternal (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/ExecutionContext.js:110:25)\n    at ExecutionContext.evaluate (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/ExecutionContext.js:48:23)\n    at ExecutionContext.<anonymous> (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:112:23)\n    at DOMWorld.evaluate (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/DOMWorld.js:112:20)\n    at process._tickCallback (internal/process/next_tick.js:68:7)\n  -- ASYNC --\n    at Frame.<anonymous> (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:111:15)\n    at Page.evaluate (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Page.js:863:43)\n    at Page.evaluate (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:112:23)\n    at Object.src_height (/Users/fajri/Documents/auto/ppt/test/initialize.js:56:39)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            "TimeoutError: Navigation timeout of 30000 ms exceeded\n    at Promise.then (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/LifecycleWatcher.js:142:21)\n  -- ASYNC --\n    at Frame.<anonymous> (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:111:15)\n    at Page.goto (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Page.js:675:49)\n    at Page.goto (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:112:23)\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/cerelac/micro/res.test.js:77:18)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
           ],
           "fullName": "e2e testing testing responsive",
           "location": null,

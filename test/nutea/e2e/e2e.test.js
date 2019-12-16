@@ -42,7 +42,7 @@ function unique_codes() {
       return randomValue = values[parseInt(Math.random() * values.length)]
 }
 
-let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -75,8 +75,8 @@ beforeAll(async() => {
     await page.setUserAgent(useragent)
   },90000);
 
-afterAll(async() => {
-    // await browser.close()
+afterAll(async () => {
+    await browser.close()
 })
   // START TO TESTING
   describe("e2e testing",() => {
@@ -84,7 +84,7 @@ afterAll(async() => {
         await page.waitFor(3000)
         await page.goto('https://nukrazytea.mrmbdg.com/',{waitUntil:'domcontentloaded'})
         await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get nutea.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get nutea.png'),
             fullpage: true,
             waitUntil :'networkidle2'
         })
@@ -100,7 +100,7 @@ afterAll(async() => {
         await expect(setuju).toMatch('Setuju');   
         await page.waitFor(3000)  
         await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input unique_code.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post input unique_code.png'),
             fullpage: true,
             waitUntil :'networkidle2'
         })
@@ -119,7 +119,7 @@ afterAll(async() => {
       await page.waitForSelector('input[id="name"]', {visible: true,timeout: 20000});
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get register nutea through input code.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get register nutea through input code.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -141,7 +141,7 @@ afterAll(async() => {
         await page.waitForSelector('div[class="token"]', {visible: true,timeout: 20000});
         await page.waitFor(3000)
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register nutea through input code.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post register nutea through input code.png'),
           fullpage: true,
           waitUntil :'networkidle2'
         })
@@ -150,7 +150,7 @@ afterAll(async() => {
       }
       catch(err) {
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register nutea through input code.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post register nutea through input code.png'),
           fullpage: true,
           waitUntil :'networkidle2'
         })
@@ -166,7 +166,7 @@ afterAll(async() => {
       await page.waitForSelector('input[id="name"]', {visible: true,timeout: 20000});
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get register nutea through free trial.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get register nutea through free trial.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -188,7 +188,7 @@ afterAll(async() => {
         await page.waitForSelector('div[class="token"]', {visible: true,timeout: 20000});
         await page.waitFor(3000)
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register nutea through free trial.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post register nutea through free trial.png'),
           fullpage: true,
           waitUntil :'networkidle2'
         })
@@ -197,7 +197,7 @@ afterAll(async() => {
       }
       catch(err) {
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post register nutea through free trial.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post register nutea through free trial.png'),
           fullpage: true,
           waitUntil :'networkidle2'
         })
@@ -227,7 +227,7 @@ afterAll(async() => {
       await page.click('button[id="submitCode"]')
       await page.waitFor(5000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input code too many invalid code.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post input code too many invalid code.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -249,7 +249,7 @@ afterAll(async() => {
       );
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post input code wrong format.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post input code wrong format.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -261,7 +261,7 @@ afterAll(async() => {
       await page.goBack();
       await page.goForward();
       await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get nutea.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get nutea.png'),
           fullpage: true,
           waitUntil :'networkidle2'
       })
@@ -284,7 +284,7 @@ afterAll(async() => {
       await page.waitFor(3000)
       await page.click('a[href="/login"]')  
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login through input code.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get login through input code.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })
@@ -298,7 +298,7 @@ afterAll(async() => {
     await page.click('a[href="https://nukrazytea.mrmbdg.com/login"]')
     await page.click(3000)
     await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get login nutea home.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get login nutea home.png'),
         fullpage: true,
         waitUntil :'networkidle2'
     })
@@ -306,7 +306,7 @@ afterAll(async() => {
     await page.type('input[id="password"]',password)
     await page.waitFor(3000)
     await page.screenshot({
-      path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post login nutea home.png'),
+      path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post login nutea home.png'),
       fullpage: true,
       waitUntil :'networkidle2'
     })
@@ -332,7 +332,7 @@ afterAll(async() => {
       await page.goForward();
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/cookie is working.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/cookie is working.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -359,7 +359,7 @@ afterAll(async() => {
       await page.click('a[href="https://nukrazytea.mrmbdg.com/howtogame_1"]')
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/get can enter uljima in mobile.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/get can enter uljima in mobile.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       }) 
@@ -415,7 +415,7 @@ afterAll(async() => {
       await page.click('a[data-request="onLogout"]')   
       await page.waitFor(3000)
       await page.screenshot({
-        path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/post logout through input code.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/nutea/'+resolusi+'/post logout through input code.png'),
         fullpage: true,
         waitUntil :'networkidle2'
       })   

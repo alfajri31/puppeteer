@@ -12,7 +12,7 @@ const CHAR_SETS = {
 function mapString(s, func) {
   return Array.prototype.map.call(s, func).join('')
 }
-let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -38,11 +38,12 @@ beforeAll(async() => {
     await page.setUserAgent(useragent)
   },90000);
 
-afterAll(() => {
-    browser.close()
+afterAll(async() => {
+    await browser.close()
 })
   // START TO TESTING
   describe("e2e testing",() => {
+    
     test("testing responsive", async() => { 
       await page.goto('https://milo.mrmbdg.com/product/')
       await page.waitForFunction(
@@ -51,7 +52,7 @@ afterAll(() => {
       init.src_height().then(async (value)=>{
         await page.setViewport({width: width,height : value})
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/Beranda.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/Beranda.png'),
           fullpage: true,
           waitUntil :'networkidle2'
         })
@@ -66,12 +67,29 @@ afterAll(() => {
         init.src_height().then(async (value)=>{
           await page.setViewport({width: width,height : value})
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/Beranda II.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/detail.png'),
             fullpage: true,
             waitUntil :'networkidle2'
           })
         })
     },10000)
+
+
+    test('testing responsive',async() => {
+      await page.goto('https://milo.mrmbdg.com/product/category-detail.php')
+      await page.waitForFunction(
+        'document.querySelector("body").innerText.includes("Nutritional Info")',{timeout: 20000}
+      );
+      init.src_height().then(async (value)=>{
+        await page.setViewport({width: width,height : value})
+        await page.screenshot({
+          path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/category-detail.png'),
+          fullpage: true,
+          waitUntil :'networkidle2'
+        })
+      })
+  },10000)
+
 
   });
 

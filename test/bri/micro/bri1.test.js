@@ -21,7 +21,7 @@ function randChar(charType) {
 }
 
 
-let dir= path.join(__dirname,'../../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -55,8 +55,8 @@ beforeAll(async() => {
 },90000)
 
 
-afterAll(async() => {
-  await browser.close()
+afterAll(() => {
+  browser.close()
 })
 
   // START TO TESTING
@@ -98,13 +98,13 @@ afterAll(async() => {
           timeout: 20000
         });
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 1.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 1.png'),
           fullpage: true
         })
       }
       catch(err) {
         await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 1.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 1.png'),
           fullpage: true
         })
       }
@@ -372,13 +372,13 @@ afterAll(async() => {
           });
           await page.waitFor(1000)
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 2.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 2.png'),
             fullpage: true
           })
         }
         catch(err) {
             await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 2.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 2.png'),
             fullpage: true
           })
     
@@ -440,13 +440,13 @@ afterAll(async() => {
           await page.waitFor(1000)
   
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 3.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 3.png'),
             fullpage: true
           })
         }
         catch(err) {
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 3.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 3.png'),
             fullpage: true
           })
         }
@@ -556,13 +556,13 @@ afterAll(async() => {
           });
           await page.waitFor(1000)
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 4.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 4.png'),
             fullpage: true
           })
         }
         catch(err) {
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/'+resolusi+'/'+no+'-step 4.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 4.png'),
             fullpage: true
           })
         }

@@ -51,16 +51,9 @@ module.exports = {
     headless : headless = true,
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
-        innerHeight = await page.waitForFunction('innerHeight');
-
-            return value = await page.evaluate((scrollHeight,innerHeight)=>{
-                    if (scrollHeight == innerHeight) {
-                        return  innerHeight
-                    }
-                    else {
+            return value = await page.evaluate((scrollHeight)=>{
                         return scrollHeight
-                    } 
-            },scrollHeight,innerHeight)
+            },scrollHeight)        
         
     }
 }

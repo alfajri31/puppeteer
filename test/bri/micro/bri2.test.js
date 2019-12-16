@@ -22,7 +22,7 @@ function randChar(charType) {
 }
 
 
-let dir= path.join(__dirname,'../../Renders/Unit/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/bri2/'+resolusi)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -108,7 +108,7 @@ afterAll(async() => {
       await page.waitFor(3000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 1_priv.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/bri2/'+resolusi+'/'+no+'-step 1_priv.png'),
         fullpage: true
       })
 
@@ -358,7 +358,7 @@ afterAll(async() => {
         await page.waitFor(3000)
 
       await page.screenshot({
-        path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 2+priv.png'),
+        path: path.join(__dirname,'../../../Renders/Unit/bri2/'+resolusi+'/'+no+'-step 2+priv.png'),
         fullpage: true
       })
 
@@ -418,7 +418,7 @@ afterAll(async() => {
         await page.waitFor(3000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 3_priv.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/bri2/'+resolusi+'/'+no+'-step 3_priv.png'),
           fullpage: true
         })
 
@@ -525,7 +525,7 @@ afterAll(async() => {
         await page.waitFor(5000)
 
         await page.screenshot({
-          path: path.join(__dirname,'../../Renders/Unit/'+resolusi+'/'+no+'-step 4+priv.png'),
+          path: path.join(__dirname,'../../../Renders/Unit/bri2/'+resolusi+'/'+no+'-step 4+priv.png'),
           fullpage: true
         })
 
