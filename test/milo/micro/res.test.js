@@ -38,57 +38,57 @@ beforeAll(async() => {
     await page.setUserAgent(useragent)
   },90000);
 
-afterAll(async() => {
-    await browser.close()
+  beforeEach(async()=>{
+    await page.setViewport({
+      width: width,
+      height: height
+  })
+  })
+
+
+afterAll(() => {
+    browser.close()
 })
   // START TO TESTING
   describe("e2e testing",() => {
-    
-    test("testing responsive", async() => { 
-      await page.goto('https://milo.mrmbdg.com/product/')
-      await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("MILO Bubuk")',{timeout: 20000}
-      );
-      init.src_height().then(async (value)=>{
-        await page.setViewport({width: width,height : value})
-        await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/Beranda.png'),
-          fullpage: true,
-          waitUntil :'networkidle2'
-        })
-      })     
-    },100000)
 
-    test('testing responsive',async() => {
-        await page.goto('https://milo.mrmbdg.com/product/detail.php')
-        await page.waitForFunction(
-          'document.querySelector("body").innerText.includes("Nutritional Info")',{timeout: 20000}
-        );
-        init.src_height().then(async (value)=>{
+    test("testing responsive", async () => { 
+      await page.goto('https://milo.mrmbdg.com/product/',{waitUntil: 'networkidle2'})
+      await init.src_height().then(async (value)=>{
           await page.setViewport({width: width,height : value})
           await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/detail.png'),
-            fullpage: true,
-            waitUntil :'networkidle2'
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get beranda.png'),
+              fullpage: true,
+              waitUntil : 'networkidle2'
           })
-        })
-    },10000)
+      }) 
+    },100000)
 
+    test("testing responsive", async () => { 
+      await page.goto('https://milo.mrmbdg.com/product/detail.php',{waitUntil: 'networkidle2'})
+      await init.src_height().then(async (value)=>{
+          await page.setViewport({width: width,height : value})
+          await page.screenshot({
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get detail.png'),
+              fullpage: true,
+              waitUntil : 'networkidle2'
+          })
+      }) 
+    },100000)
 
-    test('testing responsive',async() => {
-      await page.goto('https://milo.mrmbdg.com/product/category-detail.php')
-      await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("Nutritional Info")',{timeout: 20000}
-      );
-      init.src_height().then(async (value)=>{
-        await page.setViewport({width: width,height : value})
-        await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/category-detail.png'),
-          fullpage: true,
-          waitUntil :'networkidle2'
-        })
-      })
-  },10000)
+    test("testing responsive", async () => { 
+      await page.goto('https://milo.mrmbdg.com/product/category-detail.php',{waitUntil: 'networkidle2'})
+      await init.src_height().then(async (value)=>{
+          console.log(value)
+          await page.setViewport({width: width,height : value})
+          await page.screenshot({
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get category-detail.png'),
+              fullpage: true,
+              waitUntil : 'networkidle2'
+          })
+      }) 
+    },100000)
+    
 
 
   });

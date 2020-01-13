@@ -54,7 +54,7 @@ fs.readdir(dir, (err, files) => {
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
-        args: [ '--ignore-certificate-errors','--shm-size=1gb']
+        args: [ '--ignore-certificate-errors']
     })
     page = await browser.newPage()
     await page.setViewport({
@@ -74,20 +74,17 @@ afterAll(() => {
   // START TO TESTING
   describe("e2e testing",() => {
     test("testing responsive", async () => { 
-      await page.goto('http://cerelac.mrmbdg.com/risenutri.php')
-      await page.waitForFunction(
-        'document.querySelector("body").innerText.includes("Dengan Tekstur yang Pas")',{timeout: 20000}
-      );
-      init.src_height().then(async (value)=>{
-        await page.waitFor(2000)
-        await page.setViewport({width: width,height : value})
-        await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/cerelac/'+resolusi+'/landing page.png'),
-          fullpage: true,
-          waitUntil :'networkidle2'
-        })
-      })    
+      await page.goto('http://cerelac.mrmbdg.com/risenutri.php',{waitUntil: 'networkidle2'})
+      await init.src_height().then(async (value)=>{
+          await page.setViewport({width: width,height : value})
+          await page.screenshot({
+              path: path.join(__dirname,'../../../Renders/Unit/cerelac/'+resolusi+'/get landing page.png'),
+              fullpage: true
+          })
+      }) 
     },100000)
+
+
   });
 
   

@@ -52,6 +52,7 @@ module.exports = {
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
+                console.log(scrollHeight)
                         return scrollHeight
             },scrollHeight)        
         

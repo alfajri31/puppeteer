@@ -1,4 +1,5 @@
 require('../../initialize')
+let init = require('../../initialize')
 
 CHAR_SETS = {
     A: '123456789',
@@ -32,10 +33,10 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
   browser = await puppeteer.launch({
-    headless: headless,
+    headless: false,
     // slowMo: 20,
     // executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    args: [ '--ignore-certificate-errors' ]
+    args: [ '--ignore-certificate-errors','--use-fake-ui-for-media-stream' ]
   })
   page = await browser.newPage()
   await page.authenticate({ 
@@ -53,6 +54,13 @@ beforeAll(async() => {
   confirm_password = confirm_pass
   await page.setUserAgent(useragent)
 },90000)
+
+beforeEach(async() => {
+  await page.setViewport({
+    width: width,
+    height: height
+})
+})
 
 
 afterAll(() => {
@@ -92,47 +100,36 @@ afterAll(() => {
     test('fill form step one', async() =>{
 
       try {
-        await page.waitForSelector('label[for="selfie_scan"]', 
+        await page.waitForSelector('label[name="selfie_scan"]', 
         {
           visible: true,
           timeout: 20000
         });
-        await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 1.png'),
-          fullpage: true
-        })
+        await init.src_height().then(async (value)=>{
+          await page.setViewport({width: width,height : value})
+          await page.screenshot({
+              path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-1.png'),
+              fullpage: true,
+              waitUntil : 'networkidle2'
+          })
+      }) 
       }
       catch(err) {
-        await page.screenshot({
-          path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 1.png'),
-          fullpage: true
-        })
+        await init.src_height().then(async (value)=>{
+          await page.setViewport({width: width,height : value})
+          await page.screenshot({
+              path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-1.png'),
+              fullpage: true,
+              waitUntil : 'networkidle2'
+          })
+      }) 
       }
       await page.waitFor(1000)
-      // await page.click('label[for="selfie_scan"]')
-      // await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="selfie_scan"] > span', {
-      //   visible: true,
-      // });
-      // await page.click('label[for="ktp_scan"]')
-      // await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="ktp_scan"] > span', {
-      //   visible: true,
-      // });
-      // await page.click('label[for="npwp_scan"]')
-      // await page.waitForSelector('div[class="file-input-wrapper is-uploaded"] > label[for="npwp_scan"] > span', {
-      //   visible: true,
-      // });
-  
-      // let input = await page.$('input[id="selfie_scan"]')
-      // await page.click('label[for="selfie_scan"]')
-      // await input.uploadFile('/pictures/sample1.png')
-      
+      await page.click('button[class="btn btn-warning btn-selfie"]')
+      await page.click ('button[onClick="takeSnapshot()"]')
+      await page.click('button[onClick="uploadImage()"]')
+      await page.waitFor(2000)
       filePath = path.join(process.cwd()+'/pictures/sample1.png');
-      console.log(filePath)
-      futureFileChooser = page.waitForFileChooser();
-      await page.click('label[for="selfie_scan"]')
-      fileChooser = await futureFileChooser;
-      await fileChooser.accept([filePath]);
-
       console.log(filePath)
       futureFileChooser = page.waitForFileChooser();
       await page.click('label[for="ktp_scan"]')
@@ -371,16 +368,24 @@ afterAll(() => {
             waitUntil : "domcontentloaded"
           });
           await page.waitFor(1000)
-          await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 2.png'),
-            fullpage: true
-          })
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
         }
         catch(err) {
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
             await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 2.png'),
-            fullpage: true
-          })
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
     
         }
 
@@ -438,17 +443,24 @@ afterAll(() => {
             timeout: 20000
           });
           await page.waitFor(1000)
-  
-          await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 3.png'),
-            fullpage: true
-          })
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
         }
         catch(err) {
-          await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 3.png'),
-            fullpage: true
-          })
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
         }
       
 
@@ -555,16 +567,24 @@ afterAll(() => {
             timeout: 20000
           });
           await page.waitFor(1000)
-          await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 4.png'),
-            fullpage: true
-          })
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
         }
         catch(err) {
-          await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/'+no+'-step 4.png'),
-            fullpage: true
-          })
+          await init.src_height().then(async (value)=>{
+            await page.setViewport({width: width,height : value})
+            await page.screenshot({
+                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        }) 
         }
 
         //nama bank 1 
