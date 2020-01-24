@@ -40,13 +40,13 @@ module.exports = {
     fileChooser : this.fileChooser,
 
     no : no = 0,
-    width: width = 375,
-    height : height = 812,
+    width_mobile: width_mobile = 375,
+    height_mobile : height_mobile = 812,
     scrollHeight : this.scrollHeight,
     innerHeight : this.innerHeight,
     clientHeight : this.clientHeight,
     value : this.value,
-    resolusi: resolusi = 'Mobile',
+    res_mobile: res_mobile = 'Mobile',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
     src_height : async function () {

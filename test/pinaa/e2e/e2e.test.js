@@ -2,7 +2,7 @@ let init = require('../../initialize')
 require('../../initialize').page
 
 
-let dir= path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -23,10 +23,7 @@ beforeAll(async() => {
         username: 'grt' , 
         password:'pina2019' 
     });
-    await page.setViewport({
-        width: width,
-        height:  height
-    })
+    await page.setViewport({width: width_mobile,height:height_mobile})
     name = name
     email = email
     password = password
@@ -41,9 +38,9 @@ describe('Unit register',() => {
     test('register success', async() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/get register-successfully.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/get register-successfully.png'),
                 fullpage: true
             })
         })
@@ -57,12 +54,16 @@ describe('Unit register',() => {
             'document.querySelector("body").innerText.includes("Forgot Password?")',{timeout: 25000}
         );
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register-successfully.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register-successfully.png'),
                 fullpage: true
             })
         })
+        console.log('email'+' '+name+uniq+'@mailinator.com')
+        console.log('username'+' '+name+uniq)
+        console.log('password'+' '+password)
+
         pageTitle = await page.title();
         await expect(pageTitle).toMatch('Login | PINA')
     },90000)
@@ -78,9 +79,9 @@ describe('Unit register',() => {
         await page.click('input[id="cb"]')
         await page.click('a[class="button full"]')
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register - wrong format email.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register - wrong format email.png'),
                 fullpage: true
             })
         })
@@ -99,9 +100,9 @@ describe('Unit register',() => {
         await page.type('input[name="confirm password"]',confirm_password)
         await page.click('a[class="button full"]')
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register - tnc not checklisted.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register - tnc not checklisted.png'),
                 fullpage: true
             })
         })
@@ -120,9 +121,9 @@ describe('Unit register',() => {
         await page.type('input[name="confirm password"]','abc123')
         await page.click('a[class="button full"]')
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register - without different confirm password.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register - without different confirm password.png'),
                 fullpage: true
             })
         })
@@ -137,9 +138,9 @@ describe('Unit register',() => {
         await page.goForward();
         await page.click('a[class="button full"]')   
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register - without fill form fields.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register - without fill form fields.png'),
                 fullpage: true
             })
         })
@@ -152,16 +153,16 @@ describe('Unit register',() => {
         await page.goto('http://pinaapp.id/register',{waitUntil:'networkidle2'})
         await page.goBack();
         await page.goForward();
-        await page.type('input[name="email"]',name+'@mailinator.com')
-        await page.type('input[name="name"]',name)
+        await page.type('input[name="email"]',name+uniq+'@mailinator.com')
+        await page.type('input[name="name"]',name+uniq)
         await page.type('input[name="password"]',password)
         await page.type('input[name="confirm password"]',confirm_password)
         await page.click('input[id="cb"]')
         await page.click('a[class="button full"]')
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post register - duplicate register.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post register - duplicate register.png'),
                 fullpage: true,
             })
         })
@@ -174,15 +175,15 @@ describe('Unit register',() => {
         await page.goBack();
         await page.goForward();
         await page.screenshot({
-            path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/get login-successfully.png'),
+            path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/get login-successfully.png'),
             fullpage: true,
         })
         await page.type('input[name="email"]',name+'@mailinator.com')
         await page.type('input[name="password"]',password)
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/get login-successfully[static].png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/get login-successfully[static].png'),
                 fullpage: true
             })
         })
@@ -191,9 +192,9 @@ describe('Unit register',() => {
             await page.waitForSelector('a[class="button capitalize"]', {visible: true,timeout: 60000});
             await page.waitFor(3000)
             await init.src_height().then(async (value)=>{
-                await page.setViewport({width: width,height : value})
+                await page.setViewport({width: width_mobile,height : value})
                 await page.screenshot({
-                    path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post login-successfully.png'),
+                    path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post login-successfully.png'),
                     fullpage: true
                 })
             })
@@ -201,9 +202,9 @@ describe('Unit register',() => {
         }
         catch(err) {
             await init.src_height().then(async (value)=>{
-                await page.setViewport({width: width,height : value})
+                await page.setViewport({width: width_mobile,height : value})
                 await page.screenshot({
-                    path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post login-successfull error.png'),
+                    path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post login-successfull error.png'),
                     fullpage: true
                 })
             })
@@ -257,9 +258,9 @@ describe('Unit register',() => {
         await page.goto('http://pinaapp.id/dashboard',{waitUntil:'networkidle2'})
         await page.waitFor(3000)
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/cookie always working.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/cookie always working.png'),
                 fullpage: true,
                 waitUntil :'domcontentloaded',
               })
@@ -277,9 +278,9 @@ describe('Unit register',() => {
         );
         
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/get verify account.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/get verify account.png'),
                 fullpage: true,
                 waitUntil :'domcontentloaded',
             }) 
@@ -315,9 +316,9 @@ describe('Unit register',() => {
         await page.waitFor(2000)
 
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post verify account with checklist npwp- static.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post verify account with checklist npwp- static.png'),
                 fullpage: true,
                 waitUntil :'domcontentloaded',
             }) 
@@ -326,9 +327,9 @@ describe('Unit register',() => {
         await page.waitFor(2000)
 
         await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
+            await page.setViewport({width: width_mobile,height : value})
             await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+resolusi+'/post verify account with checklist npwp - successfully.png'),
+                path: path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile+'/post verify account with checklist npwp - successfully.png'),
                 fullpage: true,
                 waitUntil :'domcontentloaded',
             }) 
@@ -336,5 +337,9 @@ describe('Unit register',() => {
         pageTitle = await page.title();
         await expect(pageTitle).toMatch('PINA')
       },90000)
- 
+
+      
+
+
+
 })
