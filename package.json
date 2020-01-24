@@ -12,7 +12,7 @@
     "milo" :  "jest milo/micro/ --runInBand --reporters default jest-stare",
     "nutea": "jest nutea/e2e/ --runInBand  --reporters default jest-stare",
     "bri": "jest bri/micro/bri1 --runInBand --reporters default jest-stare",
-    "pinaa": "jest pinaa/e2e/ --runInBand --reporters default jest-stare",
+    "pinaa": "jest pinaa/e2e/sequence --runInBand --reporters default jest-stare",
     "pinaaperform": "jest pinaa/perform/ --runInBand --reporters default jest-stare",
     "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
     "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",

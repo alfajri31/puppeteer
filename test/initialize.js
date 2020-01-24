@@ -49,6 +49,8 @@ module.exports = {
     res_mobile: res_mobile = 'Mobile',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
     headless : headless = true,
+    slowMo : slowMo = 0,
+    uniq : uniq = Math.floor(Math.random() * 100),
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
