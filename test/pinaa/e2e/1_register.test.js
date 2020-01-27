@@ -26,9 +26,10 @@ beforeAll(async() => {
     confirm_password = password
 },90000)
 
-afterAll(() => {
-    browser.close()
-})
+afterAll(async () => {
+    await browser.close()
+},5000)
+
 
 describe('Register Scoope',() => {
     test('Register success', async() => {

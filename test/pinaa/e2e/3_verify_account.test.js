@@ -17,9 +17,9 @@ beforeAll(async() => {
     await page.setViewport({width: width_mobile,height:height_mobile})
 },90000)
 
-afterAll(() => {
-    browser.close()
-})
+afterAll(async () => {
+    await browser.close()
+},5000)
 
 describe('Verify_account',() => {
     
