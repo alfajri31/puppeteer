@@ -1,7 +1,8 @@
 {
   "name": "ppt",
   "version": "1.0.0",
-  "description": "",
+  "description": "fortesting purpose",
+  "git repository": "https://github.com/alfajri31/puppeteer)", 
   "main": "index.js",
   "jest-stare": {
     "resultDir": "Renders/jest-stare"
