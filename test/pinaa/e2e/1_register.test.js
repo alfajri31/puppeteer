@@ -15,7 +15,6 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
-        path: '',
         headless: headless,
         executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         slowMo: slowMo,
