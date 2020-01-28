@@ -1,5 +1,6 @@
 let init = require('../../initialize')
 require('../../initialize').page
+require('../../initialize').browser
 
 
 beforeAll(async() => {
