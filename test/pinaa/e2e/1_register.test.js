@@ -2,6 +2,7 @@ let init = require('../../initialize')
 require('../../initialize').page
 
 
+
 let dir= path.join(__dirname,'../../../Renders/Unit/pinaa/'+res_mobile)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
@@ -13,7 +14,9 @@ fs.readdir(dir, (err, files) => {
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
+        path: '',
         headless: headless,
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         slowMo: slowMo,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
     })

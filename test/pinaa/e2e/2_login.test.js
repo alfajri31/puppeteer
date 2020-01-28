@@ -1,9 +1,11 @@
 let init = require('../../initialize')
 require('../../initialize').page
 
+
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         slowMo: slowMo,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
     })

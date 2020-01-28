@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 1,
-  "numFailedTests": 2,
+  "numFailedTests": 6,
   "numPassedTestSuites": 0,
-  "numPassedTests": 1,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 3,
+  "numTotalTests": 6,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1580104908236,
+  "startTime": 1580184174329,
   "success": false,
   "testResults": [
     {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mLogin Scoope › Login\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Dashboard | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 83 | \u001b[39m        })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 84 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 85 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Dashboard | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 86 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 87 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 88 | \u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/2_login.test.js\u001b[39m\u001b[0m\u001b[2m:85:33)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mVerify_account › Verify account with checklist npwp\u001b[39m\u001b[22m\n\n    No node found for selector: a[class=\"button no-margin\"]\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 60 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 61 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 62 | \u001b[39m        await page\u001b[33m.\u001b[39mclick(\u001b[32m'a[class=\"button no-margin\"]'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                   \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 63 | \u001b[39m        await page\u001b[33m.\u001b[39mwaitForFunction(\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 64 | \u001b[39m            \u001b[32m'document.querySelector(\"body\").innerText.includes(\"Your ID\")'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m \u001b[35m20000\u001b[39m}\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 65 | \u001b[39m        )\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat assert (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:283:11)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat DOMWorld.click (\u001b[2mnode_modules/puppeteer/lib/DOMWorld.js\u001b[2m:366:5)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:1067:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/3_verify_account.test.js\u001b[39m\u001b[0m\u001b[2m:62:20)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 2,
-      "numPassingTests": 1,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register success\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register success\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 37 | \u001b[39mdescribe(\u001b[32m'Register Scoope'\u001b[39m\u001b[33m,\u001b[39m() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 38 | \u001b[39m    test(\u001b[32m'Register success'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 39 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 40 | \u001b[39m        await init\u001b[33m.\u001b[39msrc_height()\u001b[33m.\u001b[39mthen(async (value)\u001b[33m=>\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 41 | \u001b[39m            await page\u001b[33m.\u001b[39msetViewport({width\u001b[33m:\u001b[39m width_mobile\u001b[33m,\u001b[39mheight \u001b[33m:\u001b[39m value})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 42 | \u001b[39m            await page\u001b[33m.\u001b[39mscreenshot({\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:39:9)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with email with wrong format\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with email with wrong format\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 66 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 67 | \u001b[39m    test(\u001b[32m'Register with email with wrong format'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 68 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 69 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 70 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 71 | \u001b[39m        await page\u001b[33m.\u001b[39mtype(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test123com'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:68:9)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register without checklist the TnC\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register without checklist the TnC\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 88 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 89 | \u001b[39m    test(\u001b[32m'Register without checklist the TnC'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 90 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 91 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 92 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 93 | \u001b[39m        await page\u001b[33m.\u001b[39mtype(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39mname\u001b[33m+\u001b[39muniq\u001b[33m+\u001b[39m\u001b[32m'@mailinator.com'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:90:9)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with different confirm password\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with different confirm password\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 109 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 110 | \u001b[39m    test(\u001b[32m'Register with different confirm password'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 111 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 112 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 113 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 114 | \u001b[39m        await page\u001b[33m.\u001b[39mtype(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39mname\u001b[33m+\u001b[39muniq\u001b[33m+\u001b[39m\u001b[32m'@mailinator.com'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:111:9)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with blank form fields\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with blank form fields\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 129 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 130 | \u001b[39m    test(\u001b[32m'Register with blank form fields'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 131 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 132 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 133 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 134 | \u001b[39m        await page\u001b[33m.\u001b[39mclick(\u001b[32m'a[class=\"button full\"]'\u001b[39m)   \u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:131:9)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Duplicate the register\u001b[39m\u001b[22m\n\n    Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\n    TROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat onClose (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:348:14)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ChildProcess.helper.addEventListener.error (\u001b[2mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:339:64)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Duplicate the register\u001b[39m\u001b[22m\n\n    ReferenceError: page is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 145 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 146 | \u001b[39m    test(\u001b[32m'Duplicate the register'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {  \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 147 | \u001b[39m        await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://pinaapp.id/register'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m\u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m        \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 148 | \u001b[39m        await page\u001b[33m.\u001b[39mgoBack()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 149 | \u001b[39m        await page\u001b[33m.\u001b[39mgoForward()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 150 | \u001b[39m        await page\u001b[33m.\u001b[39mtype(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39mname\u001b[33m+\u001b[39muniq\u001b[33m+\u001b[39m\u001b[32m'@mailinator.com'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:147:9)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 6,
+      "numPassingTests": 0,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1580104989091,
-        "start": 1580104908920
+        "end": 1580184176638,
+        "start": 1580184174874
       },
       "snapshot": {
         "added": 0,
@@ -48,47 +48,97 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/sequence.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "Login Scoope"
+            "Register Scoope"
           ],
-          "duration": 66213,
+          "duration": 2,
           "failureMessages": [
-            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Dashboard | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/2_login.test.js:85:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:39:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
           ],
-          "fullName": "Login Scoope Login",
+          "fullName": "Register Scoope Register success",
           "location": null,
           "numPassingAsserts": 0,
           "status": "failed",
-          "title": "Login"
+          "title": "Register success"
         },
         {
           "ancestorTitles": [
-            "Verify_account"
+            "Register Scoope"
           ],
-          "duration": 7720,
-          "failureMessages": [],
-          "fullName": "Verify_account Coockie is avtive",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "Coockie is avtive"
-        },
-        {
-          "ancestorTitles": [
-            "Verify_account"
-          ],
-          "duration": 3353,
+          "duration": 1,
           "failureMessages": [
-            "Error: No node found for selector: a[class=\"button no-margin\"]\n    at assert (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:283:11)\n    at DOMWorld.click (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/DOMWorld.js:366:5)\n    at process._tickCallback (internal/process/next_tick.js:68:7)\n  -- ASYNC --\n    at Frame.<anonymous> (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:111:15)\n    at Page.click (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Page.js:1067:29)\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/3_verify_account.test.js:62:20)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:68:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
           ],
-          "fullName": "Verify_account Verify account with checklist npwp",
+          "fullName": "Register Scoope Register with email with wrong format",
           "location": null,
           "numPassingAsserts": 0,
           "status": "failed",
-          "title": "Verify account with checklist npwp"
+          "title": "Register with email with wrong format"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 1,
+          "failureMessages": [
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:90:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register without checklist the TnC",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register without checklist the TnC"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 0,
+          "failureMessages": [
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:111:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register with different confirm password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register with different confirm password"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 1,
+          "failureMessages": [
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:131:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register with blank form fields",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register with blank form fields"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 0,
+          "failureMessages": [
+            "Error: Failed to launch chrome! spawn /Users/fajri/Documents/auto/ppt/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome ENOENT\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md\n\n    at onClose (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:348:14)\n    at ChildProcess.helper.addEventListener.error (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Launcher.js:339:64)\n    at ChildProcess.emit (events.js:198:13)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:246:12)\n    at onErrorNT (internal/child_process.js:415:16)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+            "ReferenceError: page is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:147:9)\n    at Object.asyncJestTest (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/fajri/Documents/auto/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Duplicate the register",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Duplicate the register"
         }
       ],
       "skipped": false,

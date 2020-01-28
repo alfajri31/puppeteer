@@ -1,11 +1,13 @@
 let init = require('../../initialize')
 require('../../initialize').page
 
+
 let uniq = Math.floor(Math.random() * 100)
 
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         slowMo: slowMo,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
     })
