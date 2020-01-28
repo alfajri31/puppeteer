@@ -13,7 +13,7 @@
     "milo": "jest milo/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "nutea": "jest nutea/e2e/ --runInBand   --detectOpenHandles --forceExit  --reporters default jest-stare",
     "bri": "jest bri/micro/bri1 --runInBand  --detectOpenHandles --forceExit --reporters default jest-stare",
-    "pinaa": "jest pinaa/e2e/1_register --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
+    "pinaa": "jest pinaa/e2e/sequence --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
     "pinaaperform": "jest pinaa/perform/ --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
     "cerelac": "jest cerelac/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",

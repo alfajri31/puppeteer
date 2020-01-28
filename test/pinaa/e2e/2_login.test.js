@@ -6,7 +6,7 @@ require('../../initialize').browser
 beforeAll(async() => {
     browser = await puppeteer.launch({
         headless: headless,
-        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
+        // executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/linux-706915/chrome-linux/chrome'),
         slowMo: slowMo,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
     })
@@ -19,7 +19,9 @@ beforeAll(async() => {
 },90000)
 
 afterAll(async () => {
-    await browser.close()
+    // await browser.close()
+    var shell = require('shelljs');
+    shell.exec('pkill Chromium')
 },5000)
 
 describe('Login Scoope',() => {
