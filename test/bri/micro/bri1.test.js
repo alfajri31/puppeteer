@@ -1,5 +1,7 @@
 require('../../initialize')
 let init = require('../../initialize')
+const devices = require('puppeteer/DeviceDescriptors');
+const iPhone = devices['iPhone 6']
 
 CHAR_SETS = {
     A: '123456789',
@@ -22,7 +24,7 @@ function randChar(charType) {
 }
 
 
-let dir= path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/bri/'+res_mobile)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -34,19 +36,20 @@ fs.readdir(dir, (err, files) => {
 beforeAll(async() => {
   browser = await puppeteer.launch({
     headless: false,
-    // slowMo: 20,
+    slowMo: 100,
     // executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     args: [ '--ignore-certificate-errors','--use-fake-ui-for-media-stream' ]
   })
   page = await browser.newPage()
+  await page.emulate(iPhone);
   await page.authenticate({ 
       username: 'grt' , 
       password:'pina2019' 
   });
-  await page.setViewport({
-      width: width,
-      height: height
-  })
+  // await page.setViewport({
+  //     width: width,
+  //     height: height
+  // })
   // await page.emulate(device)
   name = name
   email = email
@@ -57,44 +60,68 @@ beforeAll(async() => {
 
 beforeEach(async() => {
   await page.setViewport({
-    width: width,
-    height: height
+    width: width_mobile,
+    height: height_mobile
 })
 })
 
 
-afterAll(() => {
-  browser.close()
+afterAll(async() => {
+  // var shell = require('shelljs');
+  // shell.exec('pkill Chromium')
 })
 
   // START TO TESTING
   describe("input form tanpa privyID",() => {
 
     test("checklist tnc", async() => { 
+      let modifiedNavigator =  'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'
+      let mm
+       await page.evaluateOnNewDocument(({modifiedNavigator},{mm})=> {
+         mm = Object.defineProperty(window.navigator,'userAgent',{
+           value: modifiedNavigator,
+           configurable: false,
+           enumerable: false,
+           writable: false
+         })
+         mm = Object.defineProperty(window.navigator,'appVersion',{
+          value: '5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+          configurable: false,
+          enumerable: false,
+          writable: false
+        })
+        mm = Object.defineProperty(window.navigator,'maxTouchPoints',{
+          value: '1',
+          configurable: false,
+          enumerable: false,
+          writable: false
+        })
+        const newProto = navigator.__proto__;
+        delete newProto.webdriver;
+        navigator.__proto__ = newProto;
+        console.log(mm)
+       },{modifiedNavigator},{mm})
+
       await page.goto('https://britouch.mrmbdg.com/apply');
       await page.waitForSelector('a[data-id="9"]', 
       {
         visible : true,
         timeout: 20000
       });
-      await page.waitFor(1000)
       await page.click('a[data-id="9"]');
       await page.waitForSelector('a[class="btn btn-bri btn-bri__orange btn-cta btn-continue"]', 
       {
         visible : true,
         timeout: 20000
       });
-      await page.waitFor(1000)
       await page.click('a[class="btn btn-bri btn-bri__orange btn-cta btn-continue"]');
       await page.waitForSelector('label[for="tnc-agreement-check"]', 
       {
         visible : true,
         timeout: 20000
       });
-      await page.waitFor(1000)
       await page.click('label[for="tnc-agreement-check"]');
-      await page.waitFor(1000)
-      await page.click('p[class="text-center btn-wrapper"]');
+      await page.click('p[class="text-center btn-wrapper"]'); dd
     },900000)
 
     test('fill form step one', async() =>{
@@ -124,13 +151,12 @@ afterAll(() => {
           })
       }) 
       }
-      await page.waitFor(1000)
       await page.click('button[class="btn btn-warning btn-selfie"]')
       await page.click ('button[onClick="takeSnapshot()"]')
       await page.click('button[onClick="uploadImage()"]')
-      await page.waitFor(2000)
       filePath = path.join(process.cwd()+'/pictures/sample1.png');
       console.log(filePath)
+
       futureFileChooser = page.waitForFileChooser();
       await page.click('label[for="ktp_scan"]')
       fileChooser = await futureFileChooser;
@@ -358,412 +384,408 @@ afterAll(() => {
     },900000)
 
 
-      test('fill form step two', async() => {
+      // test('fill form step two', async() => {
       
-        try {
-          await page.waitForSelector('input[id="inputFamilyName"]', 
-          {
-            visible: true,
-            timeout: 20000,
-            waitUntil : "domcontentloaded"
-          });
-          await page.waitFor(1000)
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
-        }
-        catch(err) {
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
+      //   try {
+      //     await page.waitForSelector('input[id="inputFamilyName"]', 
+      //     {
+      //       visible: true,
+      //       timeout: 20000,
+      //       waitUntil : "domcontentloaded"
+      //     });
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
+      //   }
+      //   catch(err) {
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-2.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
     
-        }
+      //   }
 
-      await page.type('input[id="inputFamilyName"]',"mira")
+      // await page.type('input[id="inputFamilyName"]',"mira")
 
-      //input hubungan keluarga
-      const hub = Math.floor(Math.random()*4)
-      if (hub == 0 ) {
-        await page.click('label[for="inputFamilyRelationshipSaudara Kandung"]')
-      }
-      else if(hub == 1) {
-        await page.click('label[for="inputFamilyRelationshipAnak"]')
-      }
-      else if(hub == 2) {
-        await page.click('label[for="inputFamilyRelationshipOrang Tua"]')
-      }
-      else if(hub ==3) {
-        await page.type('input[id="inputFamilyRelationshipInput"]', 'lain lain juga')
-      }
+      // //input hubungan keluarga
+      // const hub = Math.floor(Math.random()*4)
+      // if (hub == 0 ) {
+      //   await page.click('label[for="inputFamilyRelationshipSaudara Kandung"]')
+      // }
+      // else if(hub == 1) {
+      //   await page.click('label[for="inputFamilyRelationshipAnak"]')
+      // }
+      // else if(hub == 2) {
+      //   await page.click('label[for="inputFamilyRelationshipOrang Tua"]')
+      // }
+      // else if(hub ==3) {
+      //   await page.type('input[id="inputFamilyRelationshipInput"]', 'lain lain juga')
+      // }
 
-      //input alamat runah sekarang 
-      await page.type('textarea[id="inputFamilyAddress"]','Perumahan Griya Mandala, Jl. Kehormatan Blok A No.19')
+      // //input alamat runah sekarang 
+      // await page.type('textarea[id="inputFamilyAddress"]','Perumahan Griya Mandala, Jl. Kehormatan Blok A No.19')
 
-      //input kota 
-      // await page.click('select[id="inputFamilyCity"]');
-      await page.select('select[id="inputFamilyCity"]', 'Bekasi Timur')
+      // //input kota 
+      // // await page.click('select[id="inputFamilyCity"]');
+      // await page.select('select[id="inputFamilyCity"]', 'Bekasi Timur')
 
-      //input RT dan RW 
-      await page.type('input[id="inputFamilyRT"]',mapString('0A', randChar))
-      await page.type('input[id="inputFamilyRW"]',mapString('0A', randChar))
+      // //input RT dan RW 
+      // await page.type('input[id="inputFamilyRT"]',mapString('0A', randChar))
+      // await page.type('input[id="inputFamilyRW"]',mapString('0A', randChar))
 
-      //input kode pos
-      await page.type('input[id="inputFamilyPostalCode"]',mapString('AAAAAA', randChar))
+      // //input kode pos
+      // await page.type('input[id="inputFamilyPostalCode"]',mapString('AAAAAA', randChar))
 
-      //telepon_rumah 
-      await page.type('input[id="inputFamilyPhoneNumber"]',mapString('0266AAAAAA', randChar))
+      // //telepon_rumah 
+      // await page.type('input[id="inputFamilyPhoneNumber"]',mapString('0266AAAAAA', randChar))
 
-      //input no hp 
-      await page.type('input[id="inputFamilyCellPhoneNumber"]', mapString('08AAAAAAAA', randChar))
+      // //input no hp 
+      // await page.type('input[id="inputFamilyCellPhoneNumber"]', mapString('08AAAAAAAA', randChar))
 
-      //input telepon kantor 
-      await page.type('input[id="inputFamilyWorkNumber"]', mapString('22AAA', randChar))
+      // //input telepon kantor 
+      // await page.type('input[id="inputFamilyWorkNumber"]', mapString('22AAA', randChar))
 
-      //submit 
-      await page.click('input[type="submit"]')
+      // //submit 
+      // await page.click('input[type="submit"]')
 
-      },900000)
+      // },900000)
 
-      test('fill form step three', async() => {
+      // test('fill form step three', async() => {
 
-        try {
-          await page.waitForSelector('input[id="inputWorkName"]', 
-          {
-            visible: true,
-            timeout: 20000
-          });
-          await page.waitFor(1000)
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
-        }
-        catch(err) {
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
-        }
+      //   try {
+      //     await page.waitForSelector('input[id="inputWorkName"]', 
+      //     {
+      //       visible: true,
+      //       timeout: 20000
+      //     });
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
+      //   }
+      //   catch(err) {
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-3.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
+      //   }
       
 
-        //input nama kantor
-        const kantor = Math.floor(Math.random() * 9)
-        await page.type('input[id="inputWorkName"]', 'kantor'+kantor)
+      //   //input nama kantor
+      //   const kantor = Math.floor(Math.random() * 9)
+      //   await page.type('input[id="inputWorkName"]', 'kantor'+kantor)
 
-        //input alamat kantor
-        await page.type('textarea[id="inputWorkAddress"]','jl.abcd, provinsi jawa barat, 1234')
+      //   //input alamat kantor
+      //   await page.type('textarea[id="inputWorkAddress"]','jl.abcd, provinsi jawa barat, 1234')
 
-        //input kode pos kantor
-        await page.type('input[id="inputWorkPostalCode"]','1234')
+      //   //input kode pos kantor
+      //   await page.type('input[id="inputWorkPostalCode"]','1234')
 
-        //input telepon kantor
-        await page.type('input[name="perusahaan_telepon_kode_area"]','0432')
-        await page.type('input[id="inputWorkNumber"]','277777')
+      //   //input telepon kantor
+      //   await page.type('input[name="perusahaan_telepon_kode_area"]','0432')
+      //   await page.type('input[id="inputWorkNumber"]','277777')
 
-        //input EXT 
-        await page.type('input[name="perusahaan_telepon_ext"]','666')
+      //   //input EXT 
+      //   await page.type('input[name="perusahaan_telepon_ext"]','666')
 
-        //input fax kantor
-        await page.type('input[name="perusahaan_fax_kode"]','0444')
-        await page.type('input[name="perusahaan_fax_nomor"]','543211')
+      //   //input fax kantor
+      //   await page.type('input[name="perusahaan_fax_kode"]','0444')
+      //   await page.type('input[name="perusahaan_fax_nomor"]','543211')
 
-        //input kota kantor
-        await page.click('a[class="select2-choice"]');
-        await page.click('div[id="select2-result-label-11"]','021');
+      //   //input kota kantor
+      //   await page.click('a[class="select2-choice"]');
+      //   await page.click('div[id="select2-result-label-11"]','021');
 
-        //input status pekerjaan
-        const pekerjaan = Math.floor(Math.random() * 5)
-        if(pekerjaan == 0 ) {
-          await page.click('label[for="inputOccupationKaryawan"]')
-        }
-        else if(pekerjaan == 1) {
-          await page.click('label[for="inputOccupationPensiunan"]')
-        }
-        else if(pekerjaan == 2) {
-          await page.click('label[for="inputOccupationWiraswasta"]')
-        }
-        else if(pekerjaan == 3) {
-          await page.click('label[for="inputOccupationProfesional"]')
-        }
-        else if(pekerjaan == 4) {
-          await page.click('label[for="inputOccupationTNI/Polri"]')
-        }
+      //   //input status pekerjaan
+      //   const pekerjaan = Math.floor(Math.random() * 5)
+      //   if(pekerjaan == 0 ) {
+      //     await page.click('label[for="inputOccupationKaryawan"]')
+      //   }
+      //   else if(pekerjaan == 1) {
+      //     await page.click('label[for="inputOccupationPensiunan"]')
+      //   }
+      //   else if(pekerjaan == 2) {
+      //     await page.click('label[for="inputOccupationWiraswasta"]')
+      //   }
+      //   else if(pekerjaan == 3) {
+      //     await page.click('label[for="inputOccupationProfesional"]')
+      //   }
+      //   else if(pekerjaan == 4) {
+      //     await page.click('label[for="inputOccupationTNI/Polri"]')
+      //   }
 
-        //input bidang pekerjaan
-        const bidang = Math.floor((Math.random() * 20) +1  )
-        await page.click('select[id="inputWorkField"]')
-        await page.select('select[name="perusahaan_bidang_usaha"]', bidang.toString());
+      //   //input bidang pekerjaan
+      //   const bidang = Math.floor((Math.random() * 20) +1  )
+      //   await page.click('select[id="inputWorkField"]')
+      //   await page.select('select[name="perusahaan_bidang_usaha"]', bidang.toString());
 
-        //status pekerjaan 
-        const status_pek = Math.floor(Math.random() * 3)
-        if(status_pek == 0) {
-          await page.click('label[for="inputWorkStatusPemilik"]');
-        }
-        else if(status_pek == 1) {
-          await page.click('label[for="inputWorkStatusKaryawan Kontrak"]');
-        }
-        else if(status_pek == 2) {
-          await page.click('label[for="inputWorkStatusKaryawan Tetap"]');
-        }
+      //   //status pekerjaan 
+      //   const status_pek = Math.floor(Math.random() * 3)
+      //   if(status_pek == 0) {
+      //     await page.click('label[for="inputWorkStatusPemilik"]');
+      //   }
+      //   else if(status_pek == 1) {
+      //     await page.click('label[for="inputWorkStatusKaryawan Kontrak"]');
+      //   }
+      //   else if(status_pek == 2) {
+      //     await page.click('label[for="inputWorkStatusKaryawan Tetap"]');
+      //   }
 
-        //input lama bekerja 
-        const tahun_bek = Math.floor(Math.random() * 9)
-        await page.type('input[id="inputWorkTimeYear"]','0'+tahun_bek.toString())
-        const bulan_bek = Math.floor(Math.random() * 9)
-        await page.type('input[id="inputWorkTimeMonth"]','0'+bulan_bek.toString())
+      //   //input lama bekerja 
+      //   const tahun_bek = Math.floor(Math.random() * 9)
+      //   await page.type('input[id="inputWorkTimeYear"]','0'+tahun_bek.toString())
+      //   const bulan_bek = Math.floor(Math.random() * 9)
+      //   await page.type('input[id="inputWorkTimeMonth"]','0'+bulan_bek.toString())
 
-        //input pangkat atau jabatan
-        const pangkat = Math.floor(Math.random() * 9)
-        await page.type('input[id="inputWorkPosition"]','posisi'+' '+pangkat.toString())
+      //   //input pangkat atau jabatan
+      //   const pangkat = Math.floor(Math.random() * 9)
+      //   await page.type('input[id="inputWorkPosition"]','posisi'+' '+pangkat.toString())
 
-        //input jumlah karyawan 
-        const jml_kar = Math.floor(Math.random() * 4) 
-        if (jml_kar == 0 ) {
-          await page.click('label[for="inputEmployee1-9"]')
-        }
-        else if(jml_kar == 1) {
-          await page.click('label[for="inputEmployee51-100"]')
-        }
-        else if(jml_kar == 2) {
-          await page.click('label[for="inputEmployee10-50"]')
-        }
-        else if(jml_kar == 3) {
-          await page.click('label[for="inputEmployeeLebih dari 100"]')
-        }
+      //   //input jumlah karyawan 
+      //   const jml_kar = Math.floor(Math.random() * 4) 
+      //   if (jml_kar == 0 ) {
+      //     await page.click('label[for="inputEmployee1-9"]')
+      //   }
+      //   else if(jml_kar == 1) {
+      //     await page.click('label[for="inputEmployee51-100"]')
+      //   }
+      //   else if(jml_kar == 2) {
+      //     await page.click('label[for="inputEmployee10-50"]')
+      //   }
+      //   else if(jml_kar == 3) {
+      //     await page.click('label[for="inputEmployeeLebih dari 100"]')
+      //   }
 
-        //input penghasilan tambahan
-        await page.type('input[id="inputAdditionalIncome"]','5000000')
+      //   //input penghasilan tambahan
+      //   await page.type('input[id="inputAdditionalIncome"]','5000000')
 
-        //submit form 
-        await page.click('input[type="submit"]')
+      //   //submit form 
+      //   await page.click('input[type="submit"]')
 
-      },90000)
+      // },90000)
 
-      test('fill form step fourth', async() => {
-
-
-        try {
-          await page.waitForSelector('input[name="cc_nama_bank_1"]', 
-          {
-            visible: true,
-            timeout: 20000
-          });
-          await page.waitFor(1000)
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
-        }
-        catch(err) {
-          await init.src_height().then(async (value)=>{
-            await page.setViewport({width: width,height : value})
-            await page.screenshot({
-                path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
-                fullpage: true,
-                waitUntil : 'networkidle2'
-            })
-        }) 
-        }
-
-        //nama bank 1 
-        //input nama bank
-        let nama_bank = ['bni','bca','mandiri','etc']
-        let bank = Math.floor(Math.random() * 4)
-        await page.type('input[name="cc_nama_bank_1"]',nama_bank[bank].toString())
-
-        //input no kartu 
-        await page.type('input[name="cc_no_kartu_1"]',mapString('AAAAAAAAAAAA',randChar))
-
-        //sejak bulan
-        let sejak_bul = Math.floor((Math.random() * 9)+1)
-        await page.type('input[name="cc_sejak_bulan_1"]','0'+sejak_bul.toString())
-
-        //sejak tahun
-        let sejak_tahun = Math.floor((Math.random() * 9)+1)
-        // await page.type('input[name="cc_sejak_tahun_1"]', '200'+sejak_tahun.toString())
-        await page.type('input[name="cc_sejak_tahun_1"]', '0'+sejak_tahun.toString())
-
-        //limit 1
-        let limit_1 = Math.floor((Math.random()*9)+1)
-        await page.type('input[name="cc_limit_1"]',limit_1.toString()+'000000')
-
-        //nama bank 2
-        //input nama bank
-        nama_bank = ['bni','bca','mandiri','etc']
-        bank = Math.floor(Math.random() * 4)
-        await page.type('input[name="cc_nama_bank_2"]',nama_bank[bank].toString())
-
-        //input no kartu 
-        await page.type('input[name="cc_no_kartu_2"]',mapString('AAAAAAAAAAAA',randChar))
-
-        //sejak bulan
-        sejak_bul = Math.floor((Math.random() * 9)+1)
-        await page.type('input[name="cc_sejak_bulan_2"]','0'+sejak_bul.toString())
-
-        //sejak tahun
-        sejak_tahun = Math.floor((Math.random() * 9)+1)
-        // await page.type('input[name="cc_sejak_tahun_2"]', '200'+sejak_tahun.toString())
-        await page.type('input[name="cc_sejak_tahun_2"]', '0'+sejak_tahun.toString())
-
-        //limit 2
-        limit_1 = Math.floor((Math.random()*9)+1)
-        await page.type('input[name="cc_limit_2"]',limit_1.toString()+'000000')
+      // test('fill form step fourth', async() => {
 
 
-        /*informasi rekening optional
-        */
+      //   try {
+      //     await page.waitForSelector('input[name="cc_nama_bank_1"]', 
+      //     {
+      //       visible: true,
+      //       timeout: 20000
+      //     });
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
+      //   }
+      //   catch(err) {
+      //     await init.src_height().then(async (value)=>{
+      //       await page.setViewport({width: width,height : value})
+      //       await page.screenshot({
+      //           path: path.join(__dirname,'../../../Renders/Unit/bri/'+resolusi+'/step-4.png'),
+      //           fullpage: true,
+      //           waitUntil : 'networkidle2'
+      //       })
+      //   }) 
+      //   }
 
-        //penagihan kartu
-        const penag_card = Math.floor(Math.random() * 2)
-        if (penag_card == 0) {
-          await page.click('label[for="inputBillingAddressHome"]')
-        }
-        else {
-          await page.click('label[for="inputBillingAddressWork"]')
-        }
+      //   //nama bank 1 
+      //   //input nama bank
+      //   let nama_bank = ['bni','bca','mandiri','etc']
+      //   let bank = Math.floor(Math.random() * 4)
+      //   await page.type('input[name="cc_nama_bank_1"]',nama_bank[bank].toString())
 
-        //pembayaran auto debet
-        await page.type('input[name="auto_debet_no_rekening"]',mapString('AAAAAAAAAAA',randChar))
+      //   //input no kartu 
+      //   await page.type('input[name="cc_no_kartu_1"]',mapString('AAAAAAAAAAAA',randChar))
 
-        //sebesar auto debet
-        const sebesar = Math.floor(Math.random() * 2)
-        if(sebesar == 0) {
-          await page.click('label[for="inputAutoDebetNominalMinimum"]')
-        }
-        else {
-          await page.click('label[for="inputAutoDebetNominalFull"]')
-        }
+      //   //sejak bulan
+      //   let sejak_bul = Math.floor((Math.random() * 9)+1)
+      //   await page.type('input[name="cc_sejak_bulan_1"]','0'+sejak_bul.toString())
 
-        //bri protection plus
-        const protect = Math.floor(Math.random() * 2)
-        if(protect == 0 ) {
-          await page.click('label[for="inputProtectionPlusAgree"]')
-        }
-        else {
-          await page.click('label[for="inputProtectionPlusDisagree"]')
-        }
+      //   //sejak tahun
+      //   let sejak_tahun = Math.floor((Math.random() * 9)+1)
+      //   // await page.type('input[name="cc_sejak_tahun_1"]', '200'+sejak_tahun.toString())
+      //   await page.type('input[name="cc_sejak_tahun_1"]', '0'+sejak_tahun.toString())
 
-        //tambahan kartu advanced
-       // const advance = Math.floor(Math.random() * 2)
-        const advance = 1
-        if(advance == 0 ) {
+      //   //limit 1
+      //   let limit_1 = Math.floor((Math.random()*9)+1)
+      //   await page.type('input[name="cc_limit_1"]',limit_1.toString()+'000000')
+
+      //   //nama bank 2
+      //   //input nama bank
+      //   nama_bank = ['bni','bca','mandiri','etc']
+      //   bank = Math.floor(Math.random() * 4)
+      //   await page.type('input[name="cc_nama_bank_2"]',nama_bank[bank].toString())
+
+      //   //input no kartu 
+      //   await page.type('input[name="cc_no_kartu_2"]',mapString('AAAAAAAAAAAA',randChar))
+
+      //   //sejak bulan
+      //   sejak_bul = Math.floor((Math.random() * 9)+1)
+      //   await page.type('input[name="cc_sejak_bulan_2"]','0'+sejak_bul.toString())
+
+      //   //sejak tahun
+      //   sejak_tahun = Math.floor((Math.random() * 9)+1)
+      //   // await page.type('input[name="cc_sejak_tahun_2"]', '200'+sejak_tahun.toString())
+      //   await page.type('input[name="cc_sejak_tahun_2"]', '0'+sejak_tahun.toString())
+
+      //   //limit 2
+      //   limit_1 = Math.floor((Math.random()*9)+1)
+      //   await page.type('input[name="cc_limit_2"]',limit_1.toString()+'000000')
+
+
+      //   /*informasi rekening optional
+      //   */
+
+      //   //penagihan kartu
+      //   const penag_card = Math.floor(Math.random() * 2)
+      //   if (penag_card == 0) {
+      //     await page.click('label[for="inputBillingAddressHome"]')
+      //   }
+      //   else {
+      //     await page.click('label[for="inputBillingAddressWork"]')
+      //   }
+
+      //   //pembayaran auto debet
+      //   await page.type('input[name="auto_debet_no_rekening"]',mapString('AAAAAAAAAAA',randChar))
+
+      //   //sebesar auto debet
+      //   const sebesar = Math.floor(Math.random() * 2)
+      //   if(sebesar == 0) {
+      //     await page.click('label[for="inputAutoDebetNominalMinimum"]')
+      //   }
+      //   else {
+      //     await page.click('label[for="inputAutoDebetNominalFull"]')
+      //   }
+
+      //   //bri protection plus
+      //   const protect = Math.floor(Math.random() * 2)
+      //   if(protect == 0 ) {
+      //     await page.click('label[for="inputProtectionPlusAgree"]')
+      //   }
+      //   else {
+      //     await page.click('label[for="inputProtectionPlusDisagree"]')
+      //   }
+
+      //   //tambahan kartu advanced
+      //  // const advance = Math.floor(Math.random() * 2)
+      //   const advance = 1
+      //   if(advance == 0 ) {
           
-        //kartu tambahan (advanded)
-        await page.click('label[for="inputAddAdditionalCardAgree"]')
+      //   //kartu tambahan (advanded)
+      //   await page.click('label[for="inputAddAdditionalCardAgree"]')
 
-        //OR kartu tambahan (advanded)
-        // await page.click('label[for="inputAddAdditionalCardDisagree"]')
+      //   //OR kartu tambahan (advanded)
+      //   // await page.click('label[for="inputAddAdditionalCardDisagree"]')
 
-        //alamat penagihan kartu(advanced)
-        await page.waitForSelector('label[for="inputBillingAddressAdditionalCard"]', {
-          visible: true,
-        });
+      //   //alamat penagihan kartu(advanced)
+      //   await page.waitForSelector('label[for="inputBillingAddressAdditionalCard"]', {
+      //     visible: true,
+      //   });
 
-        const penag_card_adv = Math.floor(Math.random() *2)
-        if(penag_card_adv ==  0) {
-          await page.click('label[for="inputBillingAddressAdditionalCardHome"]')
-        }
-        else {
-          await page.click('label[for="inputBillingAddressAdditionalCardWork"]')
-        }
+      //   const penag_card_adv = Math.floor(Math.random() *2)
+      //   if(penag_card_adv ==  0) {
+      //     await page.click('label[for="inputBillingAddressAdditionalCardHome"]')
+      //   }
+      //   else {
+      //     await page.click('label[for="inputBillingAddressAdditionalCardWork"]')
+      //   }
 
-        //nama lengkap(adv)
-        name = faker.name.firstName() + faker.name.lastName()
-        const nama_lengkap_adv = name
-        await page.type('input[name="kt_nama_lengkap"]',nama_lengkap_adv)
+      //   //nama lengkap(adv)
+      //   name = faker.name.firstName() + faker.name.lastName()
+      //   const nama_lengkap_adv = name
+      //   await page.type('input[name="kt_nama_lengkap"]',nama_lengkap_adv)
 
-        //jenis kelamin
-        const jenis_kel = Math.floor(Math.random()*2)
-        if(jenis_kel==0) {
-          await page.click('label[for="inputGenderAdditionalCardPria"]')
-        } 
-        else {
-          await page.click('label[for="inputGenderAdditionalCardWanita"]')
-        }
+      //   //jenis kelamin
+      //   const jenis_kel = Math.floor(Math.random()*2)
+      //   if(jenis_kel==0) {
+      //     await page.click('label[for="inputGenderAdditionalCardPria"]')
+      //   } 
+      //   else {
+      //     await page.click('label[for="inputGenderAdditionalCardWanita"]')
+      //   }
 
-        //kewarganegaraan(adva)
-        const kewar_adv = Math.floor(Math.random()*2)
-        if(kewar_adv==0) {
-          await page.click('label[for="inputNationalityAdditionalCardWNI"]')
-        } 
-        else {
-          await page.click('label[for="inputNationalityAdditionalCardWNA"]')
-        }
+      //   //kewarganegaraan(adva)
+      //   const kewar_adv = Math.floor(Math.random()*2)
+      //   if(kewar_adv==0) {
+      //     await page.click('label[for="inputNationalityAdditionalCardWNI"]')
+      //   } 
+      //   else {
+      //     await page.click('label[for="inputNationalityAdditionalCardWNA"]')
+      //   }
 
-        //nomor KTP/passport(adva)
-        await page.type('input[name="kt_nomor_identitas"]',mapString('AAAAAAAAAAAAAAAE',randChar))
+      //   //nomor KTP/passport(adva)
+      //   await page.type('input[name="kt_nomor_identitas"]',mapString('AAAAAAAAAAAAAAAE',randChar))
 
-        //ttl (advanced)
-        await page.type('input[name="kt_tempat_lahir"]','sumedang')
-        await page.click('input[name="kt_tanggal_lahir"]')
-        await page.click('a[class="ui-state-default ui-state-hover"]');
+      //   //ttl (advanced)
+      //   await page.type('input[name="kt_tempat_lahir"]','sumedang')
+      //   await page.click('input[name="kt_tanggal_lahir"]')
+      //   await page.click('a[class="ui-state-default ui-state-hover"]');
 
-        //hubungan kartu(adva)
-        await page.waitForSelector('label[for="inputFamilyRelationshipAdditionalCard"]', {
-          visible: true,
-        });
-        await page.waitFor(5000)
-        const hub_kartu = Math.floor(Math.random()*5)
-        if(hub_kartu == 0) {
-          await page.click('label[for="inputFamilyRelationshipAdditionalCardSuami/Istri"]')
-        } 
-        else if(hub_kartu == 1) {
-          await page.click('label[for="inputFamilyRelationshipAdditionalCardOrang Tua"]')
-        }
-        else if(hub_kartu == 2) {
-          await page.type('input[name="kt_hubungan_other"]','lain lain juga')
-        }
-        else if(hub_kartu == 3) {
-          await page.click('label[for="inputFamilyRelationshipAdditionalCardSaudara"]')
-        }
-        else {
-          await page.click('label[for="inputFamilyRelationshipAdditionalCardAnak"]')
-        }
+      //   //hubungan kartu(adva)
+      //   await page.waitForSelector('label[for="inputFamilyRelationshipAdditionalCard"]', {
+      //     visible: true,
+      //   });
+      //   const hub_kartu = Math.floor(Math.random()*5)
+      //   if(hub_kartu == 0) {
+      //     await page.click('label[for="inputFamilyRelationshipAdditionalCardSuami/Istri"]')
+      //   } 
+      //   else if(hub_kartu == 1) {
+      //     await page.click('label[for="inputFamilyRelationshipAdditionalCardOrang Tua"]')
+      //   }
+      //   else if(hub_kartu == 2) {
+      //     await page.type('input[name="kt_hubungan_other"]','lain lain juga')
+      //   }
+      //   else if(hub_kartu == 3) {
+      //     await page.click('label[for="inputFamilyRelationshipAdditionalCardSaudara"]')
+      //   }
+      //   else {
+      //     await page.click('label[for="inputFamilyRelationshipAdditionalCardAnak"]')
+      //   }
 
-        //maksimum limit(adva)
-        await page.click('label[for="inputCardLimitAdditionalCardDifferent"]')
+      //   //maksimum limit(adva)
+      //   await page.click('label[for="inputCardLimitAdditionalCardDifferent"]')
 
-        //jumlah dikehendaki jika berbeda
-        await page.type('input[name="kt_limit_rupiah"]','7000000')
+      //   //jumlah dikehendaki jika berbeda
+      //   await page.type('input[name="kt_limit_rupiah"]','7000000')
 
-        }
-        else {
-          // await page.click('label[for="inputProtectionPlusDisagree"]')
-           await page.click('label[for="inputAddAdditionalCardDisagree"]')
-        }
+      //   }
+      //   else {
+      //     // await page.click('label[for="inputProtectionPlusDisagree"]')
+      //      await page.click('label[for="inputAddAdditionalCardDisagree"]')
+      //   }
 
-        //submit form 
-        await page.click('input[type="submit"]')
+      //   //submit form 
+      //   await page.click('input[type="submit"]')
 
-        fs.writeFileSync('./logs user registration',JSON.stringify(users), function(err) {
-            if (err) {
-              console.log(err);
-            }
-        })
+      //   fs.writeFileSync('./logs user registration',JSON.stringify(users), function(err) {
+      //       if (err) {
+      //         console.log(err);
+      //       }
+      //   })
 
-      },90000)
+      // },90000)
 
   });
 

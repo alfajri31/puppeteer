@@ -47,7 +47,7 @@ module.exports = {
     clientHeight : this.clientHeight,
     value : this.value,
     res_mobile: res_mobile = 'Mobile',
-    useragent: useragent ="Mozilla/5.0 (Linux; Android 7.0; SM-G930V Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36",
+    useragent: useragent ="Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1",
     headless : headless = true,
     slowMo : slowMo = 0,
     uniq : uniq = Math.floor(Math.random() * 100),
