@@ -28,7 +28,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: https://alfajri31.github.io/pina.github.io/", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "muhammad.fajri@mirumagency.com,rizky.shofyannugraha@mirumagency";
+            mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: https://alfajri31.github.io/pina.github.io/", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "muhammad.fajri@mirumagency.com";
         }
     }
 }
