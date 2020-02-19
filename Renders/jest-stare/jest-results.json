@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 1,
-  "numFailedTests": 2,
+  "numFailedTests": 5,
   "numPassedTestSuites": 0,
-  "numPassedTests": 0,
+  "numPassedTests": 4,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 2,
+  "numTotalTests": 9,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1580271491904,
+  "startTime": 1582021794053,
   "success": false,
   "testResults": [
     {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1minput form tanpa privyID › checklist tnc\u001b[39m\u001b[22m\n\n    ReferenceError: dd is not defined\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 122 | \u001b[39m      })\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 123 | \u001b[39m      await page\u001b[33m.\u001b[39mclick(\u001b[32m'label[for=\"tnc-agreement-check\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 124 | \u001b[39m      await page\u001b[33m.\u001b[39mclick(\u001b[32m'p[class=\"text-center btn-wrapper\"]'\u001b[39m)\u001b[33m;\u001b[39m dd\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 125 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m900000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 126 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 127 | \u001b[39m    test(\u001b[32m'fill form step one'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/bri/micro/bri1.test.js\u001b[39m\u001b[0m\u001b[2m:124:63)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1minput form tanpa privyID › fill form step one\u001b[39m\u001b[22m\n\n    Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat CDPSession.send (\u001b[2mnode_modules/puppeteer/lib/Connection.js\u001b[2m:180:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext._evaluateInternal (\u001b[2mnode_modules/puppeteer/lib/ExecutionContext.js\u001b[2m:107:44)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.evaluateHandle (\u001b[2mnode_modules/puppeteer/lib/ExecutionContext.js\u001b[2m:57:17)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat ExecutionContext.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat WaitTask.rerun (\u001b[2mnode_modules/puppeteer/lib/DOMWorld.js\u001b[2m:570:65)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 2,
-      "numPassingTests": 0,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with email with wrong format\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Register | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 85 | \u001b[39m      \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 86 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 87 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Register | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 88 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 89 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 90 | \u001b[39m    test(\u001b[32m'Register without checklist the TnC'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:87:33)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register without checklist the TnC\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Register | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 106 | \u001b[39m  \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 107 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 108 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Register | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 109 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 110 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 111 | \u001b[39m    test(\u001b[32m'Register with different confirm password'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:108:33)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with different confirm password\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Register | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 126 | \u001b[39m        })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 127 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 128 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Register | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 129 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 130 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 131 | \u001b[39m    test(\u001b[32m'Register with blank form fields'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:128:33)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Register with blank form fields\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Register | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 142 | \u001b[39m        })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 143 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 144 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Register | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 145 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 146 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 147 | \u001b[39m    test(\u001b[32m'Duplicate the register'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {  \u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:144:33)\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mRegister Scoope › Duplicate the register\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"Registrasi | PINA\"\u001b[39m\n    Received string:    \u001b[31m\"Login | PINA\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 163 | \u001b[39m        })\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 164 | \u001b[39m        pageTitle \u001b[33m=\u001b[39m await page\u001b[33m.\u001b[39mtitle()\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 165 | \u001b[39m        await expect(pageTitle)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'Registrasi | PINA'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                                \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 166 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m90000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 167 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 168 | \u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/pinaa/e2e/1_register.test.js\u001b[39m\u001b[0m\u001b[2m:165:33)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 5,
+      "numPassingTests": 4,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1580271507558,
-        "start": 1580271492542
+        "end": 1582021867845,
+        "start": 1582021796558
       },
       "snapshot": {
         "added": 0,
@@ -48,35 +48,125 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/bri/micro/bri1.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/sequence.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "input form tanpa privyID"
+            "Register Scoope"
           ],
-          "duration": 5888,
-          "failureMessages": [
-            "ReferenceError: dd is not defined\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/bri/micro/bri1.test.js:124:63)"
-          ],
-          "fullName": "input form tanpa privyID checklist tnc",
+          "duration": 4068,
+          "failureMessages": [],
+          "fullName": "Register Scoope Register success",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "failed",
-          "title": "checklist tnc"
+          "status": "passed",
+          "title": "Register success"
         },
         {
           "ancestorTitles": [
-            "input form tanpa privyID"
+            "Register Scoope"
           ],
-          "duration": 4165,
+          "duration": 2586,
           "failureMessages": [
-            "Error: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.\n    at CDPSession.send (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/Connection.js:180:29)\n    at ExecutionContext._evaluateInternal (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/ExecutionContext.js:107:44)\n    at ExecutionContext.evaluateHandle (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/ExecutionContext.js:57:17)\n    at ExecutionContext.<anonymous> (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/helper.js:112:23)\n    at WaitTask.rerun (/Users/fajri/Documents/auto/ppt/node_modules/puppeteer/lib/DOMWorld.js:570:65)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Register | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:87:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
           ],
-          "fullName": "input form tanpa privyID fill form step one",
+          "fullName": "Register Scoope Register with email with wrong format",
           "location": null,
           "numPassingAsserts": 0,
           "status": "failed",
-          "title": "fill form step one"
+          "title": "Register with email with wrong format"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 3692,
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Register | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:108:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register without checklist the TnC",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register without checklist the TnC"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 3591,
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Register | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:128:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register with different confirm password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register with different confirm password"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 3531,
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Register | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:144:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Register with blank form fields",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Register with blank form fields"
+        },
+        {
+          "ancestorTitles": [
+            "Register Scoope"
+          ],
+          "duration": 4638,
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"Registrasi | PINA\"\u001b[39m\nReceived string:    \u001b[31m\"Login | PINA\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/pinaa/e2e/1_register.test.js:165:33)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "Register Scoope Duplicate the register",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "Duplicate the register"
+        },
+        {
+          "ancestorTitles": [
+            "Login Scoope"
+          ],
+          "duration": 8623,
+          "failureMessages": [],
+          "fullName": "Login Scoope Login",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Login"
+        },
+        {
+          "ancestorTitles": [
+            "Verify_account"
+          ],
+          "duration": 6639,
+          "failureMessages": [],
+          "fullName": "Verify_account Coockie is avtive",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Coockie is avtive"
+        },
+        {
+          "ancestorTitles": [
+            "Verify_account"
+          ],
+          "duration": 14637,
+          "failureMessages": [],
+          "fullName": "Verify_account Verify account with checklist npwp",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Verify account with checklist npwp"
         }
       ],
       "skipped": false,

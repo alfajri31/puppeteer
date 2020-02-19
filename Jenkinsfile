@@ -1,6 +1,6 @@
 def remote = [:]
 remote.name = 'test'
-remote.host = 'web2'
+remote.host = 'ppt-server'
 remote.user = 'remote_user'
 remote.password = '1234'
 remote.allowAnyHosts = true
@@ -12,10 +12,10 @@ pipeline {
                 docker { image 'jenkins/docker' }
             }
             steps {
-                sh 'docker exec web2 mv /home/testsite/node_modules /home/node_modules'
-                sh 'docker exec web2 rm -rf /home/testsite/*'
-                sh 'docker cp /var/jenkins_home/workspace/pina-webtest-staging_master/. web2:/home/testsite/.'
-                sh 'docker exec web2 mv /home/node_modules/ /home/testsite/node_modules'
+                sh 'docker exec ppt-server mv /home/testsite/node_modules /home/node_modules'
+                sh 'docker exec ppt-server rm -rf /home/testsite/*'
+                sh 'docker cp /var/jenkins_home/workspace/pina-webtest-staging_master/. ppt-server:/home/testsite/.'
+                sh 'docker exec ppt-server mv /home/node_modules/ /home/testsite/node_modules'
                 sshCommand remote: remote, command: "cd /home/testsite && npm install && npm run pinaa && cd /Renders/jest-stare && git init && git add . && git commit -m 'update' && git remote add testio https://github.com/alfajri31/pina.github.io.git && git push testio master"
             }
         }
