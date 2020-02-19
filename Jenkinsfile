@@ -17,6 +17,7 @@ pipeline {
                 sh 'docker cp /var/jenkins_home/workspace/pina-webtest-staging_master/. ppt-server:/home/testsite/.'
                 sh 'docker exec ppt-server mv /home/node_modules/ /home/testsite/node_modules'
                 sshCommand remote: remote, command: "cd /home/testsite && npm install && npm run pinaa && cd /Renders/jest-stare && git init && git add . && git commit -m 'update' && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git remote -v && git push pinaio master && git remote remove pinaio"
+                sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v"
             }
         }
     }
