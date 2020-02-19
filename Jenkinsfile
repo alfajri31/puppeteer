@@ -22,15 +22,15 @@ pipeline {
     }
     post { 
         success {
-            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
+            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && rm -rf .git && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
             echo 'I succeeeded!'
         }
         unstable {
-            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
+            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && rm -rf .git && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
             echo 'I am unstable :/'
         }
         failure {
-            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
+            sshCommand remote: remote, command: "cd /home/testsite/Renders/jest-stare && ls && git remote -v && rm -rf .git && git init && git remote add pinaio https://github.com/alfajri31/pina.github.io.git && git push commit -m 'update-euy' && git push pinaio master && git remote remove pinaio"
             mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: https://alfajri31.github.io/pina.github.io/", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "muhammad.fajri@mirumagency.com";
         }
     }
