@@ -19,9 +19,8 @@
 //    })
 },10000)
  
- 
  afterAll(() => {
-    //  browser.close()
+     browser.close()
  })
 
 // START TO TESTING

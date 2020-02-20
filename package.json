@@ -31,12 +31,16 @@
     "jest-stare": "^1.25.0",
     "json-query": "^2.2.2",
     "lighthouse": "^5.6.0",
+    "pending-xhr-puppeteer": "^2.1.0",
     "puppeteer": "^2.1.0",
     "puppeteer-core": "^2.1.1",
     "puppeteer-firefox": "^0.5.0",
     "puppeteer-full-page-screenshot": "^1.0.4",
     "puppeteer-loadtest": "^1.0.7",
     "request-promise": "^4.2.5",
-    "shelljs": "^0.8.3"
+    "request-promise-native": "^1.0.8",
+    "shelljs": "^0.8.3",
+    "xhr": "^2.5.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }
