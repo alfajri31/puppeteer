@@ -16,7 +16,7 @@ pipeline {
                 sh 'docker exec ppt-server rm -rf /home/testsite/*'
                 sh 'docker cp /var/jenkins_home/workspace/pina-webtest-staging_master/. ppt-server:/home/testsite/.'
                 sh 'docker exec ppt-server mv /home/node_modules/ /home/testsite/node_modules'
-                sshCommand remote: remote, command: "k6 run loadtests/performance-test.js",
+                sshCommand remote: remote, command: "k6 run loadtests/performance-test.js"
                 sshCommand remote: remote, command: "cd /home/testsite && npm install && npm run pinaa"
             }
         }
