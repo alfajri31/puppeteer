@@ -1,6 +1,7 @@
 module.exports = {
     fs : fs = require('fs'),
     puppeteer : puppeteer = require('puppeteer'),
+    puppeteer_core : puppeteer_core = require('puppeteer-core'),
     pptrFox : pptrFox = require('puppeteer-firefox'),
     devices : devices = require('puppeteer/DeviceDescriptors'),
     device : device = devices['iPhone X'],
@@ -42,6 +43,8 @@ module.exports = {
     no : no = 0,
     width_mobile: width_mobile = 375,
     height_mobile : height_mobile = 812,
+    width_laptop: width_laptop = 1366,
+    height_laptop: height_laptop = 768,
     scrollHeight : this.scrollHeight,
     innerHeight : this.innerHeight,
     clientHeight : this.clientHeight,

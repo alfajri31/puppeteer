@@ -1,5 +1,5 @@
  // PREPEARING
- let init = require('../../initialize')
+let init = require('../../initialize')
 require('../../initialize').page
 require('../../initialize').browser
 
