@@ -19,7 +19,8 @@
     "cerelac": "jest cerelac/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
     "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",
-    "trv": "jest traveloka/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare"
+    "trv": "jest traveloka/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "olx": "jest olx/micro --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare"
   },
   "keywords": [],
   "author": "",

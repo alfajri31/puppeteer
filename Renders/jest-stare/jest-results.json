@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1583322143709,
+  "startTime": 1583329158664,
   "success": false,
   "testResults": [
     {
@@ -36,8 +36,8 @@
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1583322186847,
-        "start": 1583322144840
+        "end": 1583329184031,
+        "start": 1583329159125
       },
       "snapshot": {
         "added": 0,
@@ -54,7 +54,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 28527,
+          "duration": 22874,
           "failureMessages": [],
           "fullName": "micro testing testing home layout",
           "location": null,
