@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1582102732845,
+  "startTime": 1583322143709,
   "success": false,
   "testResults": [
     {
@@ -36,8 +36,8 @@
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1582102792213,
-        "start": 1582102733337
+        "end": 1583322186847,
+        "start": 1583322144840
       },
       "snapshot": {
         "added": 0,
@@ -48,19 +48,19 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/milo/micro/pmgm.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/traveloka/micro/res.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "load testing"
+            "micro testing"
           ],
-          "duration": 56226,
+          "duration": 28527,
           "failureMessages": [],
-          "fullName": "load testing testing video running",
+          "fullName": "micro testing testing home layout",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
-          "title": "testing video running"
+          "title": "testing home layout"
         }
       ],
       "skipped": false,

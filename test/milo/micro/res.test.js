@@ -3,16 +3,7 @@ let init = require('../../initialize')
 require('../../initialize').page
 require('../../initialize').browser
 
-const CHAR_SETS = {
-  A: '0123456789',
-  B: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  K: 'abcdefghijklmnopqrstuvwxyz',
-  S: '!@#$%^&*()_+'
-};
-function mapString(s, func) {
-  return Array.prototype.map.call(s, func).join('')
-}
-let dir= path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi)
+let dir= path.join(__dirname,'../../../Renders/Unit/milo/'+res_mobile)
 fs.readdir(dir, (err, files) => {
     for (const file of files) {
         fs.unlink(path.join(dir, file), err => {
@@ -57,7 +48,7 @@ afterAll(() => {
       await init.src_height().then(async (value)=>{
           await page.setViewport({width: width,height : value})
           await page.screenshot({
-              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get beranda.png'),
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+res_mobile+'/get beranda.png'),
               fullpage: true,
               waitUntil : 'networkidle2'
           })
@@ -69,7 +60,7 @@ afterAll(() => {
       await init.src_height().then(async (value)=>{
           await page.setViewport({width: width,height : value})
           await page.screenshot({
-              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get detail.png'),
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+res_mobile+'/get detail.png'),
               fullpage: true,
               waitUntil : 'networkidle2'
           })
@@ -82,7 +73,7 @@ afterAll(() => {
           console.log(value)
           await page.setViewport({width: width,height : value})
           await page.screenshot({
-              path: path.join(__dirname,'../../../Renders/Unit/milo/'+resolusi+'/get category-detail.png'),
+              path: path.join(__dirname,'../../../Renders/Unit/milo/'+res_mobile+'/get category-detail.png'),
               fullpage: true,
               waitUntil : 'networkidle2'
           })

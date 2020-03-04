@@ -18,7 +18,8 @@
     "pinaaperform": "jest pinaa/perform/ --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
     "cerelac": "jest cerelac/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
-    "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200"
+    "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",
+    "trv": "jest traveloka/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "lighthouse": "^5.6.0",
     "pending-xhr-puppeteer": "^2.1.0",
     "puppeteer": "^2.1.1",
+    "puppeteer-autoscroll-down": "^0.1.2",
     "puppeteer-core": "^2.1.1",
     "puppeteer-extra": "^3.1.9",
     "puppeteer-firefox": "^0.5.0",

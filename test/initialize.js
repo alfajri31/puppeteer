@@ -39,17 +39,24 @@ module.exports = {
     filePath : this.filePath,
     futureFileChooser : this.futureFileChooser,
     fileChooser : this.fileChooser,
-
+    scrollPageToBottom : scrollPageToBottom = require('puppeteer-autoscroll-down'),
     no : no = 0,
-    width_mobile: width_mobile = 375,
+    /*
+    cek browserszie.com
+    */ 
+    width_mobile: width_mobile = 360,
     height_mobile : height_mobile = 812,
     width_laptop: width_laptop = 1366,
     height_laptop: height_laptop = 768,
+    width_mac: width_mac = 2048,
+    height_mac: height_mac = 1152 ,
     scrollHeight : this.scrollHeight,
     innerHeight : this.innerHeight,
     clientHeight : this.clientHeight,
     value : this.value,
     res_mobile: res_mobile = 'Mobile',
+    res_laptop: res_laptop = 'Laptop',
+    res_mac: res_mac = 'Mac',
     useragent: useragent ="Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1",
     headless : headless = true,
     slowMo : slowMo = 0,
@@ -58,10 +65,16 @@ module.exports = {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
                 console.log(scrollHeight)
-                        return scrollHeight
-            },scrollHeight)        
-        
-    }
+                    return scrollHeight
+            },scrollHeight)     
+    },
+
+
+    /*
+    resolution custom display
+    */
+   width_iphonex: width_iphonex = 375,
+   height_iphonex : height_iphonex = 812,
 }
 
 
