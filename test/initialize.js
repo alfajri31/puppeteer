@@ -46,7 +46,7 @@ module.exports = {
     */ 
     width_mobile: width_mobile = 360,
     height_mobile : height_mobile = 812,
-    width_laptop: width_laptop = 1366,
+    width_laptop: width_laptop = 1440,
     height_laptop: height_laptop = 768,
     width_mac: width_mac = 2048,
     height_mac: height_mac = 1152 ,
