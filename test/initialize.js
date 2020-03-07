@@ -60,16 +60,58 @@ module.exports = {
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
     headless : headless = true,
     slowMo : slowMo = 0,
+    dir : this.dir,
+    clear_dir : function (dir) {
+        dir = path.join(__dirname,'../Renders/Unit/traveloka/'+res)
+        fs.readdir(dir, (err, files) => {
+            for (const file of files) {
+                fs.unlink(path.join(dir, file), err => {
+                  if (err) throw err;
+                });
+            }
+        })
+    },
     uniq : uniq = Math.floor(Math.random() * 100),
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
-                console.log(scrollHeight)
+                // console.log(scrollHeight)
                     return scrollHeight
             },scrollHeight)     
     },
-
-
+    optmimal_ss : async function (folder,res,name,default_width) {
+        if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
+            fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
+                console.log(err)
+            });
+        }
+        if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
+            fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                console.log(err)
+            });
+        }
+        // await scrollPageToBottom(page)
+        // await page.evaluate(_ => {
+        //     window.scrollTo(0, 0);
+        // });
+        await page.setViewport({
+            width: default_width,
+            height: height_mac
+        })
+        await scrollPageToBottom(page)
+        await page.evaluate(_ => {
+            window.scrollTo(0, 0);
+        });
+        await this.src_height().then(async (value)=>{
+            await page.setViewport({width: default_width,height : value})
+            await page.waitFor(5000)
+            await page.screenshot({
+                path: path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/'+name+'.png'),
+                fullpage: true,
+                waitUntil : 'networkidle2'
+            })
+        })
+    },
     /*
     resolution custom display
     */

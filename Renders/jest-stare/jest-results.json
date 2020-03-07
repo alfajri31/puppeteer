@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 0,
-  "numFailedTests": 0,
-  "numPassedTestSuites": 1,
+  "numFailedTestSuites": 1,
+  "numFailedTests": 1,
+  "numPassedTestSuites": 0,
   "numPassedTests": 4,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 4,
+  "numTotalTests": 5,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1583489866219,
+  "startTime": 1583567269881,
   "success": false,
   "testResults": [
     {
-      "failureMessage": null,
-      "numFailingTests": 0,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mmicro testing › testing student-graduate intership layout\u001b[39m\u001b[22m\n\n    net::ERR_NETWORK_CHANGED at http://159.65.142.237:3000/student-graduate/internship-program\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 51 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 52 | \u001b[39m    test(\u001b[32m\"testing student-graduate intership layout\"\u001b[39m\u001b[33m,\u001b[39m async () \u001b[33m=>\u001b[39m { \u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 53 | \u001b[39m      await page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://159.65.142.237:3000/student-graduate/internship-program'\u001b[39m\u001b[33m,\u001b[39m{waitUntil\u001b[33m:\u001b[39m \u001b[32m'networkidle2'\u001b[39m})\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 54 | \u001b[39m      await page\u001b[33m.\u001b[39mwaitFor(\u001b[35m5000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 55 | \u001b[39m      await init\u001b[33m.\u001b[39moptmimal_ss(\u001b[32m'traveloka'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Laptop'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'STUNDENT INERSHIP'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1440\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 56 | \u001b[39m      await init\u001b[33m.\u001b[39moptmimal_ss(\u001b[32m'traveloka'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'Mobile'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'STUNDENT INTERSHIP'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m360\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat navigate (\u001b[2mnode_modules/puppeteer/lib/FrameManager.js\u001b[2m:120:37)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat FrameManager.navigateFrame (\u001b[2mnode_modules/puppeteer/lib/FrameManager.js\u001b[2m:94:17)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.goto (\u001b[2mnode_modules/puppeteer/lib/FrameManager.js\u001b[2m:406:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:672:12)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[2m\u001b[0m\u001b[36mtest/traveloka/micro/res.test.js\u001b[39m\u001b[0m\u001b[2m:53:7)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:111:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/puppeteer/lib/Page.js\u001b[2m:672:49)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[2m\u001b[0m\u001b[36mtest/traveloka/micro/res.test.js\u001b[39m\u001b[0m\u001b[2m:53:18)\u001b[2m\u001b[22m\n\u001b[2m          at runMicrotasks (<anonymous>)\u001b[22m\n",
+      "numFailingTests": 1,
       "numPassingTests": 4,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1583489959138,
-        "start": 1583489867631
+        "end": 1583567421349,
+        "start": 1583567275888
       },
       "snapshot": {
         "added": 0,
@@ -48,13 +48,25 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/traveloka/micro/res.test.js",
+      "testFilePath": "/home/fajri/projects/automation/ppt/test/traveloka/micro/res.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 22196,
+          "duration": 28559,
+          "failureMessages": [],
+          "fullName": "micro testing testing home layout",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "testing home layout"
+        },
+        {
+          "ancestorTitles": [
+            "micro testing"
+          ],
+          "duration": 51248,
           "failureMessages": [],
           "fullName": "micro testing testing live traveloka layout",
           "location": null,
@@ -66,7 +78,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 19856,
+          "duration": 25265,
           "failureMessages": [],
           "fullName": "micro testing testing student-graduate accelecation program layout",
           "location": null,
@@ -78,19 +90,21 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 18391,
-          "failureMessages": [],
+          "duration": 886,
+          "failureMessages": [
+            "Error: net::ERR_NETWORK_CHANGED at http://159.65.142.237:3000/student-graduate/internship-program\n    at navigate (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/FrameManager.js:120:37)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at FrameManager.navigateFrame (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/FrameManager.js:94:17)\n    at Frame.goto (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/FrameManager.js:406:12)\n    at Page.goto (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/Page.js:672:12)\n    at Object.<anonymous> (/home/fajri/projects/automation/ppt/test/traveloka/micro/res.test.js:53:7)\n  -- ASYNC --\n    at Frame.<anonymous> (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/helper.js:111:15)\n    at Page.goto (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/Page.js:672:49)\n    at Page.goto (/home/fajri/projects/automation/ppt/node_modules/puppeteer/lib/helper.js:112:23)\n    at Object.<anonymous> (/home/fajri/projects/automation/ppt/test/traveloka/micro/res.test.js:53:18)\n    at Object.asyncJestTest (/home/fajri/projects/automation/ppt/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at /home/fajri/projects/automation/ppt/node_modules/jest-jasmine2/build/queueRunner.js:43:12\n    at new Promise (<anonymous>)\n    at mapper (/home/fajri/projects/automation/ppt/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at /home/fajri/projects/automation/ppt/node_modules/jest-jasmine2/build/queueRunner.js:73:41\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+          ],
           "fullName": "micro testing testing student-graduate intership layout",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "failed",
           "title": "testing student-graduate intership layout"
         },
         {
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 23461,
+          "duration": 24880,
           "failureMessages": [],
           "fullName": "micro testing testing vacancies layout",
           "location": null,
