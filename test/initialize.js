@@ -79,22 +79,47 @@ module.exports = {
                     return scrollHeight
             },scrollHeight)     
     },
-    optmimal_ss : async function (folder,res,name,default_width) {
-        if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
-            fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
-                console.log(err)
-            });
+    optmimal_ss : async function (folder,res,name,default_width,browserType) {
+
+        if (browserType == 'webkit') {
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
+                    console.log(err)
+                });
+            }
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                    console.log(err)
+                });
+            }
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                    console.log(err)
+                });
+            }
         }
-        if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
-            fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
-                console.log(err)
-            });
+
+        if (browserType == 'chromium') {
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
+                    console.log(err)
+                });
+            }
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                    console.log(err)
+                });
+            }
+            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                    console.log(err)
+                });
+            }
         }
-        // await scrollPageToBottom(page)
-        // await page.evaluate(_ => {
-        //     window.scrollTo(0, 0);
-        // });
-        await page.setViewport({
+
+
+        
+        await page.setViewportSize({
             width: default_width,
             height: height_mac
         })
@@ -103,10 +128,10 @@ module.exports = {
             window.scrollTo(0, 0);
         });
         await this.src_height().then(async (value)=>{
-            await page.setViewport({width: default_width,height : value})
+            await page.setViewportSize({width: default_width,height : value})
             await page.waitFor(5000)
             await page.screenshot({
-                path: path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/'+name+'.png'),
+                path: path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/'+browserType+'/'+name+'.png'),
                 fullpage: true,
                 waitUntil : 'networkidle2'
             })

@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1583574500037,
+  "startTime": 1583750090110,
   "success": false,
   "testResults": [
     {
@@ -36,8 +36,8 @@
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1583574661098,
-        "start": 1583574505605
+        "end": 1583750206622,
+        "start": 1583750091249
       },
       "snapshot": {
         "added": 0,
@@ -48,13 +48,13 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/home/fajri/projects/automation/ppt/test/traveloka/micro/res.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/traveloka/micro/res.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 30161,
+          "duration": 26324,
           "failureMessages": [],
           "fullName": "micro testing testing home layout",
           "location": null,
@@ -66,7 +66,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 38207,
+          "duration": 21947,
           "failureMessages": [],
           "fullName": "micro testing testing live traveloka layout",
           "location": null,
@@ -78,7 +78,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 24789,
+          "duration": 20767,
           "failureMessages": [],
           "fullName": "micro testing testing student-graduate accelecation program layout",
           "location": null,
@@ -90,7 +90,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 22100,
+          "duration": 19595,
           "failureMessages": [],
           "fullName": "micro testing testing student-graduate intership layout",
           "location": null,
@@ -102,7 +102,7 @@
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 18782,
+          "duration": 19537,
           "failureMessages": [],
           "fullName": "micro testing testing vacancies layout",
           "location": null,
