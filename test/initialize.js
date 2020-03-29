@@ -60,14 +60,42 @@ module.exports = {
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
     headless : headless = true,
     slowMo : slowMo = 0,
-    dir : this.dir,
-    clear_dir : function (dir) {
-        dir = path.join(__dirname,'../Renders/Unit/traveloka/'+res)
-        fs.readdir(dir, (err, files) => {
-            for (const file of files) {
-                fs.unlink(path.join(dir, file), err => {
-                  if (err) throw err;
-                });
+    clear_dir : function (res) {
+        console.log('..waiting directory be cleared')
+        const browser3= []
+        browser3.push(
+            'chromium',
+            'firefox',
+            'webkit'
+        )
+        
+        for(const browser in browser3) {
+            let dirBrowser = path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/'+browser3[browser])
+            if (fs.existsSync(dirBrowser)){
+                fs.readdir(dirBrowser, (err, files) => {             
+                    for (const file of files) {
+                        fs.unlink(path.join(dirBrowser, file), err => {
+                            if (err) throw err;
+                        });
+                    }
+                })
+            } else {
+                console.log('folder tidak ada')
+            }
+            fs.rmdir(dirBrowser, function(err) {
+                if (err) {
+                    throw err
+                } else {
+                    console.log('Successfully removed the empty directory '+browser3[browser])
+                }
+            })
+        }            
+        dir = path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/')
+        fs.rmdir(dir, function(err) {
+            if (err) {
+                throw err
+            } else {
+                console.log('Successfully removed the empty directory '+res)
             }
         })
     },
@@ -104,12 +132,13 @@ module.exports = {
                 fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
                     console.log(err)
                 });
-            }
+            } 
             if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
                 fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
                     console.log(err)
                 });
             }
+
             if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
                 fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
                     console.log(err)
@@ -117,8 +146,6 @@ module.exports = {
             }
         }
 
-
-        
         await page.setViewportSize({
             width: default_width,
             height: height_mac

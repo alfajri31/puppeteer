@@ -1,0 +1,2 @@
+Warning 
+before install please update the new latest installation npm and node

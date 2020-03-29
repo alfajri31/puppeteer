@@ -1,7 +1,7 @@
 // const XLSX = require('xlsx')
 // var ws = XLSX.utils.json_to_sheet([{"name":"John"}, {"city":"Seattle"}]);
 
-let init = require('./test/initialize')
+let init = require('../test/initialize')
 var XLSX = require('xlsx')
 let faker = require('faker')
 let data = []

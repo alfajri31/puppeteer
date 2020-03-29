@@ -19,9 +19,9 @@ beforeAll(async() => {
 },90000)
 
 afterAll(async () => {
-    // await browser.close()
-    var shell = require('shelljs');
-    shell.exec('pkill Chromium')
+    await browser.close()
+    // var shell = require('shelljs');
+    // shell.exec('pkill Chromium')
 },5000)
 
 describe('Login Scoope',() => {
