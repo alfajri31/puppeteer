@@ -18,6 +18,7 @@ beforeAll(async() => {
         args: [ '--ignore-certificate-errors','--no-sandbox'],
         chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
         disableDeviceEmulation: true,
+         executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/MacOS/Chromium')
     }
     
     // Launch chrome using chrome-launcher

@@ -17,7 +17,9 @@ beforeAll(async() => {
     opts = {
         headless: headless,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
-        chromeFlags: ['--headless', '--disable-gpu']
+        chromeFlags: ['--headless', '--disable-gpu'],
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/MacOS/Chromium')
+        
     }
     
     // Launch chrome using chrome-launcher

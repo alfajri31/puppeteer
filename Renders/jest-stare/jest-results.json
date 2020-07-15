@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 5,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 5,
+  "numTotalTests": 1,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1583750090110,
+  "startTime": 1594793415312,
   "success": false,
   "testResults": [
     {
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 5,
+      "numPassingTests": 1,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1583750206622,
-        "start": 1583750091249
+        "end": 1594793468152,
+        "start": 1594793417102
       },
       "snapshot": {
         "added": 0,
@@ -48,67 +48,19 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/traveloka/micro/res.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/akudankau/micro/res.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "micro testing"
           ],
-          "duration": 26324,
+          "duration": 46661,
           "failureMessages": [],
           "fullName": "micro testing testing home layout",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "testing home layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 21947,
-          "failureMessages": [],
-          "fullName": "micro testing testing live traveloka layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing live traveloka layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 20767,
-          "failureMessages": [],
-          "fullName": "micro testing testing student-graduate accelecation program layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing student-graduate accelecation program layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 19595,
-          "failureMessages": [],
-          "fullName": "micro testing testing student-graduate intership layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing student-graduate intership layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 19537,
-          "failureMessages": [],
-          "fullName": "micro testing testing vacancies layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing vacancies layout"
         }
       ],
       "skipped": false,
