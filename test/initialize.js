@@ -58,7 +58,7 @@ module.exports = {
     res_laptop: res_laptop = 'Laptop',
     res_mac: res_mac = 'Mac',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
-    headless : headless = false,
+    headless : headless = true,
     slowMo : slowMo = 0,
     dir : this.dir,
     clear_dir : function (dir) {
@@ -75,7 +75,7 @@ module.exports = {
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
-                // console.log(scrollHeight)
+                console.log(scrollHeight)
                     return scrollHeight
             },scrollHeight)     
     },

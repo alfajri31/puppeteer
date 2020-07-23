@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1594793415312,
+  "startTime": 1595497676939,
   "success": false,
   "testResults": [
     {
@@ -36,8 +36,8 @@
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1594793468152,
-        "start": 1594793417102
+        "end": 1595497689130,
+        "start": 1595497677387
       },
       "snapshot": {
         "added": 0,
@@ -48,19 +48,19 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/akudankau/micro/res.test.js",
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "micro testing"
+            "brimo form fills"
           ],
-          "duration": 46661,
+          "duration": 9696,
           "failureMessages": [],
-          "fullName": "micro testing testing home layout",
+          "fullName": "brimo form fills step 1 should be success",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
-          "title": "testing home layout"
+          "title": "step 1 should be success"
         }
       ],
       "skipped": false,
