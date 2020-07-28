@@ -24,14 +24,17 @@
     "akudankau": "jest akudankau/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "fixenak": "jest fixenak/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "loginvideo": "jest akudankau/micro/loginvideo --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
-    "brimo" : "jest brimo/micro/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare"
+    "brimo": "jest brimo/micro/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "test:acceptance": "cucumber-js  --require-module @babel/register"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/register": "^7.10.5",
     "cheerio": "^1.0.0-rc.3",
     "chrome-launcher": "^0.13.3",
+    "cucumber": "^6.0.5",
     "faker": "^4.1.0",
     "jest": "^24.9.0",
     "jest-stare": "^1.25.0",
