@@ -35,7 +35,8 @@ const phone = mapString('08AAAAAAAAAA', randChar)
 beforeAll(async() => {
     browser = await playwright['chromium'].launch({  
         headless: headless,
-        args: ['--use-fake-ui-for-media-stream']
+        args: ['--use-fake-ui-for-media-stream'],
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/playwright-core/.local-chromium/linux-740847/chrome-linux/chrome')
     });
     const context = await browser.newContext();
     page = await context.newPage();
