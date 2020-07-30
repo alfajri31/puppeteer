@@ -103,7 +103,7 @@ module.exports = {
     src_height : async function () {
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
-                // console.log(scrollHeight)
+                console.log(scrollHeight)
                     return scrollHeight
             },scrollHeight)     
     },
@@ -158,7 +158,7 @@ module.exports = {
             await page.setViewportSize({width: default_width,height : value})
             await page.waitFor(5000)
             await page.screenshot({
-                path: path.join(__dirname,'../Renders/Unit/traveloka/'+res+'/'+browserType+'/'+name+'.png'),
+                path: path.join(__dirname,'../Renders/Unit/'+folder+'/'+res+'/'+browserType+'/'+name+'.png'),
                 fullpage: true,
                 waitUntil : 'networkidle2'
             })

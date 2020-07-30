@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 5,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 5,
+  "numTotalTests": 1,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,27 @@
     "unmatched": 0,
     "updated": 0
   },
+<<<<<<< HEAD
   "startTime": 1585468167291,
+=======
+  "startTime": 1595922806215,
+>>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
   "success": false,
   "testResults": [
     {
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 5,
+      "numPassingTests": 1,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
+<<<<<<< HEAD
         "end": 1585468308317,
         "start": 1585468169303
+=======
+        "end": 1595922836657,
+        "start": 1595922806871
+>>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
       },
       "snapshot": {
         "added": 0,
@@ -48,18 +57,27 @@
         "updated": 0,
         "uncheckedKeys": []
       },
+<<<<<<< HEAD
       "testFilePath": "/server/ppt/test/traveloka/e2e/sequence.test.js",
+=======
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js",
+>>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
       "testResults": [
         {
           "ancestorTitles": [
-            "micro testing"
+            "brimo form fills"
           ],
+<<<<<<< HEAD
           "duration": 30017,
+=======
+          "duration": 26359,
+>>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
           "failureMessages": [],
-          "fullName": "micro testing testing home layout",
+          "fullName": "brimo form fills step 1 should be success",
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
+<<<<<<< HEAD
           "title": "testing home layout"
         },
         {
@@ -109,6 +127,9 @@
           "numPassingAsserts": 0,
           "status": "passed",
           "title": "testing vacancies layout"
+=======
+          "title": "step 1 should be success"
+>>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
         }
       ],
       "skipped": false,
