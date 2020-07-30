@@ -37,7 +37,7 @@ const name = init.lead.name
 //preapering chromium launch
 beforeAll(async() => {
     browser = await playwright['chromium'].launch({  
-        headless: false,
+        headless: headless,
         args: ['--use-fake-ui-for-media-stream']
     });
     const context = await browser.newContext();
@@ -131,7 +131,7 @@ async function tanggalLahir(){
 }
 
 async function kewarganegaraan() {
-    await page.click('input[id="kewarganegaraan-1"]'););
+    await page.click('input[id="kewarganegaraan-1"]');
 }
 
 async function email() {
