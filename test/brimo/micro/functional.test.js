@@ -6,7 +6,6 @@ let init = require('../../initialize');
 let fs = require('../../initialize').fs;
 const playwright = require('playwright');
 
-
 //initialize function random number
 CHAR_SETS = {
     A: '123456789',
@@ -29,15 +28,13 @@ function randChar(charType) {
 }
 
 //initialize variables
-const URL = 'https://brimo.wtid.dev/registration?step=1&token=f1cdd81a5d5a92c132764759f092e016'
+const URL = 'https://brimo.wtid.dev/intro?step=1&token=6aa10b3e9f1482e49b7eb716b8a1a174'
 const phone = mapString('08AAAAAAAAAA', randChar)
-const email = init.lead.email
-const name = init.lead.name
 
 //preapering chromium launch
 beforeAll(async() => {
     browser = await playwright['chromium'].launch({  
-        headless: false,
+        headless: headless,
         args: ['--use-fake-ui-for-media-stream']
     });
     const context = await browser.newContext();
@@ -131,7 +128,7 @@ async function tanggalLahir(){
 }
 
 async function kewarganegaraan() {
-    await page.click('input[id="kewarganegaraan-1"]'););
+    await page.click('input[id="kewarganegaraan-1"]');
 }
 
 async function email() {

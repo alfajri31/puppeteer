@@ -1,8 +1,8 @@
 {
-  "numFailedTestSuites": 0,
-  "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numFailedTestSuites": 1,
+  "numFailedTests": 1,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
@@ -26,27 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-<<<<<<< HEAD
-  "startTime": 1585468167291,
-=======
-  "startTime": 1595922806215,
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
+  "startTime": 1596093581816,
   "success": false,
   "testResults": [
     {
-      "failureMessage": null,
-      "numFailingTests": 0,
-      "numPassingTests": 1,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mbrimo form fills › step 1 should be success\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for selector \"[visible] svg[data-icon=\"portrait\"]\" failed: timeout 30000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 53 | \u001b[39m async \u001b[36mfunction\u001b[39m getSelfie () {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 54 | \u001b[39m    \u001b[90m//input selfie\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 55 | \u001b[39m    await page\u001b[33m.\u001b[39mclick(\u001b[32m'svg[data-icon=\"portrait\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m               \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 56 | \u001b[39m    await page\u001b[33m.\u001b[39mwaitFor(\u001b[35m4000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 57 | \u001b[39m    await page\u001b[33m.\u001b[39mclick(\u001b[32m'button[class=\"btn mr-4 ml-4 btn-capture\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 58 | \u001b[39m    await page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'svg[data-icon=\"check\"]'\u001b[39m\u001b[33m,\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new RerunnableTask (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:822:34)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._scheduleRerunnableTask (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:770:32)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._waitForSelectorInUtilityContext (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:741:35)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._optionallyWaitForSelectorInUtilityContext (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:721:44)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.click (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:657:35)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/playwright-core/lib/helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules/playwright-core/lib/page.js\u001b[2m:353:33)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules/playwright-core/lib/helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat getSelfie (\u001b[2m\u001b[0m\u001b[36mtest/brimo/micro/functional.test.js\u001b[39m\u001b[0m\u001b[2m:55:16)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[2m\u001b[0m\u001b[36mtest/brimo/micro/functional.test.js\u001b[39m\u001b[0m\u001b[2m:146:15)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 1,
+      "numPassingTests": 0,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "perfStats": {
-<<<<<<< HEAD
-        "end": 1585468308317,
-        "start": 1585468169303
-=======
-        "end": 1595922836657,
-        "start": 1595922806871
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
+        "end": 1596093640334,
+        "start": 1596093585361
       },
       "snapshot": {
         "added": 0,
@@ -57,79 +48,21 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-<<<<<<< HEAD
-      "testFilePath": "/server/ppt/test/traveloka/e2e/sequence.test.js",
-=======
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js",
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
+      "testFilePath": "C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "brimo form fills"
           ],
-<<<<<<< HEAD
-          "duration": 30017,
-=======
-          "duration": 26359,
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
-          "failureMessages": [],
+          "duration": 38752,
+          "failureMessages": [
+            "TimeoutError: waiting for selector \"[visible] svg[data-icon=\"portrait\"]\" failed: timeout 30000ms exceeded\n    at new RerunnableTask (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:822:34)\n    at Frame._scheduleRerunnableTask (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:770:32)\n    at Frame._waitForSelectorInUtilityContext (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:741:35)\n    at Frame._optionallyWaitForSelectorInUtilityContext (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:721:44)\n    at Frame.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:657:35)\n    at Frame.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at Page.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\page.js:353:33)\n    at Page.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at getSelfie (C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js:55:16)\n    at Object.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js:146:15)\n    at runNextTicks (internal/process/task_queues.js:62:5)\n    at processImmediate (internal/timers.js:429:9)"
+          ],
           "fullName": "brimo form fills step 1 should be success",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
-<<<<<<< HEAD
-          "title": "testing home layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 27090,
-          "failureMessages": [],
-          "fullName": "micro testing testing live traveloka layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing live traveloka layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 24992,
-          "failureMessages": [],
-          "fullName": "micro testing testing student-graduate accelecation program layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing student-graduate accelecation program layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 23717,
-          "failureMessages": [],
-          "fullName": "micro testing testing student-graduate intership layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing student-graduate intership layout"
-        },
-        {
-          "ancestorTitles": [
-            "micro testing"
-          ],
-          "duration": 23685,
-          "failureMessages": [],
-          "fullName": "micro testing testing vacancies layout",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "testing vacancies layout"
-=======
+          "status": "failed",
           "title": "step 1 should be success"
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
         }
       ],
       "skipped": false,

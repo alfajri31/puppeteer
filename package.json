@@ -19,10 +19,6 @@
     "cerelac": "jest cerelac/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
     "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",
-<<<<<<< HEAD
-    "trv": "jest traveloka/e2e/sequence --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
-    "olx": "jest olx/micro --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare"
-=======
     "trv": "jest traveloka/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "olx": "jest olx/micro --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "akudankau": "jest akudankau/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
@@ -30,7 +26,6 @@
     "loginvideo": "jest akudankau/micro/loginvideo --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "brimo": "jest brimo/micro/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "test:acceptance": "cucumber-js  --require-module @babel/register"
->>>>>>> 5617a2b6ef46f17a99b67032c43208a508db3585
   },
   "keywords": [],
   "author": "",
