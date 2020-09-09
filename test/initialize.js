@@ -58,7 +58,7 @@ module.exports = {
     res_laptop: res_laptop = 'Laptop',
     res_mac: res_mac = 'Mac',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
-    headless : headless = true,
+    headless : headless = false,
     slowMo : slowMo = 0,
     dir : this.dir,
     clear_dir : function (dir) {
@@ -117,12 +117,10 @@ module.exports = {
             }
         }
 
-
-        
-        await page.setViewportSize({
-            width: default_width,
-            height: height_mac
-        })
+        // await page.setViewportSize({
+        //     width: default_width,
+        //     height: height_mac
+        // })
         await scrollPageToBottom(page)
         await page.evaluate(_ => {
             window.scrollTo(0, 0);

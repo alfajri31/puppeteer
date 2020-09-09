@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 21 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,16 +115,16 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 0,
-  &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 1,
-  &quot;numPassedTests&quot;: 1,
+  &quot;numFailedTestSuites&quot;: 1,
+  &quot;numFailedTests&quot;: 1,
+  &quot;numPassedTestSuites&quot;: 0,
+  &quot;numPassedTests&quot;: 0,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 0,
+  &quot;numPendingTests&quot;: 20,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 1,
+  &quot;numTotalTests&quot;: 21,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1595922806215,
+  &quot;startTime&quot;: 1597734926864,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: null,
-      &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 1,
-      &quot;numPendingTests&quot;: 0,
+      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mbrimo form fills › step 1 should be success\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\&quot;gagal\&quot;\u001b[39m\n    Received string:    \u001b[31m\&quot;sukses\&quot;\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 297 | \u001b[39m        await init\u001b[33m.\u001b[39moptmimal_ss(\u001b[32m&#39;brimo&#39;\u001b[39m\u001b[33m,\u001b[39m\u001b[32m&#39;extra desktop&#39;\u001b[39m\u001b[33m,\u001b[39m\u001b[32m&#39;step-1&#39;\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2000\u001b[39m\u001b[33m,\u001b[39m\u001b[32m&#39;chromium&#39;\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 298 | \u001b[39m        await page\u001b[33m.\u001b[39mclick(\u001b[32m&#39;button[type&#x3D;\&quot;submit\&quot;]&#39;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 299 | \u001b[39m        await expect(\u001b[32m&#39;sukses&#39;\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[32m&#39;gagal&#39;\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                               \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 300 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m3600000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 301 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 302 | \u001b[39m    test\u001b[33m.\u001b[39mskip(\u001b[32m&#39;nomor npmp belum bener formatnya&#39;\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m&#x3D;&gt;\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;brimo&#x2F;micro&#x2F;functional.test.js\u001b[39m\u001b[0m\u001b[2m:299:32)\u001b[2m\u001b[22m\n&quot;,
+      &quot;numFailingTests&quot;: 1,
+      &quot;numPassingTests&quot;: 0,
+      &quot;numPendingTests&quot;: 20,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1595922836657,
-        &quot;start&quot;: 1595922806871
+        &quot;end&quot;: 1597734978347,
+        &quot;start&quot;: 1597734927537
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -170,13 +170,255 @@
           &quot;ancestorTitles&quot;: [
             &quot;brimo form fills&quot;
           ],
-          &quot;duration&quot;: 26359,
-          &quot;failureMessages&quot;: [],
+          &quot;duration&quot;: 47326,
+          &quot;failureMessages&quot;: [
+            &quot;Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\&quot;gagal\&quot;\u001b[39m\nReceived string:    \u001b[31m\&quot;sukses\&quot;\u001b[39m\n    at Object.test (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;test&#x2F;brimo&#x2F;micro&#x2F;functional.test.js:299:32)&quot;
+          ],
           &quot;fullName&quot;: &quot;brimo form fills step 1 should be success&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
           &quot;title&quot;: &quot;step 1 should be success&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills nomor npmp belum bener formatnya&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;nomor npmp belum bener formatnya&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills nomor telepon tidak perlu prefix 0 atau kode area&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;nomor telepon tidak perlu prefix 0 atau kode area&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills gaji pertahun gunakan formatter thousand&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;gaji pertahun gunakan formatter thousand&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Perusahaan lama bekerja validasi error, padahal field \&quot;Lama Bekerja Tahun\&quot;dan \&quot;Lama Bekerja Bulan\&quot;sudah diisi&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Perusahaan lama bekerja validasi error, padahal field \&quot;Lama Bekerja Tahun\&quot;dan \&quot;Lama Bekerja Bulan\&quot;sudah diisi&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Update Data Kota&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Update Data Kota&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Rekening BRI limit 15 digit (min. 15 digit, maks. 15 digit). Hanya 15 Digit&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Rekening BRI limit 15 digit (min. 15 digit, maks. 15 digit). Hanya 15 Digit&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills NPWP di-sanitize dan length nya adalah 15 digit&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;NPWP di-sanitize dan length nya adalah 15 digit&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills NPWP menggunakan formatter dengan format NPWP&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;NPWP menggunakan formatter dengan format NPWP&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Image kartu di Halaman intro untuk device yang kecil overflow&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Image kartu di Halaman intro untuk device yang kecil overflow&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Setelah user memilih kamera, lalu klik \&quot;Foto NPWP\&quot;. Kamera tidak muncul&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Setelah user memilih kamera, lalu klik \&quot;Foto NPWP\&quot;. Kamera tidak muncul&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Jika kamera tidak ditemukan, layar hanya akan menampilkan bar loading saja. Munculkan pesan notifikasi \&quot;Kamera tidak ditemukan. Silakan enable Kamera Anda\&quot;&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Jika kamera tidak ditemukan, layar hanya akan menampilkan bar loading saja. Munculkan pesan notifikasi \&quot;Kamera tidak ditemukan. Silakan enable Kamera Anda\&quot;&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Pilihan \&quot;Status Rumah\&quot; memanjang kebawah&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Pilihan \&quot;Status Rumah\&quot; memanjang kebawah&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Jumlah Tanggungan\&quot; dibatasi maksimal 2 digit saja. Dengan validasi range antara \&quot;0-99\&quot; dan tidak perlu pakai format thousand&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Jumlah Tanggungan\&quot; dibatasi maksimal 2 digit saja. Dengan validasi range antara \&quot;0-99\&quot; dan tidak perlu pakai format thousand&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Lama Menempati\&quot; dibatasi maksimal 2 digit angka saja. Dengan validasi range antara \&quot;0-99\&quot; &quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Lama Menempati\&quot; dibatasi maksimal 2 digit angka saja. Dengan validasi range antara \&quot;0-99\&quot; &quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;RT\&quot; dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \&quot;000 - 999\&quot;&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;RT\&quot; dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \&quot;000 - 999\&quot;&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;RW\&quot; dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \&quot;000 - 999\&quot;&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;RW\&quot; dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \&quot;000 - 999\&quot;&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Kode Pos\&quot; dibatasi maksimal 5 digit angka saja&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Kode Pos\&quot; dibatasi maksimal 5 digit angka saja&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Kode Area Rumah\&quot; dibatas maksimal 4 digit angka saja&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Kode Area Rumah\&quot; dibatas maksimal 4 digit angka saja&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Nomor Telepon Rumah\&quot; dibatasi maksimal 10 digit angka saja&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Nomor Telepon Rumah\&quot; dibatasi maksimal 10 digit angka saja&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;brimo form fills&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;brimo form fills Field \&quot;Nomor NPWP\&quot; masih bisa dimasukkan lebih dari 15 digit&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;Field \&quot;Nomor NPWP\&quot; masih bisa dimasukkan lebih dari 15 digit&quot;
         }
       ],
       &quot;skipped&quot;: false,

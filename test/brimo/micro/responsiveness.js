@@ -1,0 +1,2 @@
+// myModule.js
+

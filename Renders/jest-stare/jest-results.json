@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 0,
-  "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numFailedTestSuites": 1,
+  "numFailedTests": 1,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
-  "numPendingTests": 0,
+  "numPendingTests": 20,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 1,
+  "numTotalTests": 21,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1595922806215,
+  "startTime": 1597734926864,
   "success": false,
   "testResults": [
     {
-      "failureMessage": null,
-      "numFailingTests": 0,
-      "numPassingTests": 1,
-      "numPendingTests": 0,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mbrimo form fills › step 1 should be success\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected substring: \u001b[32m\"gagal\"\u001b[39m\n    Received string:    \u001b[31m\"sukses\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 297 | \u001b[39m        await init\u001b[33m.\u001b[39moptmimal_ss(\u001b[32m'brimo'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'extra desktop'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'step-1'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2000\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'chromium'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 298 | \u001b[39m        await page\u001b[33m.\u001b[39mclick(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 299 | \u001b[39m        await expect(\u001b[32m'sukses'\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[32m'gagal'\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                               \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 300 | \u001b[39m    }\u001b[33m,\u001b[39m\u001b[35m3600000\u001b[39m)\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 301 | \u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 302 | \u001b[39m    test\u001b[33m.\u001b[39mskip(\u001b[32m'nomor npmp belum bener formatnya'\u001b[39m\u001b[33m,\u001b[39m async() \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[2m\u001b[0m\u001b[36mtest/brimo/micro/functional.test.js\u001b[39m\u001b[0m\u001b[2m:299:32)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 1,
+      "numPassingTests": 0,
+      "numPendingTests": 20,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1595922836657,
-        "start": 1595922806871
+        "end": 1597734978347,
+        "start": 1597734927537
       },
       "snapshot": {
         "added": 0,
@@ -54,13 +54,255 @@
           "ancestorTitles": [
             "brimo form fills"
           ],
-          "duration": 26359,
-          "failureMessages": [],
+          "duration": 47326,
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"gagal\"\u001b[39m\nReceived string:    \u001b[31m\"sukses\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js:299:32)"
+          ],
           "fullName": "brimo form fills step 1 should be success",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "failed",
           "title": "step 1 should be success"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills nomor npmp belum bener formatnya",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "nomor npmp belum bener formatnya"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills nomor telepon tidak perlu prefix 0 atau kode area",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "nomor telepon tidak perlu prefix 0 atau kode area"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills gaji pertahun gunakan formatter thousand",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "gaji pertahun gunakan formatter thousand"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Perusahaan lama bekerja validasi error, padahal field \"Lama Bekerja Tahun\"dan \"Lama Bekerja Bulan\"sudah diisi",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Perusahaan lama bekerja validasi error, padahal field \"Lama Bekerja Tahun\"dan \"Lama Bekerja Bulan\"sudah diisi"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Update Data Kota",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Update Data Kota"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Rekening BRI limit 15 digit (min. 15 digit, maks. 15 digit). Hanya 15 Digit",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Rekening BRI limit 15 digit (min. 15 digit, maks. 15 digit). Hanya 15 Digit"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills NPWP di-sanitize dan length nya adalah 15 digit",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "NPWP di-sanitize dan length nya adalah 15 digit"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills NPWP menggunakan formatter dengan format NPWP",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "NPWP menggunakan formatter dengan format NPWP"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Image kartu di Halaman intro untuk device yang kecil overflow",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Image kartu di Halaman intro untuk device yang kecil overflow"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Setelah user memilih kamera, lalu klik \"Foto NPWP\". Kamera tidak muncul",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Setelah user memilih kamera, lalu klik \"Foto NPWP\". Kamera tidak muncul"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Jika kamera tidak ditemukan, layar hanya akan menampilkan bar loading saja. Munculkan pesan notifikasi \"Kamera tidak ditemukan. Silakan enable Kamera Anda\"",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Jika kamera tidak ditemukan, layar hanya akan menampilkan bar loading saja. Munculkan pesan notifikasi \"Kamera tidak ditemukan. Silakan enable Kamera Anda\""
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Pilihan \"Status Rumah\" memanjang kebawah",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Pilihan \"Status Rumah\" memanjang kebawah"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Jumlah Tanggungan\" dibatasi maksimal 2 digit saja. Dengan validasi range antara \"0-99\" dan tidak perlu pakai format thousand",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Jumlah Tanggungan\" dibatasi maksimal 2 digit saja. Dengan validasi range antara \"0-99\" dan tidak perlu pakai format thousand"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Lama Menempati\" dibatasi maksimal 2 digit angka saja. Dengan validasi range antara \"0-99\" ",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Lama Menempati\" dibatasi maksimal 2 digit angka saja. Dengan validasi range antara \"0-99\" "
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"RT\" dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \"000 - 999\"",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"RT\" dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \"000 - 999\""
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"RW\" dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \"000 - 999\"",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"RW\" dibatasi maksimal 3 digit angka saja. Dengan validasi range antara \"000 - 999\""
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Kode Pos\" dibatasi maksimal 5 digit angka saja",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Kode Pos\" dibatasi maksimal 5 digit angka saja"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Kode Area Rumah\" dibatas maksimal 4 digit angka saja",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Kode Area Rumah\" dibatas maksimal 4 digit angka saja"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Nomor Telepon Rumah\" dibatasi maksimal 10 digit angka saja",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Nomor Telepon Rumah\" dibatasi maksimal 10 digit angka saja"
+        },
+        {
+          "ancestorTitles": [
+            "brimo form fills"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "brimo form fills Field \"Nomor NPWP\" masih bisa dimasukkan lebih dari 15 digit",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "Field \"Nomor NPWP\" masih bisa dimasukkan lebih dari 15 digit"
         }
       ],
       "skipped": false,
