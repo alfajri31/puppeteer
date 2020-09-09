@@ -44,10 +44,14 @@ module.exports = {
     /*
     cek browserszie.com
     */ 
-    width_mobile: width_mobile = 360,
-    height_mobile : height_mobile = 812,
-    width_laptop: width_laptop = 1440,
-    height_laptop: height_laptop = 768,
+    width_mobile: width_mobile = 414,
+    height_mobile : height_mobile = 736,
+    width_retina: width_retina =  3840,
+    height_retina : height_retina = 2160,
+    width_desktop: width_desktop = 1440,
+    height_desktop: height_desktop = 900,
+    width_tablet: width_tablet = 1024,
+    height_tablet: height_tablet = 1366,
     width_mac: width_mac = 2048,
     height_mac: height_mac = 1152 ,
     scrollHeight : this.scrollHeight,
@@ -55,10 +59,11 @@ module.exports = {
     clientHeight : this.clientHeight,
     value : this.value,
     res_mobile: res_mobile = 'Mobile',
-    res_laptop: res_laptop = 'Laptop',
-    res_mac: res_mac = 'Mac',
+    res_retina: res_retina = 'Retina',
+    res_desktop: res_desktop = 'Desktop',
+    res_tablet: res_tablet = 'Tablet',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
-    headless : headless = true,
+    headless : headless = false,
     slowMo : slowMo = 0,
     clear_dir : function (res) {
         console.log('..waiting directory be cleared')
