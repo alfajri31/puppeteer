@@ -2,9 +2,9 @@ module.exports = {
     fs : fs = require('fs'),
     puppeteer : puppeteer = require('puppeteer'),
     puppeteer_core : puppeteer_core = require('puppeteer-core'),
+    mydevices : mydevices = puppeteer.devices['Pixel 2 XL landscapes'],
     pptrFox : pptrFox = require('puppeteer-firefox'),
     devices : devices = require('puppeteer/DeviceDescriptors'),
-    device : device = devices['iPhone X'],
     path : path = require('path'),
     faker : faker = require('faker'),
     cheerio : cheerio = require('cheerio'),
@@ -44,11 +44,15 @@ module.exports = {
     /*
     cek browserszie.com
     */ 
-    width_mobile: width_mobile = 414,
+   /** 
+    * width_mobile: width_mobile = 414,
     height_mobile : height_mobile = 736,
+   */
+    width_mobile: width_mobile = 414,
+    height_mobile : height_mobile = 892,
     width_retina: width_retina =  3840,
     height_retina : height_retina = 2160,
-    width_desktop: width_desktop = 1440,
+    width_desktop: width_desktop = 1800,
     height_desktop: height_desktop = 900,
     width_tablet: width_tablet = 1024,
     height_tablet: height_tablet = 1366,
@@ -58,12 +62,14 @@ module.exports = {
     innerHeight : this.innerHeight,
     clientHeight : this.clientHeight,
     value : this.value,
+    orientation: this.orientation,
     res_mobile: res_mobile = 'Mobile',
     res_retina: res_retina = 'Retina',
+    res_mac: res_mac = 'iMac',
     res_desktop: res_desktop = 'Desktop',
     res_tablet: res_tablet = 'Tablet',
     useragent: useragent ="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Mobile Safari/537.36",
-    headless : headless = false,
+    headless : headless = true,
     slowMo : slowMo = 0,
     clear_dir : function (res) {
         console.log('..waiting directory be cleared')
@@ -106,54 +112,125 @@ module.exports = {
     },
     uniq : uniq = Math.floor(Math.random() * 100),
     src_height : async function () {
+        
         scrollHeight = await page.waitForFunction('document.body.scrollHeight');
             return value = await page.evaluate((scrollHeight)=>{
                 console.log(scrollHeight)
                     return scrollHeight
             },scrollHeight)     
+
     },
-    optmimal_ss : async function (folder,res,name,default_width,browserType) {
+    optmimal_ss : async function (folder,res,name,default_width,default_height,browserType) {
 
-        if (browserType == 'webkit') {
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
-                    console.log(err)
-                });
+        if(default_width > default_height) {
+            this.orientation = 'Landscape'
+            if (browserType == 'webkit') {
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder, (err) => {
+                        console.log(err)
+                    });
+                }
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                        console.log(err)
+                    });
+                }
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation, (err) => {
+                        console.log(err)
+                    });
+                }  
             }
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
-                    console.log(err)
-                });
-            }
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
-                    console.log(err)
-                });
+    
+            if (browserType == 'chromium') {
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder, (err) => {
+                        console.log(err)
+                    });
+                } 
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation, (err) => {
+                        console.log(err)
+                    });
+                }        
+    
             }
         }
-
-        if (browserType == 'chromium') {
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder, (err) => {
-                    console.log(err)
-                });
-            } 
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res, (err) => {
-                    console.log(err)
-                });
+        else {
+            this.orientation = "Potrait"
+            if (browserType == 'webkit') {
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder, (err) => {
+                        console.log(err)
+                    });
+                }
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                        console.log(err)
+                    });
+                }
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation, (err) => {
+                        console.log(err)
+                    });
+                }  
             }
-
-            if (!fs.existsSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
-                fs.mkdirSync('Renders'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
-                    console.log(err)
-                });
+    
+            if (browserType == 'chromium') {
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder, (err) => {
+                        console.log(err)
+                    });
+                } 
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation, (err) => {
+                        console.log(err)
+                    });
+                }        
+    
             }
         }
+      
 
         await page.setViewportSize({
             width: default_width,
-            height: height_mac
+            height: 352
         })
         await scrollPageToBottom(page)
         await page.evaluate(_ => {
@@ -163,7 +240,7 @@ module.exports = {
             await page.setViewportSize({width: default_width,height : value})
             await page.waitFor(5000)
             await page.screenshot({
-                path: path.join(__dirname,'../Renders/Unit/'+folder+'/'+res+'/'+browserType+'/'+name+'.png'),
+                path: path.join(__dirname,'../Renders/OneDrive - WPP Cloud/Unit/'+folder+'/'+res+'/'+browserType+'/'+this.orientation+'/'+name+'.png'),
                 fullpage: true,
                 waitUntil : 'networkidle2'
             })
@@ -175,6 +252,8 @@ module.exports = {
    width_iphonex: width_iphonex = 375,
    height_iphonex : height_iphonex = 812,
 }
+
+
 
 
 /*

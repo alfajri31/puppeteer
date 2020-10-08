@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,10 +115,10 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 1,
-  &quot;numFailedTests&quot;: 1,
-  &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 0,
+  &quot;numFailedTestSuites&quot;: 0,
+  &quot;numFailedTests&quot;: 0,
+  &quot;numPassedTestSuites&quot;: 1,
+  &quot;numPassedTests&quot;: 1,
   &quot;numPendingTestSuites&quot;: 0,
   &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1596096626337,
+  &quot;startTime&quot;: 1602135435527,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1mbrimo form fills › step 1 should be success\u001b[39m\u001b[22m\n\n    TimeoutError: waiting for selector \&quot;[visible] svg[data-icon&#x3D;\&quot;portrait\&quot;]\&quot; failed: timeout 30000ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 53 | \u001b[39m async \u001b[36mfunction\u001b[39m getSelfie () {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 54 | \u001b[39m    \u001b[90m&#x2F;&#x2F;input selfie\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 55 | \u001b[39m    await page\u001b[33m.\u001b[39mclick(\u001b[32m&#39;svg[data-icon&#x3D;\&quot;portrait\&quot;]&#39;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m    | \u001b[39m               \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 56 | \u001b[39m    await page\u001b[33m.\u001b[39mwaitFor(\u001b[35m4000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 57 | \u001b[39m    await page\u001b[33m.\u001b[39mclick(\u001b[32m&#39;button[class&#x3D;\&quot;btn mr-4 ml-4 btn-capture\&quot;]&#39;\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 58 | \u001b[39m    await page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m&#39;svg[data-icon&#x3D;\&quot;check\&quot;]&#39;\u001b[39m\u001b[33m,\u001b[39m{\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new RerunnableTask (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:822:34)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._scheduleRerunnableTask (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:770:32)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._waitForSelectorInUtilityContext (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:741:35)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame._optionallyWaitForSelectorInUtilityContext (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:721:44)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.click (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:657:35)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;page.js\u001b[2m:353:33)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.click (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat getSelfie (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;brimo&#x2F;micro&#x2F;functional.test.js\u001b[39m\u001b[0m\u001b[2m:55:16)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;brimo&#x2F;micro&#x2F;functional.test.js\u001b[39m\u001b[0m\u001b[2m:146:15)\u001b[2m\u001b[22m\n&quot;,
-      &quot;numFailingTests&quot;: 1,
-      &quot;numPassingTests&quot;: 0,
+      &quot;failureMessage&quot;: null,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 1,
       &quot;numPendingTests&quot;: 0,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1596096687649,
-        &quot;start&quot;: 1596096630080
+        &quot;end&quot;: 1602135895404,
+        &quot;start&quot;: 1602135439189
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -164,21 +164,19 @@
         &quot;updated&quot;: 0,
         &quot;uncheckedKeys&quot;: []
       },
-      &quot;testFilePath&quot;: &quot;C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js&quot;,
+      &quot;testFilePath&quot;: &quot;C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js&quot;,
       &quot;testResults&quot;: [
         {
           &quot;ancestorTitles&quot;: [
-            &quot;brimo form fills&quot;
+            &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 39570,
-          &quot;failureMessages&quot;: [
-            &quot;TimeoutError: waiting for selector \&quot;[visible] svg[data-icon&#x3D;\&quot;portrait\&quot;]\&quot; failed: timeout 30000ms exceeded\n    at new RerunnableTask (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:822:34)\n    at Frame._scheduleRerunnableTask (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:770:32)\n    at Frame._waitForSelectorInUtilityContext (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:741:35)\n    at Frame._optionallyWaitForSelectorInUtilityContext (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:721:44)\n    at Frame.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:657:35)\n    at Frame.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at Page.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\page.js:353:33)\n    at Page.click (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at getSelfie (C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js:55:16)\n    at Object.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\test\\brimo\\micro\\functional.test.js:146:15)&quot;
-          ],
-          &quot;fullName&quot;: &quot;brimo form fills step 1 should be success&quot;,
+          &quot;duration&quot;: 439740,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing optimal ss&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;step 1 should be success&quot;
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;optimal ss&quot;
         }
       ],
       &quot;skipped&quot;: false,
@@ -214,7 +212,7 @@
   &quot;maxWorkers&quot;: 1,
   &quot;noStackTrace&quot;: false,
   &quot;nonFlagArgs&quot;: [
-    &quot;brimo&#x2F;micro&#x2F;functional&quot;
+    &quot;projects&#x2F;scr&#x2F;scr&quot;
   ],
   &quot;notify&quot;: false,
   &quot;notifyMode&quot;: &quot;failure-change&quot;,
@@ -235,7 +233,7 @@
   &quot;runTestsByPath&quot;: false,
   &quot;skipFilter&quot;: false,
   &quot;testFailureExitCode&quot;: 1,
-  &quot;testPathPattern&quot;: &quot;brimo\\\\micro\\\\functional&quot;,
+  &quot;testPathPattern&quot;: &quot;projects\\\\scr\\\\scr&quot;,
   &quot;testResultsProcessor&quot;: null,
   &quot;testSequencer&quot;: &quot;C:\\Users\\Fajri\\Documents\\automation\\node_modules\\@jest\\test-sequencer\\build\\index.js&quot;,
   &quot;updateSnapshot&quot;: &quot;new&quot;,
