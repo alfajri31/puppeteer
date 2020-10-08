@@ -23,10 +23,6 @@
  let dir1,dir2,dir3,dir4,pp;
 
 
-
-       
-
-
  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
  fs.readdir(dir3, (err, files) => {
      for (const file of files) {
@@ -52,7 +48,7 @@ beforeAll(async() => {
     },90000);
   
    afterAll(async() => {
-     await browser.close();
+     await browser.disconnected();
      await chrome.kill();
    })
  
@@ -177,15 +173,10 @@ beforeAll(async() => {
                   //loop the test
                   i = 0
 
-                  //init report.json
-                  fs.writeFileSync(__dirname+'/report.json', function(err) {
-                    if (err) {
-                      console.log(err);
-                    }
-                  })
-
                   while (i <=url.length -1) {
-                    await page.goto(url[3],{waitUntil : 'networkidle2'}) 
+
+
+                    await page.goto(url[i],{waitUntil : 'networkidle2'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
