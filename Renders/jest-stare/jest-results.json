@@ -26,7 +26,11 @@
     "unmatched": 0,
     "updated": 0
   },
+<<<<<<< HEAD
   "startTime": 1597734926864,
+=======
+  "startTime": 1602135435527,
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
   "success": false,
   "testResults": [
     {
@@ -36,8 +40,13 @@
       "numPendingTests": 20,
       "numTodoTests": 0,
       "perfStats": {
+<<<<<<< HEAD
         "end": 1597734978347,
         "start": 1597734927537
+=======
+        "end": 1602135895404,
+        "start": 1602135439189
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
       },
       "snapshot": {
         "added": 0,
@@ -48,12 +57,13 @@
         "updated": 0,
         "uncheckedKeys": []
       },
-      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js",
+      "testFilePath": "C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "brimo form fills"
+            "e2e testing"
           ],
+<<<<<<< HEAD
           "duration": 47326,
           "failureMessages": [
             "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected substring: \u001b[32m\"gagal\"\u001b[39m\nReceived string:    \u001b[31m\"sukses\"\u001b[39m\n    at Object.test (/Users/fajri/Documents/auto/ppt/test/brimo/micro/functional.test.js:299:32)"
@@ -303,6 +313,15 @@
           "numPassingAsserts": 0,
           "status": "pending",
           "title": "Field \"Nomor NPWP\" masih bisa dimasukkan lebih dari 15 digit"
+=======
+          "duration": 439740,
+          "failureMessages": [],
+          "fullName": "e2e testing optimal ss",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "optimal ss"
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
         }
       ],
       "skipped": false,

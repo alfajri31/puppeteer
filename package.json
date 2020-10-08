@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "ppt",
   "version": "1.0.0",
@@ -64,3 +65,83 @@
     "xlsx": "^0.15.5"
   }
 }
+=======
+{
+  "name": "ppt",
+  "version": "1.0.0",
+  "description": "fortesting purpose",
+  "git repository": "https://github.com/alfajri31/puppeteer",
+  "main": "index.js",
+  "jest-stare": {
+    "resultDir": "Renders/jest-stare"
+  },
+  "scripts": {
+    "test": "concurrently 'npm run miloperm' 'npm run nutea' 'npm run bri' 'npm run pinaa' 'npm run pinaaperform'npm run nutealoadgethome' 'npm run nutealoadgetregister' 'npm run cerelac' 'npm run milo'",
+    "miloperm": "jest milo/perform/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "milo": "jest milo/micro/res --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "onedancow": "jest onedancow/micro/res --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "nutridancow": "jest nutridancow/micro/res --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "pmgm": "jest milo/micro/pmgm --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "nutea": "jest nutea/e2e/ --runInBand   --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "bri": "jest bri/micro/bri1 --runInBand  --detectOpenHandles --forceExit --reporters default jest-stare",
+    "pinaa": "jest pinaa/e2e/sequence --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
+    "pinaaperform": "jest pinaa/perform/ --runInBand --detectOpenHandles --forceExit --reporters default jest-stare",
+    "cerelac": "jest cerelac/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "nutealoadhome": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/gethome.js --s=1 --c=50000",
+    "nutealoadregister": "./node_modules/puppeteer-loadtest/index.js --file=./test/nutea/loadtest/getregister.js --s=1 --c=200",
+    "trv": "jest traveloka/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "olx": "jest olx/micro --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "akudankau": "jest akudankau/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "fixenak": "jest fixenak/micro/ --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "loginvideo": "jest akudankau/micro/loginvideo --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "doubledha-desk": "jest doubledha/desktop/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "doubledha-mob": "jest doubledha/mobile/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "doubledha-visual": "jest doubledha/scr/res --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "brimo": "jest brimo/micro/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "scr": "jest projects/scr/scr --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "simple": "jest simple --runInBand  --detectOpenHandles --forceExit",
+    "test:acceptance": "cucumber-js  --require-module @babel/register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/register": "^7.10.5",
+    "cheerio": "^1.0.0-rc.3",
+    "chrome-launcher": "^0.13.3",
+    "cucumber": "^6.0.5",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "jest-stare": "^1.25.0",
+    "json-query": "^2.2.2",
+    "pending-xhr-puppeteer": "^2.1.0",
+    "puppeteer": "^2.1.1",
+    "puppeteer-autoscroll-down": "^0.1.2",
+    "puppeteer-core": "^2.1.1",
+    "puppeteer-extra": "^3.1.12",
+    "puppeteer-firefox": "^0.5.0",
+    "puppeteer-full-page-screenshot": "^1.0.4",
+    "puppeteer-loadtest": "^1.0.7",
+    "request-promise": "^4.2.6",
+    "request-promise-native": "^1.0.8",
+    "shelljs": "^0.8.3",
+    "xhr": "^2.5.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "dependencies": {
+    "got": "^11.7.0",
+    "http-parser-js": "^0.5.2",
+    "lighthouse": "^6.4.1",
+    "moment": "^2.27.0",
+    "moment-timezone": "^0.5.31",
+    "needle": "^2.5.2",
+    "playwright": "^0.11.1",
+    "puppeteer-extra-plugin-adblocker": "^2.11.5",
+    "puppeteer-extra-plugin-recaptcha": "^3.1.13",
+    "puppeteer-extra-plugin-stealth": "^2.4.13",
+    "request": "^2.88.2",
+    "superagent": "^6.1.0",
+    "xlsx": "^0.15.5"
+  }
+}
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a

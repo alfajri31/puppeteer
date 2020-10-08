@@ -1,15 +1,21 @@
+
  // PREPEARING
- let init = require('../../initialize')
+ let init = require('../../initialize');
+ const playwright = require('playwright');
+ 
  require('../../initialize').page
  require('../../initialize').browser
- const playwright = require('playwright');
- let browserType
-
  
+
+ init.clear_dir('Laptop')
+ init.clear_dir('Mobile')
+
+
  beforeAll(async() => {
-    for (browserType of ['webkit']) {
+    for (browserType of ['chromium']) {
       browser = await playwright[browserType].launch({
-        headless: headless
+        headless: headless,
+        args: ['--no-sandbox']
       });
       const context = await browser.newContext();
       page = await context.newPage();
@@ -23,8 +29,8 @@ beforeEach(async()=>{
   })
 })
  
- afterAll(() => {
-     browser.close()
+ afterAll(async () => {
+     await browser.close()
  })
    // START TO TESTING
    describe("micro testing",() => {
@@ -34,7 +40,6 @@ beforeEach(async()=>{
        await page.waitFor(8000)
        await init.optmimal_ss('traveloka','Laptop','HOME',1440,browserType)
        await init.optmimal_ss('traveloka','Mobile','HOME',360,browserType)
-       
      },100000)
 
      test("testing live traveloka layout", async () => { 

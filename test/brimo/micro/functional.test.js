@@ -4,7 +4,10 @@ require('../../initialize').page
 require('../../initialize').browser
 const moment = require('moment-timezone');
 const playwright = require('playwright');
+<<<<<<< HEAD
 let init = require('../../initialize');
+=======
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 
 //initialize function random number
 CHAR_SETS = {
@@ -28,13 +31,22 @@ function randChar(charType) {
 }
 
 //initialize variables
+<<<<<<< HEAD
+=======
+const URL = 'https://brimo.wtid.dev/intro?step=1&token=6aa10b3e9f1482e49b7eb716b8a1a174'
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 const phone = mapString('08AAAAAAAAAA', randChar)
 
 //preapering chromium launch
 beforeAll(async() => {
     browser = await playwright['chromium'].launch({  
         headless: headless,
+<<<<<<< HEAD
         args: ['--no-sandbox','--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream']
+=======
+        args: ['--use-fake-ui-for-media-stream'],
+        executablePath: path.join(__dirname,'../','../','../','/node_modules/playwright-core/.local-chromium/linux-740847/chrome-linux/chrome')
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
     });
     const context = await browser.newContext();
     page = await context.newPage();
@@ -309,12 +321,19 @@ describe("brimo testing",() => {
 
     },3600000)
 
+<<<<<<< HEAD
     test.skip('Update Data Kota', async() => {
+=======
+async function kewarganegaraan() {
+    await page.click('input[id="kewarganegaraan-1"]');
+}
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 
     },3600000)
 
     test.skip('Rekening BRI limit 15 digit (min. 15 digit, maks. 15 digit). Hanya 15 Digit', async() => {
 
+<<<<<<< HEAD
     },3600000)
 
     test.skip('NPWP di-sanitize dan length nya adalah 15 digit', async() => {
@@ -375,4 +394,26 @@ describe("brimo testing",() => {
 
 
 
+=======
+//start testing
+describe("brimo form fills",() => {
+    test("step 1 should be success", async() =>{
+        await page.goto(URL);
+        await getSelfie();
+        await getKtp();
+        await getSlipGaji()
+        await getNpwp()
+        await isiNamaLengkap();
+        await isiNamaSesuaiID();
+        await jenisKelamin();
+        await jenisIdentitas();
+        await nomorIdentitas();
+        await nomorNPWP();
+        await tempatLahir();
+        await tanggalLahir();
+        await kewarganegaraan();
+        await email();
+        await nohp();
+    },3600000)
+>>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 })
