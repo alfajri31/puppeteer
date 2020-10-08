@@ -9,8 +9,8 @@
  //request and response
  const cheerio = require('cheerio');
  const request = require('request');
- const superagent = require('superagent');
- var https = require('https');
+
+
 
  //important
  const target = 'https://www.milo.co.id/'
@@ -20,7 +20,11 @@
  const regex = /([\b\/])\1/g;
  const regex2 = /[:]/g;
 
- let dir1,dir2,dir3,dir4;
+ let dir1,dir2,dir3,dir4,pp;
+
+
+
+       
 
 
  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
@@ -47,8 +51,9 @@ beforeAll(async() => {
     }
     },90000);
   
-   afterAll(() => {
-      browser.close()
+   afterAll(async() => {
+     await browser.close();
+     await chrome.kill();
    })
  
     // START TO TESTING
@@ -108,7 +113,7 @@ beforeAll(async() => {
           }
 
           
-          test("optimal ss", async() => {
+          test.skip("optimal ss", async() => {
             await yy().then(async (result) => {
      
                //print all sitemap
@@ -129,6 +134,96 @@ beforeAll(async() => {
      
              })
            
+           },3600000)
+
+           test("performance", async() => {
+
+            const chromeLauncher = require('chrome-launcher');
+            const puppeteer = require('puppeteer');
+            const lighthouse = require('lighthouse');
+            const config = require('lighthouse/lighthouse-core/config/lr-mobile-config.js');
+            const reportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
+            const request = require('request');
+            const util = require('util');
+            const fs = require('fs');
+            
+       
+         
+            opts = {
+              args: [ '--ignore-certificate-errors','--no-sandbox'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
+              disableDeviceEmulation: true,
+            }
+          
+            // Launch chrome using chrome-launcher
+            chrome = await chromeLauncher.launch(opts);
+            opts.port = chrome.port;
+        
+            // Connect to it using puppeteer.connect().
+            const resp = await util.promisify(request)(`http://localhost:${opts.port}/json/version`);
+            const {webSocketDebuggerUrl} = JSON.parse(resp.body);
+            browser = await puppeteer.connect({browserWSEndpoint: webSocketDebuggerUrl});
+            page = (await browser.pages())[0]
+
+            await yy().then(async (result) => {
+
+                  //print all sitemap
+                  console.log(result)
+     
+                  //initialize step
+                  let url = [];
+                  url = result;
+              
+                  //loop the test
+                  i = 0
+
+                  //init report.json
+                  fs.writeFileSync(__dirname+'/report.json', function(err) {
+                    if (err) {
+                      console.log(err);
+                    }
+                  })
+
+                  while (i <=url.length -1) {
+                    await page.goto(url[3],{waitUntil : 'networkidle2'}) 
+                    const report = await lighthouse(page.url(), opts, config).then(results => {
+                        return results;
+                    });
+            
+                    const json = reportGenerator.generateReport(report.lhr, 'json');
+                    const html = reportGenerator.generateReport(report.lhr, 'html');
+                    
+               
+                    //Write report json to the file                    
+                    fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
+                      console.log(err)
+                    });
+
+                    fs.writeFileSync(__dirname+'/report.json', json, (err) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
+
+                 
+
+                    let output = require('./report.json')
+
+                    let perf_score = output.categories.performance.score
+                    let seo =output.categories.seo.score
+
+                    console.log('score'+' '+perf_score+' '+seo)
+
+                    fs.appendFileSync(__dirname+'/score',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
+                      if (err) {
+                        console.log(err);
+                      }
+                    })
+
+                  i = i + 1;
+                  }
+            })
+
            },3600000)
     })
  
