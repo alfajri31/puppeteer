@@ -140,6 +140,7 @@ beforeAll(async() => {
             const request = require('request');
             const util = require('util');
             const fs = require('fs');
+            let output;
             
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
@@ -183,11 +184,16 @@ beforeAll(async() => {
                     });
 
                     fs.readFile(__dirname+'/report.json',  {encoding:'utf8', flag:'r'}, function(err, data) { 
-                      if(err) 
+                      if(err) {
                         console.log(err); 
-                      else
-                        console.log(data); 
+                      }
+                      else {
+                        output = JSON.parse(data)
+                        console.log(output.categories.performance.score)
+                      }
+                   
                     }); 
+
 
                   i = i + 1;
                   }
