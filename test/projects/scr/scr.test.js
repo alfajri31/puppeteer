@@ -10,8 +10,6 @@
  const cheerio = require('cheerio');
  const request = require('request');
 
-
-
  //important
  const target = 'https://www.milo.co.id/'
  const last_path = ''
@@ -48,8 +46,8 @@ beforeAll(async() => {
     },90000);
   
    afterAll(async() => {
-     await browser.disconnected();
-     await chrome.kill();
+      await browser.disconnected();
+      await browser.close();
    })
  
     // START TO TESTING
@@ -143,8 +141,6 @@ beforeAll(async() => {
             const util = require('util');
             const fs = require('fs');
             
-       
-         
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
               chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
@@ -172,23 +168,13 @@ beforeAll(async() => {
               
                   //loop the test
                   i = 0
-
                   while (i <=url.length -1) {
-
-
                     await page.goto(url[i],{waitUntil : 'networkidle2'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
-            
+
                     const json = reportGenerator.generateReport(report.lhr, 'json');
-                    const html = reportGenerator.generateReport(report.lhr, 'html');
-                    
-               
-                    //Write report json to the file                    
-                    fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
-                      console.log(err)
-                    });
 
                     fs.writeFileSync(__dirname+'/report.json', json, (err) => {
                         if (err) {
@@ -196,20 +182,12 @@ beforeAll(async() => {
                         }
                     });
 
-                 
-
-                    let output = require('./report.json')
-
-                    let perf_score = output.categories.performance.score
-                    let seo =output.categories.seo.score
-
-                    console.log('score'+' '+perf_score+' '+seo)
-
-                    fs.appendFileSync(__dirname+'/score',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
-                      if (err) {
-                        console.log(err);
-                      }
-                    })
+                    fs.readFile(__dirname+'/report.json',  {encoding:'utf8', flag:'r'}, function(err, data) { 
+                      if(err) 
+                        console.log(err); 
+                      else
+                        console.log(data); 
+                    }); 
 
                   i = i + 1;
                   }
