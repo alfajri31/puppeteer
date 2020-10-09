@@ -46,7 +46,6 @@ beforeAll(async() => {
     },90000);
   
    afterAll(async() => {
-      await browser.disconnected();
       await browser.close();
    })
  
@@ -130,7 +129,7 @@ beforeAll(async() => {
            
            },3600000)
 
-           test("performance", async() => {
+           test("performance in mobile", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -141,7 +140,8 @@ beforeAll(async() => {
             const util = require('util');
             const fs = require('fs');
             let output;
-            
+
+    
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
               chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
@@ -166,11 +166,28 @@ beforeAll(async() => {
                   //initialize step
                   let url = [];
                   url = result;
+
+                 //excel convert
+                 let data = [];
+                 let ndata= [];
+                 let XLSX = require('xlsx')
+                 let wb = XLSX.utils.book_new();
+
               
+                 function pushScore (output) {
+                  data = output
+                  ndata.push(data)
+                  fs.writeFileSync(__dirname+'/prexl', JSON.stringify(ndata), (err) => {
+                    if (err) {
+                        console.error(err);
+                    }
+                  });
+                  return ndata
+                }
                   //loop the test
                   i = 0
-                  while (i <=url.length -1) {
-                    await page.goto(url[i],{waitUntil : 'networkidle2'}) 
+                  while (i <=url.length - 10) {
+                    await page.goto(url[i],{waitUntil : 'domcontentloaded'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -189,16 +206,23 @@ beforeAll(async() => {
                       }
                       else {
                         output = JSON.parse(data)
-                        console.log(output.categories.performance.score)
+                        let score = new pushScore({"no" : i, "url": url[i], "performance score": output.categories.performance.score})
+                        console.log(score)
+                        chrome.disconnected;
+                        chrome.kill;
                       }
-                   
                     }); 
-
-
+                 
                   i = i + 1;
                   }
+
             })
 
            },3600000)
-    })
+          
+           test("performance in desktop", async() => {
+
+           })
+    
+          })
  

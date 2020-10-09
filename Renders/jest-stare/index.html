@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 0 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">2 passed, 3 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,16 +115,16 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 1,
+  &quot;numFailedTestSuites&quot;: 0,
   &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 0,
+  &quot;numPassedTestSuites&quot;: 1,
+  &quot;numPassedTests&quot;: 2,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 0,
-  &quot;numRuntimeErrorTestSuites&quot;: 1,
+  &quot;numPendingTests&quot;: 1,
+  &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 0,
+  &quot;numTotalTests&quot;: 3,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,43 +142,69 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1602173279031,
+  &quot;startTime&quot;: 1602190513742,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;displayName&quot;: &quot;&quot;,
-      &quot;failureMessage&quot;: &quot;  \u001b[1m● \u001b[22mTest suite failed to run\n\n    TypeError: browser.disconnected is not a function\n\n    \u001b[0m \u001b[90m 47 | \u001b[39m  \u001b[0m\n    \u001b[0m \u001b[90m 48 | \u001b[39m   afterAll(async() \u001b[33m&#x3D;&gt;\u001b[39m {\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[22m\u001b[39m\u001b[90m 49 | \u001b[39m      await browser\u001b[33m.\u001b[39mdisconnected()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 50 | \u001b[39m      await browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 51 | \u001b[39m   })\u001b[0m\n    \u001b[0m \u001b[90m 52 | \u001b[39m \u001b[0m\n\n      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[22m\u001b[0m\u001b[36mtest&#x2F;projects&#x2F;scr&#x2F;scr.test.js\u001b[39m\u001b[0m\u001b[2m:49:21)\u001b[22m\n          at runMicrotasks (&lt;anonymous&gt;)\n&quot;,
-      &quot;leaks&quot;: false,
+      &quot;failureMessage&quot;: null,
       &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 0,
-      &quot;numPendingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 2,
+      &quot;numPendingTests&quot;: 1,
       &quot;numTodoTests&quot;: 0,
-      &quot;openHandles&quot;: [],
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 0,
-        &quot;start&quot;: 0
+        &quot;end&quot;: 1602192017208,
+        &quot;start&quot;: 1602190516138
       },
-      &quot;skipped&quot;: false,
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
         &quot;fileDeleted&quot;: false,
         &quot;matched&quot;: 0,
         &quot;unchecked&quot;: 0,
-        &quot;uncheckedKeys&quot;: [],
         &quot;unmatched&quot;: 0,
-        &quot;updated&quot;: 0
-      },
-      &quot;testExecError&quot;: {
-        &quot;actual&quot;: &quot;&quot;,
-        &quot;error&quot;: {},
-        &quot;expected&quot;: &quot;&quot;,
-        &quot;matcherName&quot;: &quot;&quot;,
-        &quot;message&quot;: &quot;TypeError: browser.disconnected is not a function&quot;,
-        &quot;passed&quot;: false,
-        &quot;stack&quot;: &quot;TypeError: browser.disconnected is not a function\n    at Object.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:49:21)\n    at Object.asyncJestLifecycle (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\jasmineAsyncInstall.js:53:37)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:43:12\n    at new Promise (&lt;anonymous&gt;)\n    at mapper (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:26:19)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:73:41\n    at runMicrotasks (&lt;anonymous&gt;)\n    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:97:5)&quot;
+        &quot;updated&quot;: 0,
+        &quot;uncheckedKeys&quot;: []
       },
       &quot;testFilePath&quot;: &quot;C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js&quot;,
-      &quot;testResults&quot;: []
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing optimal ss&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;optimal ss&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 1487810,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing performance in mobile&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;performance in mobile&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing performance in desktop&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;performance in desktop&quot;
+        }
+      ],
+      &quot;skipped&quot;: false,
+      &quot;leaks&quot;: false
     }
   ],
   &quot;wasInterrupted&quot;: false
