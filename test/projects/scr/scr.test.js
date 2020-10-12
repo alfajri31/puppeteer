@@ -237,17 +237,6 @@ const { fs } = require('../../initialize');
                       }
                     })
 
-                    // let output = require('./report.json')
-                    // let perf_score = output.categories.performance.score * 100
-                    // let seo =output.categories.seo.score * 100
-
-                    // console.log('score in mobile'+' '+perf_score+' '+seo)
-
-                    // fs.appendFileSync(__dirname+'/score in mobile',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
-                    //   if (err) {
-                    //     console.log(err);
-                    //   }
-                    // })
                   i = i + 1;
                   }
             })
