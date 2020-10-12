@@ -7,6 +7,7 @@ let faker = require('faker')
 let data = []
 var wb = XLSX.utils.book_new();
 let i = 1
+
 CHAR_SETS = {
     A: '123456789',
     B: '01234',

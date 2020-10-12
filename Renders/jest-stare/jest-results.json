@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 0,
+  "numFailedTestSuites": 1,
   "numFailedTests": 0,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 2,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
-  "numPendingTests": 1,
-  "numRuntimeErrorTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 1,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 3,
+  "numTotalTests": 0,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,69 +26,43 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602190513742,
+  "startTime": 1602234452003,
   "success": false,
   "testResults": [
     {
-      "failureMessage": null,
+      "displayName": "",
+      "failureMessage": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    Error: WebSocket is not open: readyState 3 (CLOSED)\n\n    \u001b[0m \u001b[90m 47 | \u001b[39m  \u001b[0m\n    \u001b[0m \u001b[90m 48 | \u001b[39m   afterAll(async() \u001b[33m=>\u001b[39m {\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 | \u001b[39m      await browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 50 | \u001b[39m   })\u001b[0m\n    \u001b[0m \u001b[90m 51 | \u001b[39m \u001b[0m\n    \u001b[0m \u001b[90m 52 | \u001b[39m    \u001b[90m// START TO TESTING\u001b[39m\u001b[0m\n\n      \u001b[2mat WebSocket.send (\u001b[22mnode_modules/ws/lib/websocket.js\u001b[2m:329:19)\u001b[22m\n      \u001b[2mat WebSocketTransport.send (\u001b[22mnode_modules/puppeteer/lib/WebSocketTransport.js\u001b[2m:60:14)\u001b[22m\n      \u001b[2mat Connection._rawSend (\u001b[22mnode_modules/puppeteer/lib/Connection.js\u001b[2m:86:21)\u001b[22m\n      \u001b[2mat Connection.send (\u001b[22mnode_modules/puppeteer/lib/Connection.js\u001b[2m:72:21)\u001b[22m\n      \u001b[2mat \u001b[22mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:351:117\u001b[22m\n      \u001b[2mat Browser.close (\u001b[22mnode_modules/puppeteer/lib/Browser.js\u001b[2m:255:31)\u001b[22m\n      \u001b[2mat Browser.close (\u001b[22mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[22m\n      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:49:21)\u001b[22m\n",
+      "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 2,
-      "numPendingTests": 1,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
       "numTodoTests": 0,
+      "openHandles": [],
       "perfStats": {
-        "end": 1602192017208,
-        "start": 1602190516138
+        "end": 0,
+        "start": 0
       },
+      "skipped": false,
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
         "matched": 0,
         "unchecked": 0,
+        "uncheckedKeys": [],
         "unmatched": 0,
-        "updated": 0,
-        "uncheckedKeys": []
+        "updated": 0
+      },
+      "testExecError": {
+        "actual": "",
+        "error": {},
+        "expected": "",
+        "matcherName": "",
+        "message": "Error: WebSocket is not open: readyState 3 (CLOSED)",
+        "passed": false,
+        "stack": "Error: WebSocket is not open: readyState 3 (CLOSED)\n    at WebSocket.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\ws\\lib\\websocket.js:329:19)\n    at WebSocketTransport.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\WebSocketTransport.js:60:14)\n    at Connection._rawSend (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Connection.js:86:21)\n    at Connection.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Connection.js:72:21)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Launcher.js:351:117\n    at Browser.close (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Browser.js:255:31)\n    at Browser.close (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\helper.js:112:23)\n    at Object.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:49:21)\n    at Object.asyncJestLifecycle (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\jasmineAsyncInstall.js:53:37)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:43:12\n    at new Promise (<anonymous>)\n    at mapper (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:26:19)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:73:41"
       },
       "testFilePath": "C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js",
-      "testResults": [
-        {
-          "ancestorTitles": [
-            "e2e testing"
-          ],
-          "duration": 1,
-          "failureMessages": [],
-          "fullName": "e2e testing optimal ss",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "pending",
-          "title": "optimal ss"
-        },
-        {
-          "ancestorTitles": [
-            "e2e testing"
-          ],
-          "duration": 1487810,
-          "failureMessages": [],
-          "fullName": "e2e testing performance in mobile",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "performance in mobile"
-        },
-        {
-          "ancestorTitles": [
-            "e2e testing"
-          ],
-          "duration": 0,
-          "failureMessages": [],
-          "fullName": "e2e testing performance in desktop",
-          "location": null,
-          "numPassingAsserts": 0,
-          "status": "passed",
-          "title": "performance in desktop"
-        }
-      ],
-      "skipped": false,
-      "leaks": false
+      "testResults": []
     }
   ],
   "wasInterrupted": false

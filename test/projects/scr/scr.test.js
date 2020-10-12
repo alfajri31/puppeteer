@@ -20,7 +20,6 @@
 
  let dir1,dir2,dir3,dir4,pp;
 
-
  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
  fs.readdir(dir3, (err, files) => {
      for (const file of files) {
@@ -31,7 +30,7 @@
  })
 
 
- let i = 0  ;
+let i = 0  ;
 beforeAll(async() => {
     for (browserType of ['chromium']) {
       browser = await playwright[browserType].launch({
@@ -103,9 +102,8 @@ beforeAll(async() => {
               }
               
               return tmp;
-          }
-
-          
+        }
+ 
           test.skip("optimal ss", async() => {
             await yy().then(async (result) => {
      
@@ -129,7 +127,7 @@ beforeAll(async() => {
            
            },3600000)
 
-           test("performance in mobile", async() => {
+          test("performance in mobile", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -170,14 +168,11 @@ beforeAll(async() => {
                  //excel convert
                  let data = [];
                  let ndata= [];
-                 let XLSX = require('xlsx')
-                 let wb = XLSX.utils.book_new();
-
               
                  function pushScore (output) {
                   data = output
                   ndata.push(data)
-                  fs.writeFileSync(__dirname+'/prexl', JSON.stringify(ndata), (err) => {
+                  fs.writeFileSync(__dirname+'/prexl-mobile.json', JSON.stringify(ndata), (err) => {
                     if (err) {
                         console.error(err);
                     }
@@ -186,20 +181,17 @@ beforeAll(async() => {
                 }
                   //loop the test
                   i = 0
-                  while (i <=url.length - 10) {
-                    await page.goto(url[i],{waitUntil : 'domcontentloaded'}) 
+                  while (i <= url.length - 1) {
+                    await page.goto(url[i],{waitUntil : 'domcontentloaded', timeout: '180000'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
-
                     const json = reportGenerator.generateReport(report.lhr, 'json');
-
                     fs.writeFileSync(__dirname+'/report.json', json, (err) => {
                         if (err) {
                             console.error(err);
                         }
                     });
-
                     fs.readFile(__dirname+'/report.json',  {encoding:'utf8', flag:'r'}, function(err, data) { 
                       if(err) {
                         console.log(err); 
@@ -211,18 +203,11 @@ beforeAll(async() => {
                         chrome.disconnected;
                         chrome.kill;
                       }
-                    }); 
-                 
-                  i = i + 1;
+                    });               
+                    i = i + 1;
                   }
-
-            })
-
+              })
            },3600000)
-          
-           test("performance in desktop", async() => {
-
-           })
-    
-          })
+     
+    })
  
