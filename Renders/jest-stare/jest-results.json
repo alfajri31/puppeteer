@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 1,
-  "numFailedTests": 0,
+  "numFailedTests": 1,
   "numPassedTestSuites": 0,
   "numPassedTests": 0,
   "numPendingTestSuites": 0,
-  "numPendingTests": 0,
-  "numRuntimeErrorTestSuites": 1,
+  "numPendingTests": 3,
+  "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 0,
+  "numTotalTests": 4,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,43 +26,83 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602483848021,
+  "startTime": 1602494340500,
   "success": false,
   "testResults": [
     {
-      "displayName": "",
-      "failureMessage": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    ReferenceError: chrome is not defined\n\n    \u001b[0m \u001b[90m 53 | \u001b[39m   afterAll(async() \u001b[33m=>\u001b[39m {\u001b[0m\n    \u001b[0m \u001b[90m 54 | \u001b[39m     await browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 | \u001b[39m     await chrome\u001b[33m.\u001b[39mkill()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 56 | \u001b[39m   })\u001b[0m\n    \u001b[0m \u001b[90m 57 | \u001b[39m \u001b[0m\n    \u001b[0m \u001b[90m 58 | \u001b[39m    \u001b[90m// START TO TESTING\u001b[39m\u001b[0m\n\n      \u001b[2mat Object.<anonymous>.afterAll (\u001b[22m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:55:6)\u001b[22m\n",
-      "leaks": false,
-      "numFailingTests": 0,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › test performance in mobile\u001b[39m\u001b[22m\n\n    You probably have multiple tabs open to the same origin.\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat versions.forEach.ver (\u001b[2mnode_modules/lighthouse/lighthouse-core/gather/driver.js\u001b[2m:652:21)\u001b[2m\u001b[22m\n\u001b[2m          at Array.forEach (<anonymous>)\u001b[22m\n\u001b[2m      \u001b[2mat registrations.filter.forEach.reg (\u001b[2mnode_modules/lighthouse/lighthouse-core/gather/driver.js\u001b[2m:644:20)\u001b[2m\u001b[22m\n\u001b[2m          at Array.forEach (<anonymous>)\u001b[22m\n\u001b[2m      \u001b[2mat getServiceWorkerRegistrations.then.then.then.then._ (\u001b[2mnode_modules/lighthouse/lighthouse-core/gather/driver.js\u001b[2m:643:10)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 1,
       "numPassingTests": 0,
-      "numPendingTests": 0,
+      "numPendingTests": 3,
       "numTodoTests": 0,
-      "openHandles": [],
       "perfStats": {
-        "end": 0,
-        "start": 0
+        "end": 1602494355458,
+        "start": 1602494342883
       },
-      "skipped": false,
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
         "matched": 0,
         "unchecked": 0,
-        "uncheckedKeys": [],
         "unmatched": 0,
-        "updated": 0
-      },
-      "testExecError": {
-        "actual": "",
-        "error": {},
-        "expected": "",
-        "matcherName": "",
-        "message": "ReferenceError: chrome is not defined",
-        "passed": false,
-        "stack": "ReferenceError: chrome is not defined\n    at Object.<anonymous>.afterAll (/Users/fajri/Documents/auto/ppt/test/projects/scr/scr.test.js:55:6)"
+        "updated": 0,
+        "uncheckedKeys": []
       },
       "testFilePath": "/Users/fajri/Documents/auto/ppt/test/projects/scr/scr.test.js",
-      "testResults": []
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "e2e testing optimal ss",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "optimal ss"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 8690,
+          "failureMessages": [
+            "Error: You probably have multiple tabs open to the same origin.\n    at versions.forEach.ver (/Users/fajri/Documents/auto/ppt/node_modules/lighthouse/lighthouse-core/gather/driver.js:652:21)\n    at Array.forEach (<anonymous>)\n    at registrations.filter.forEach.reg (/Users/fajri/Documents/auto/ppt/node_modules/lighthouse/lighthouse-core/gather/driver.js:644:20)\n    at Array.forEach (<anonymous>)\n    at getServiceWorkerRegistrations.then.then.then.then._ (/Users/fajri/Documents/auto/ppt/node_modules/lighthouse/lighthouse-core/gather/driver.js:643:10)\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+          ],
+          "fullName": "e2e testing test performance in mobile",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "test performance in mobile"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing test performance in desktop",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "test performance in desktop"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing convert to excel",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "convert to excel"
+        }
+      ],
+      "skipped": false,
+      "leaks": false
     }
   ],
   "wasInterrupted": false

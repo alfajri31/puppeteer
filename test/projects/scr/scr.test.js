@@ -26,14 +26,14 @@ const { fs } = require('../../initialize');
  let dir1,dir2,dir3,dir4,pp;
 
 
- dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
-  fs.readdir(dir3, (err, files) => {
-     for (const file of files) {
-         fs.unlink(path.join(dir3, file), err => {
-           if (err) throw err;
-         });
-     }
- })
+//  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
+//   fs.readdir(dir3, (err, files) => {
+//      for (const file of files) {
+//          fs.unlink(path.join(dir3, file), err => {
+//            if (err) throw err;
+//          });
+//      }
+//  })
 
 
   let i = 0  ;
@@ -185,7 +185,7 @@ const { fs } = require('../../initialize');
             await yy().then(async (result) => {
 
                   //print all sitemap
-                  // console.log(result)
+                  console.log(result)
      
                   //initialize step
                   let url = [];
@@ -204,8 +204,8 @@ const { fs } = require('../../initialize');
                     }
                   })
 
-                  while (i <=url.length - 24) {
-                    await page.goto(url[3],{waitUntil : 'networkidle2'}) 
+                  while (i <=url.length) {
+                    await page.goto('https://www.youtube.com/channel/UCJU1oph89LKXryQwUItT1Bw?nohtml5=False',{waitUntil : 'networkidle2'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -230,10 +230,13 @@ const { fs } = require('../../initialize');
                       }
                       else {
                         output = JSON.parse(data)
-                        let score = new pushScore({"no":i, "url":url[i],"performance score": output.categories.performance.score})
+                        
+                        // checkMsite(url[i])
+
+                        let score = new pushScore({"no":i, "url":url[i],"mobile performance": output.categories.performance.score * 100})
                         console.log(score)
-                        // chrome.disconnected;
-                        // chrome.kill
+                       
+                        chrome.kill
                       }
                     })
 
@@ -243,36 +246,7 @@ const { fs } = require('../../initialize');
 
            },3600000)
 
-          test("convert to excel for mobile", async() => {
-
-            const fs = require('fs');
-
-            // First I want to read the file
-            fs.readFile(__dirname+'/prexl-mobile.json', function read(err, data) {
-                if (err) {
-                    throw err;
-                }
-                const content = data;
-
-                // Invoke the next step here however you like
-                console.log(content);   // Put all of the code here (not the best solution)
-                // processFile(content);   // Or put the next step in a function and invoke it
-
-                if(typeof XLSX == 'undefined') XLSX = require('xlsx');
-
-                /* make the worksheet */
-                var ws = XLSX.utils.json_to_sheet(JSON.parse(data));
-                
-                /* add to workbook */
-                var wb = XLSX.utils.book_new();
-                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-                
-                /* generate an XLSX file */
-                XLSX.writeFile(wb, "performance-score.xlsx");
-            });            
-          },3600000)
-
-           test("test performance in desktop", async() => {
+           test.skip("test performance in desktop", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -303,7 +277,7 @@ const { fs } = require('../../initialize');
             await yy().then(async (result) => {
 
                   //print all sitemap
-                  //console.log(result)
+                  console.log(result)
      
                   //initialize step
                   let url = [];
@@ -323,7 +297,7 @@ const { fs } = require('../../initialize');
                   })
 
                   while (i <=url.length -1) {
-                    await page.goto(url[3],{waitUntil : 'networkidle2'}) 
+                    await page.goto(url[i],{waitUntil : 'networkidle2'}) 
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -343,25 +317,53 @@ const { fs } = require('../../initialize');
                         }
                     });
 
-                 
-
-                    let output = require('./report.json')
-
-                    let perf_score = output.categories.performance.score * 100
-                    let seo =output.categories.seo.score * 100
-
-                    console.log('score in desktop'+' '+perf_score+' '+seo)
-
-                    fs.appendFileSync(__dirname+'/score in desktop',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
+                    fs.readFile(__dirname+'/report.json', {encoding: 'utf8', flag:'r'},function(err,data) {
                       if (err) {
-                        console.log(err);
+                        console.log(err)
+                      }
+                      else {
+                        output = JSON.parse(data)
+                        let score = new pushScore({"no":i, "url":url[i],"desktop performance": output.categories.performance.score * 100})
+                        console.log(score)
+                        chrome.disconnected;
+                        chrome.kill
                       }
                     })
+                    
 
                   i = i + 1;
                   }
             })
            },3600000)
+
+           test.skip("convert to excel", async() => {
+
+            const fs = require('fs');
+
+            // First I want to read the file
+            fs.readFile(__dirname+'/prexl-mobile.json', function read(err, data) {
+                if (err) {
+                    throw err;
+                }
+                const content = data;
+
+                // Invoke the next step here however you like
+                console.log(content);   // Put all of the code here (not the best solution)
+                // processFile(content);   // Or put the next step in a function and invoke it
+
+                if(typeof XLSX == 'undefined') XLSX = require('xlsx');
+
+                /* make the worksheet */
+                var ws = XLSX.utils.json_to_sheet(JSON.parse(data));
+                
+                /* add to workbook */
+                var wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+                
+                /* generate an XLSX file */
+                XLSX.writeFile(wb, "performance-score.xlsx");
+            });            
+          },3600000)
 
           
     })
