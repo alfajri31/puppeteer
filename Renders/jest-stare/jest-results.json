@@ -1,11 +1,11 @@
 {
-  "numFailedTestSuites": 0,
+  "numFailedTestSuites": 1,
   "numFailedTests": 0,
   "numPassedTestSuites": 0,
   "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
-  "numRuntimeErrorTestSuites": 0,
+  "numRuntimeErrorTestSuites": 1,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
   "numTotalTests": 0,
@@ -26,8 +26,44 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602152693585,
+  "startTime": 1602483848021,
   "success": false,
-  "testResults": [],
+  "testResults": [
+    {
+      "displayName": "",
+      "failureMessage": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    ReferenceError: chrome is not defined\n\n    \u001b[0m \u001b[90m 53 | \u001b[39m   afterAll(async() \u001b[33m=>\u001b[39m {\u001b[0m\n    \u001b[0m \u001b[90m 54 | \u001b[39m     await browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 | \u001b[39m     await chrome\u001b[33m.\u001b[39mkill()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 56 | \u001b[39m   })\u001b[0m\n    \u001b[0m \u001b[90m 57 | \u001b[39m \u001b[0m\n    \u001b[0m \u001b[90m 58 | \u001b[39m    \u001b[90m// START TO TESTING\u001b[39m\u001b[0m\n\n      \u001b[2mat Object.<anonymous>.afterAll (\u001b[22m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:55:6)\u001b[22m\n",
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 0,
+        "start": 0
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testExecError": {
+        "actual": "",
+        "error": {},
+        "expected": "",
+        "matcherName": "",
+        "message": "ReferenceError: chrome is not defined",
+        "passed": false,
+        "stack": "ReferenceError: chrome is not defined\n    at Object.<anonymous>.afterAll (/Users/fajri/Documents/auto/ppt/test/projects/scr/scr.test.js:55:6)"
+      },
+      "testFilePath": "/Users/fajri/Documents/auto/ppt/test/projects/scr/scr.test.js",
+      "testResults": []
+    }
+  ],
   "wasInterrupted": false
 }

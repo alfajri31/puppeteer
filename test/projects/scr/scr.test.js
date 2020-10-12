@@ -5,10 +5,13 @@
  let init = require('../../initialize')
  require('../../initialize').page
  require('../../initialize').browser
+ const ndata = [];
 
  //request and response
  const cheerio = require('cheerio');
  const request = require('request');
+const { NODATA } = require('dns');
+const { fs } = require('../../initialize');
 
 
 
@@ -23,12 +26,8 @@
  let dir1,dir2,dir3,dir4,pp;
 
 
-
-       
-
-
  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
- fs.readdir(dir3, (err, files) => {
+  fs.readdir(dir3, (err, files) => {
      for (const file of files) {
          fs.unlink(path.join(dir3, file), err => {
            if (err) throw err;
@@ -37,8 +36,8 @@
  })
 
 
- let i = 0  ;
-beforeAll(async() => {
+  let i = 0  ;
+  beforeAll(async() => {
     for (browserType of ['chromium']) {
       browser = await playwright[browserType].launch({
         headless: headless,
@@ -110,19 +109,38 @@ beforeAll(async() => {
               }
               
               return tmp;
-          }
+        }
 
+        const remove_duplicate = (x) => {
+          return Array.from(new Set(x))
+        }
+
+        function pushScore (output)  {
+          data = output
+          ndata.push(data)
+          fs.writeFileSync(__dirname+'/prexl-mobile.json',JSON.stringify(ndata),(err)=> {
+            if (err) {
+              console.log(err)
+            }
+          })
+          return ndata
+        }
           
-          test.skip("optimal ss", async() => {
+           test.skip("optimal ss", async() => {
             await yy().then(async (result) => {
      
                //print all sitemap
-               console.log(result)
+               //console.log(result)
      
                //initialize step
                let url = [];
                url = result;
-     
+              
+               //remove the dulicate strings
+               url = remove_duplicate(url)
+
+               console.log(url);
+
                //loop the test
                i=0 
                while(i<=url.length-1) {
@@ -136,7 +154,7 @@ beforeAll(async() => {
            
            },3600000)
 
-           test("performance", async() => {
+           test("test performance in mobile", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -146,9 +164,8 @@ beforeAll(async() => {
             const request = require('request');
             const util = require('util');
             const fs = require('fs');
+           
             
-       
-         
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
               chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
@@ -168,12 +185,144 @@ beforeAll(async() => {
             await yy().then(async (result) => {
 
                   //print all sitemap
-                  console.log(result)
+                  // console.log(result)
      
                   //initialize step
                   let url = [];
                   url = result;
-              
+
+                  //remove the dulicate strings
+                  url = remove_duplicate(url)
+
+                  //loop the test
+                  i = 0
+
+                  //init report.json
+                  fs.writeFileSync(__dirname+'/report.json', function(err) {
+                    if (err) {
+                      console.log(err);
+                    }
+                  })
+
+                  while (i <=url.length - 24) {
+                    await page.goto(url[3],{waitUntil : 'networkidle2'}) 
+                    const report = await lighthouse(page.url(), opts, config).then(results => {
+                        return results;
+                    });
+            
+                    const json = reportGenerator.generateReport(report.lhr, 'json');
+                    const html = reportGenerator.generateReport(report.lhr, 'html');
+                                   
+                    //Write report json to the file                    
+                    fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
+                      console.log(err)
+                    });
+
+                    fs.writeFileSync(__dirname+'/report.json', json, (err) => {
+                        if (err) {
+                            console.error(err);
+                        }
+                    });
+
+                    fs.readFile(__dirname+'/report.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+                      if (err) {
+                        console.log(err)
+                      }
+                      else {
+                        output = JSON.parse(data)
+                        let score = new pushScore({"no":i, "url":url[i],"performance score": output.categories.performance.score})
+                        console.log(score)
+                        // chrome.disconnected;
+                        // chrome.kill;
+                      }
+                    })
+
+                    // let output = require('./report.json')
+                    // let perf_score = output.categories.performance.score * 100
+                    // let seo =output.categories.seo.score * 100
+
+                    // console.log('score in mobile'+' '+perf_score+' '+seo)
+
+                    // fs.appendFileSync(__dirname+'/score in mobile',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
+                    //   if (err) {
+                    //     console.log(err);
+                    //   }
+                    // })
+                  i = i + 1;
+                  }
+            })
+
+           },3600000)
+
+          test("convert to excel for mobile", async() => {
+
+            const fs = require('fs');
+
+            // First I want to read the file
+            fs.readFile(__dirname+'/prexl-mobile.json', function read(err, data) {
+                if (err) {
+                    throw err;
+                }
+                const content = data;
+
+                // Invoke the next step here however you like
+                console.log(content);   // Put all of the code here (not the best solution)
+                // processFile(content);   // Or put the next step in a function and invoke it
+
+                if(typeof XLSX == 'undefined') XLSX = require('xlsx');
+
+                /* make the worksheet */
+                var ws = XLSX.utils.json_to_sheet(JSON.parse(data));
+                
+                /* add to workbook */
+                var wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+                
+                /* generate an XLSX file */
+                XLSX.writeFile(wb, "performance-score.xlsx");
+            });            
+          },3600000)
+
+           test("test performance in desktop", async() => {
+
+            const chromeLauncher = require('chrome-launcher');
+            const puppeteer = require('puppeteer');
+            const lighthouse = require('lighthouse');
+            const config = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
+            const reportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
+            const request = require('request');
+            const util = require('util');
+            const fs = require('fs');
+            
+  
+            opts = {
+              args: [ '--ignore-certificate-errors','--no-sandbox'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
+              disableDeviceEmulation: true,
+            }
+          
+            // Launch chrome using chrome-launcher
+            chrome = await chromeLauncher.launch(opts);
+            opts.port = chrome.port;
+        
+            // Connect to it using puppeteer.connect().
+            const resp = await util.promisify(request)(`http://localhost:${opts.port}/json/version`);
+            const {webSocketDebuggerUrl} = JSON.parse(resp.body);
+            browser = await puppeteer.connect({browserWSEndpoint: webSocketDebuggerUrl});
+            page = (await browser.pages())[0]
+
+            await yy().then(async (result) => {
+
+                  //print all sitemap
+                  //console.log(result)
+     
+                  //initialize step
+                  let url = [];
+                  url = result;
+
+                  //remove the dulicate strings
+                  url = remove_duplicate(url)
+
                   //loop the test
                   i = 0
 
@@ -209,12 +358,12 @@ beforeAll(async() => {
 
                     let output = require('./report.json')
 
-                    let perf_score = output.categories.performance.score
-                    let seo =output.categories.seo.score
+                    let perf_score = output.categories.performance.score * 100
+                    let seo =output.categories.seo.score * 100
 
-                    console.log('score'+' '+perf_score+' '+seo)
+                    console.log('score in desktop'+' '+perf_score+' '+seo)
 
-                    fs.appendFileSync(__dirname+'/score',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
+                    fs.appendFileSync(__dirname+'/score in desktop',url[i]+' '+'performance'+' '+perf_score+' '+'SEO'+' '+seo+"\n", function(err) {
                       if (err) {
                         console.log(err);
                       }
@@ -223,7 +372,8 @@ beforeAll(async() => {
                   i = i + 1;
                   }
             })
-
            },3600000)
+
+          
     })
  
