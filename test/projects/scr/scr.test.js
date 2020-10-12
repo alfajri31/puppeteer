@@ -233,7 +233,7 @@ const { fs } = require('../../initialize');
                         let score = new pushScore({"no":i, "url":url[i],"performance score": output.categories.performance.score})
                         console.log(score)
                         // chrome.disconnected;
-                        // chrome.kill;
+                        // chrome.kill
                       }
                     })
 
