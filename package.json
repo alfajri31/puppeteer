@@ -30,7 +30,7 @@
     "doubledha-mob": "jest doubledha/mobile/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "doubledha-visual": "jest doubledha/scr/res --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "brimo": "jest brimo/micro/functional --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
-    "scr": "jest projects/scr/scr --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
+    "project": "jest projects/scr/scr --runInBand  --detectOpenHandles --forceExit  --reporters default jest-stare",
     "simple": "jest simple --runInBand  --detectOpenHandles --forceExit",
     "test:acceptance": "cucumber-js  --require-module @babel/register"
   },

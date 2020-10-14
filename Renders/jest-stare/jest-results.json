@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 1,
-  "numFailedTests": 0,
+  "numFailedTests": 1,
   "numPassedTestSuites": 0,
   "numPassedTests": 0,
   "numPendingTestSuites": 0,
-  "numPendingTests": 0,
-  "numRuntimeErrorTestSuites": 1,
+  "numPendingTests": 3,
+  "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 0,
+  "numTotalTests": 4,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,43 +26,83 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602234452003,
+  "startTime": 1602578800337,
   "success": false,
   "testResults": [
     {
-      "displayName": "",
-      "failureMessage": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    Error: WebSocket is not open: readyState 3 (CLOSED)\n\n    \u001b[0m \u001b[90m 47 | \u001b[39m  \u001b[0m\n    \u001b[0m \u001b[90m 48 | \u001b[39m   afterAll(async() \u001b[33m=>\u001b[39m {\u001b[0m\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 | \u001b[39m      await browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m    | \u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 50 | \u001b[39m   })\u001b[0m\n    \u001b[0m \u001b[90m 51 | \u001b[39m \u001b[0m\n    \u001b[0m \u001b[90m 52 | \u001b[39m    \u001b[90m// START TO TESTING\u001b[39m\u001b[0m\n\n      \u001b[2mat WebSocket.send (\u001b[22mnode_modules/ws/lib/websocket.js\u001b[2m:329:19)\u001b[22m\n      \u001b[2mat WebSocketTransport.send (\u001b[22mnode_modules/puppeteer/lib/WebSocketTransport.js\u001b[2m:60:14)\u001b[22m\n      \u001b[2mat Connection._rawSend (\u001b[22mnode_modules/puppeteer/lib/Connection.js\u001b[2m:86:21)\u001b[22m\n      \u001b[2mat Connection.send (\u001b[22mnode_modules/puppeteer/lib/Connection.js\u001b[2m:72:21)\u001b[22m\n      \u001b[2mat \u001b[22mnode_modules/puppeteer/lib/Launcher.js\u001b[2m:351:117\u001b[22m\n      \u001b[2mat Browser.close (\u001b[22mnode_modules/puppeteer/lib/Browser.js\u001b[2m:255:31)\u001b[22m\n      \u001b[2mat Browser.close (\u001b[22mnode_modules/puppeteer/lib/helper.js\u001b[2m:112:23)\u001b[22m\n      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:49:21)\u001b[22m\n",
-      "leaks": false,
-      "numFailingTests": 0,
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › optimal ss\u001b[39m\u001b[22m\n\n    TimeoutError: While navigating to https://www.milo.co.id/sarapan-untuk-raih-lebih: Navigation timeout of 30000 ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 143 | \u001b[39m               \u001b[36mwhile\u001b[39m(i\u001b[33m<=\u001b[39murl\u001b[33m.\u001b[39mlength\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 144 | \u001b[39m                 console\u001b[33m.\u001b[39mlog(url[i])\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[2m\u001b[39m\u001b[90m 145 | \u001b[39m                 await page\u001b[33m.\u001b[39mgoto(url[i]\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 146 | \u001b[39m                 await init\u001b[33m.\u001b[39moptmimal_ss(folder_name\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39mi\u001b[33m+\u001b[39murl[i]\u001b[33m.\u001b[39msplit(\u001b[35m/[,\\/:.?]/g\u001b[39m)\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mviewport\u001b[33m.\u001b[39mwidth\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mviewport\u001b[33m.\u001b[39mheight\u001b[33m,\u001b[39mbrowserType)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 147 | \u001b[39m                 i \u001b[33m=\u001b[39m i \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 148 | \u001b[39m               }\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat throwIfError (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:329:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.goto (\u001b[2mnode_modules/playwright-core/lib/frames.js\u001b[2m:307:9)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[2m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:145:18\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[2m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:127:13)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.<anonymous> (\u001b[2mnode_modules/playwright-core/lib/helper.js\u001b[2m:54:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/playwright-core/lib/page.js\u001b[2m:224:33)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules/playwright-core/lib/helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[2m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:145:29\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[2m\u001b[0m\u001b[36mtest/projects/scr/scr.test.js\u001b[39m\u001b[0m\u001b[2m:127:13)\u001b[2m\u001b[22m\n",
+      "numFailingTests": 1,
       "numPassingTests": 0,
-      "numPendingTests": 0,
+      "numPendingTests": 3,
       "numTodoTests": 0,
-      "openHandles": [],
       "perfStats": {
-        "end": 0,
-        "start": 0
+        "end": 1602579015311,
+        "start": 1602578806564
       },
-      "skipped": false,
       "snapshot": {
         "added": 0,
         "fileDeleted": false,
         "matched": 0,
         "unchecked": 0,
-        "uncheckedKeys": [],
         "unmatched": 0,
-        "updated": 0
-      },
-      "testExecError": {
-        "actual": "",
-        "error": {},
-        "expected": "",
-        "matcherName": "",
-        "message": "Error: WebSocket is not open: readyState 3 (CLOSED)",
-        "passed": false,
-        "stack": "Error: WebSocket is not open: readyState 3 (CLOSED)\n    at WebSocket.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\ws\\lib\\websocket.js:329:19)\n    at WebSocketTransport.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\WebSocketTransport.js:60:14)\n    at Connection._rawSend (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Connection.js:86:21)\n    at Connection.send (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Connection.js:72:21)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Launcher.js:351:117\n    at Browser.close (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\Browser.js:255:31)\n    at Browser.close (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\puppeteer\\lib\\helper.js:112:23)\n    at Object.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:49:21)\n    at Object.asyncJestLifecycle (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\jasmineAsyncInstall.js:53:37)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:43:12\n    at new Promise (<anonymous>)\n    at mapper (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:26:19)\n    at C:\\Users\\Fajri\\Documents\\automation\\node_modules\\jest-jasmine2\\build\\queueRunner.js:73:41"
+        "updated": 0,
+        "uncheckedKeys": []
       },
       "testFilePath": "C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js",
-      "testResults": []
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 185227,
+          "failureMessages": [
+            "TimeoutError: While navigating to https://www.milo.co.id/sarapan-untuk-raih-lebih: Navigation timeout of 30000 ms exceeded\n    at throwIfError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:329:23)\n    at Frame.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:307:9)\n    at C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:145:18\n    at Object.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:127:13)\n  -- ASYNC --\n    at Frame.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:54:23)\n    at Page.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\page.js:224:33)\n    at Page.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:145:29\n    at Object.<anonymous> (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:127:13)"
+          ],
+          "fullName": "e2e testing optimal ss",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "failed",
+          "title": "optimal ss"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 1,
+          "failureMessages": [],
+          "fullName": "e2e testing test performance in mobile",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "test performance in mobile"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing test performance in desktop",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "test performance in desktop"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing convert to excel",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "convert to excel"
+        }
+      ],
+      "skipped": false,
+      "leaks": false
     }
   ],
   "wasInterrupted": false
