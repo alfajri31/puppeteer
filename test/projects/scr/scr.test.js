@@ -1,7 +1,7 @@
  // PREPEARING
  const playwright = require('playwright');
  const {devices} = require('playwright')
- const device = devices['Iphone X landscape'];
+ const device = devices['Iphone X'];
  let init = require('../../initialize')
  require('../../initialize').page
  require('../../initialize').browser
@@ -10,16 +10,19 @@
  //request and response
  const cheerio = require('cheerio');
  const request = require('request');
-const { NODATA } = require('dns');
-const { fs } = require('../../initialize');
+ const { fs, value } = require('../../initialize');
+
 
  //important
  const target = 'https://www.milo.co.id/'
  const last_path = ''
  const folder_name = "miloprod"
+ const crawling_lvl = 2;
+
 
  const regex = /([\b\/])\1/g;
  const regex2 = /[:]/g;
+ const regex3 = /([\b\..])\1/g
 
  let dir1,dir2,dir3,dir4,pp;
 
@@ -49,7 +52,12 @@ const { fs } = require('../../initialize');
     },90000);
   
    afterAll(async() => {
+<<<<<<< HEAD
       await browser.close();
+=======
+     await browser.close();
+    //  await chrome.kill();
+>>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
    })
  
     // START TO TESTING
@@ -60,52 +68,117 @@ const { fs } = require('../../initialize');
             let anchors = [];
             let anchors2 = [];
             let tmp=[];
-            let j=0;
-     
-            const response = await request(target);
-            let $ = cheerio.load(response);
-      
-            $("a").each(function(i, link){
-               anchors[i] = $(link).attr("href");
-            });
-     
-            let bb;
-            $("div").each(function(i, link){
-               anchors2[i] = $(link).attr("data-url");
-               if(anchors2[i]!==undefined) {
-                 bb = anchors2[i].split(last_path)
-                 bb = bb[1]
-                 anchors.push(bb)
-               }
-            });
-     
-              function checkRegex(value,i) {
-                try {
-                    if(value.match(regex)=='//') {
-                        tmp.push(value)
+            let j = 0;
+            let k = 0;
+            let lvl = 1;
+            let count;
+
+            function checkRegex(value,i) {
+              try {
+                  if(value.match(regex)=='//') {
+                      tmp.push(value)
+                  }
+                  else {
+                    console.log(i+' '+value+' '+value.match(regex2))
+                    if(value.match(regex2)==':') {
+                      //do nothing
                     }
                     else {
-                      console.log(i+' '+value+' '+value.match(regex2))
-                      if(value.match(regex2)==':') {
-                        //do nothing
-                      }
-                      else {
-                        tmp.push(target+value) 
-                      }
-                     
+                      tmp.push(target+value) 
                     }
-                }
-                catch(e) {
-                    console.log(e)
-                }
+                   
+                  }
               }
-      
-              while(j<=anchors.length-1) {
-                  checkRegex(anchors[j],j)
-                  j++;
+              catch(e) {
+                  console.log(e)
               }
+            }
+    
+            
+            while(lvl<=crawling_lvl) {
+              if(lvl == 1) {
+                //crawling level up from only once
+                let response = await request(target);
+                let $ = cheerio.load(response);
+
+               
+                $("a").each(function(i, link){
+                  anchors[i] = $(link).attr("href");
+                });
+                
+                let bb;
+                $("div").each(function(i, link){
+                   anchors2[i] = $(link).attr("data-url");
+                   if(anchors2[i]!==undefined) {
+                     bb = anchors2[i].split(last_path)
+                     bb = bb[1]
+                     anchors.push(bb)
+                   }
+                });
+        
+                while(j<=anchors.length-1) {
+                    checkRegex(anchors[j],j)
+                    j++;
+                }
+                lvl++;
+                
+              }
+              else {
               
-              return tmp;
+                count = tmp.length
+
+                while(k <= count ) {
+
+                  anchors=[];anchors2=[];i=0;j=0;
+                  
+                  console.log('is have problem? '+tmp[k])
+                  if (tmp[k].match(regex3)=='..') {
+                    // console.log('is have problem? '+tmp[k])
+                    let gg = tmp[k].split('..')
+                    try {
+                      response = await request(gg[0]+gg[1])
+                    }
+                    catch(err) {
+                      // console.log(gg[0]+gg[1]+' this page maybe 404 not found')
+                    }
+                   
+                  }
+                  else {
+                    try {
+                      response = await request(tmp[k])
+                    }
+                    catch(e) {
+                      // console.log(tmp[k]+' this page maybe 404 not found') 
+                    }
+                  }
+                 
+                  $ = cheerio.load(response);
+                    
+                  $("a").each(function(i, link){
+                     anchors[i] = $(link).attr("href");
+                  });
+           
+                  let bb;
+                  $("div").each(function(i, link){
+                     anchors2[i] = $(link).attr("data-url");
+                     if(anchors2[i]!==undefined) {
+                       bb = anchors2[i].split(last_path)
+                       bb = bb[1]
+                       anchors.push(bb)
+                     }
+                  });
+           
+                  while(j<=anchors.length-1) {
+                      checkRegex(anchors[j],j)
+                      j++;
+                  }
+                  k++;
+                }
+              lvl++;
+              }
+            
+            }
+            return tmp;
         }
 
         const remove_duplicate = (x) => {
@@ -122,8 +195,19 @@ const { fs } = require('../../initialize');
           })
           return ndata
         }
+<<<<<<< HEAD
           
            test("optimal ss", async() => {
+=======
+
+        test("TEST CRAWLING",async() => {
+          await yy().then(result => {
+            console.log(result)
+          })
+        },3600000)
+
+           test.skip("optimal ss", async() => {
+>>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
             await yy().then(async (result) => {
      
                //print all sitemap
@@ -200,7 +284,11 @@ const { fs } = require('../../initialize');
               
 
                   while (i <=url.length) {
+<<<<<<< HEAD
                     await page.goto(url[i],{waitUntil : 'networkidle2',timeout: 220000}).catch(e => void 0);
+=======
+                    await page.goto('https://www.youtube.com/channel/UCJU1oph89LKXryQwUItT1Bw?nohtml5=False',{waitUntil : 'networkidle2'}).catch(e => void 0)
+>>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -291,7 +379,11 @@ const { fs } = require('../../initialize');
                   })
 
                   while (i <=url.length -1) {
+<<<<<<< HEAD
                     await page.goto(url[i],{waitUntil : 'networkidle2',timeout: 220000}).catch(e => void 0);
+=======
+                    await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
+>>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
