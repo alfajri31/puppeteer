@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 4 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">4 passed, 4 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,12 +115,12 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 1,
-  &quot;numFailedTests&quot;: 1,
-  &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 0,
+  &quot;numFailedTestSuites&quot;: 0,
+  &quot;numFailedTests&quot;: 0,
+  &quot;numPassedTestSuites&quot;: 1,
+  &quot;numPassedTests&quot;: 4,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 3,
+  &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1602494340500,
+  &quot;startTime&quot;: 1602652396184,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › test performance in mobile\u001b[39m\u001b[22m\n\n    You probably have multiple tabs open to the same origin.\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat versions.forEach.ver (\u001b[2mnode_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js\u001b[2m:652:21)\u001b[2m\u001b[22m\n\u001b[2m          at Array.forEach (&lt;anonymous&gt;)\u001b[22m\n\u001b[2m      \u001b[2mat registrations.filter.forEach.reg (\u001b[2mnode_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js\u001b[2m:644:20)\u001b[2m\u001b[22m\n\u001b[2m          at Array.forEach (&lt;anonymous&gt;)\u001b[22m\n\u001b[2m      \u001b[2mat getServiceWorkerRegistrations.then.then.then.then._ (\u001b[2mnode_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js\u001b[2m:643:10)\u001b[2m\u001b[22m\n&quot;,
-      &quot;numFailingTests&quot;: 1,
-      &quot;numPassingTests&quot;: 0,
-      &quot;numPendingTests&quot;: 3,
+      &quot;failureMessage&quot;: null,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 4,
+      &quot;numPendingTests&quot;: 0,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1602494355458,
-        &quot;start&quot;: 1602494342883
+        &quot;end&quot;: 1602653741706,
+        &quot;start&quot;: 1602652398893
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -170,50 +170,48 @@
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 1,
+          &quot;duration&quot;: 335263,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing optimal ss&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
+          &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;optimal ss&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 8690,
-          &quot;failureMessages&quot;: [
-            &quot;Error: You probably have multiple tabs open to the same origin.\n    at versions.forEach.ver (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js:652:21)\n    at Array.forEach (&lt;anonymous&gt;)\n    at registrations.filter.forEach.reg (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js:644:20)\n    at Array.forEach (&lt;anonymous&gt;)\n    at getServiceWorkerRegistrations.then.then.then.then._ (&#x2F;Users&#x2F;fajri&#x2F;Documents&#x2F;auto&#x2F;ppt&#x2F;node_modules&#x2F;lighthouse&#x2F;lighthouse-core&#x2F;gather&#x2F;driver.js:643:10)\n    at process._tickCallback (internal&#x2F;process&#x2F;next_tick.js:68:7)&quot;
-          ],
+          &quot;duration&quot;: 263892,
+          &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing test performance in mobile&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
+          &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;test performance in mobile&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 0,
+          &quot;duration&quot;: 725942,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing test performance in desktop&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
+          &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;test performance in desktop&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 0,
+          &quot;duration&quot;: 2,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing convert to excel&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
+          &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;convert to excel&quot;
         }
       ],

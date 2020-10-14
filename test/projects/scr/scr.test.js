@@ -1,7 +1,7 @@
  // PREPEARING
  const playwright = require('playwright');
  const {devices} = require('playwright')
- const device = devices['Iphone X landscape'];
+ const device = devices['Iphone X'];
  let init = require('../../initialize')
  require('../../initialize').page
  require('../../initialize').browser
@@ -126,7 +126,7 @@ const { fs } = require('../../initialize');
           return ndata
         }
           
-           test.skip("optimal ss", async() => {
+           test("optimal ss", async() => {
             await yy().then(async (result) => {
      
                //print all sitemap
@@ -168,7 +168,7 @@ const { fs } = require('../../initialize');
             
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito'],
               disableDeviceEmulation: true,
             }
           
@@ -205,7 +205,7 @@ const { fs } = require('../../initialize');
                   })
 
                   while (i <=url.length) {
-                    await page.goto('https://www.youtube.com/channel/UCJU1oph89LKXryQwUItT1Bw?nohtml5=False',{waitUntil : 'networkidle2'}) 
+                    await page.goto('https://www.youtube.com/channel/UCJU1oph89LKXryQwUItT1Bw?nohtml5=False',{waitUntil : 'networkidle2'}).catch(e => void 0)
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -246,7 +246,7 @@ const { fs } = require('../../initialize');
 
            },3600000)
 
-           test.skip("test performance in desktop", async() => {
+           test("test performance in desktop", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -260,7 +260,7 @@ const { fs } = require('../../initialize');
   
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito'],
               disableDeviceEmulation: true,
             }
           
@@ -297,7 +297,7 @@ const { fs } = require('../../initialize');
                   })
 
                   while (i <=url.length -1) {
-                    await page.goto(url[i],{waitUntil : 'networkidle2'}) 
+                    await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
@@ -336,7 +336,7 @@ const { fs } = require('../../initialize');
             })
            },3600000)
 
-           test.skip("convert to excel", async() => {
+           test("convert to excel", async() => {
 
             const fs = require('fs');
 
