@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 4,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
-  "numPendingTests": 0,
+  "numPendingTests": 4,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 4,
+  "numTotalTests": 5,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602652396184,
+  "startTime": 1602671546720,
   "success": false,
   "testResults": [
     {
       "failureMessage": null,
       "numFailingTests": 0,
-      "numPassingTests": 4,
-      "numPendingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 4,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1602653741706,
-        "start": 1602652398893
+        "end": 1602671600933,
+        "start": 1602671547180
       },
       "snapshot": {
         "added": 0,
@@ -54,48 +54,60 @@
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 335263,
+          "duration": 51274,
+          "failureMessages": [],
+          "fullName": "e2e testing TEST CRAWLING",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "TEST CRAWLING"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing optimal ss",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "optimal ss"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 263892,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing test performance in mobile",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "test performance in mobile"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 725942,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing test performance in desktop",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "test performance in desktop"
         },
         {
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 2,
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing convert to excel",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "passed",
+          "status": "pending",
           "title": "convert to excel"
         }
       ],
