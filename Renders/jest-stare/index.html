@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 5 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 0 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -110,6 +110,7 @@
         <div class="d-none" id="test-summary"></div>
         <div class="d-none" id="test-config">{
   &quot;additionalResultsProcessors&quot;: [],
+  &quot;log&quot;: false,
   &quot;resultDir&quot;: &quot;Renders&#x2F;jest-stare&#x2F;&quot;,
   &quot;resultHtml&quot;: &quot;index.html&quot;,
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
@@ -117,14 +118,14 @@
         <div class="d-none" id="test-results">{
   &quot;numFailedTestSuites&quot;: 0,
   &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 1,
-  &quot;numPassedTests&quot;: 1,
+  &quot;numPassedTestSuites&quot;: 0,
+  &quot;numPassedTests&quot;: 0,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 4,
+  &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 5,
+  &quot;numTotalTests&quot;: 0,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,121 +143,9 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-<<<<<<< HEAD
-  &quot;startTime&quot;: 1602578800337,
+  &quot;startTime&quot;: 1602877046683,
   &quot;success&quot;: false,
-  &quot;testResults&quot;: [
-    {
-      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › optimal ss\u001b[39m\u001b[22m\n\n    TimeoutError: While navigating to https:&#x2F;&#x2F;www.milo.co.id&#x2F;sarapan-untuk-raih-lebih: Navigation timeout of 30000 ms exceeded\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 143 | \u001b[39m               \u001b[36mwhile\u001b[39m(i\u001b[33m&lt;&#x3D;\u001b[39murl\u001b[33m.\u001b[39mlength\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) {\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 144 | \u001b[39m                 console\u001b[33m.\u001b[39mlog(url[i])\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m&gt;\u001b[2m\u001b[39m\u001b[90m 145 | \u001b[39m                 await page\u001b[33m.\u001b[39mgoto(url[i]\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m&#39;domcontentloaded&#39;\u001b[39m})\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m     | \u001b[39m                 \u001b[31m\u001b[1m^\u001b[2m\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 146 | \u001b[39m                 await init\u001b[33m.\u001b[39moptmimal_ss(folder_name\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39mi\u001b[33m+\u001b[39murl[i]\u001b[33m.\u001b[39msplit(\u001b[35m&#x2F;[,\\&#x2F;:.?]&#x2F;g\u001b[39m)\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mviewport\u001b[33m.\u001b[39mwidth\u001b[33m,\u001b[39mdevice\u001b[33m.\u001b[39mviewport\u001b[33m.\u001b[39mheight\u001b[33m,\u001b[39mbrowserType)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 147 | \u001b[39m                 i \u001b[33m&#x3D;\u001b[39m i \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 148 | \u001b[39m               }\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat throwIfError (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:329:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Frame.goto (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;frames.js\u001b[2m:307:9)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[2m\u001b[0m\u001b[36mtest&#x2F;projects&#x2F;scr&#x2F;scr.test.js\u001b[39m\u001b[0m\u001b[2m:145:18\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;projects&#x2F;scr&#x2F;scr.test.js\u001b[39m\u001b[0m\u001b[2m:127:13)\u001b[2m\u001b[22m\n\u001b[2m        -- ASYNC --\u001b[22m\n\u001b[2m      \u001b[2mat Frame.&lt;anonymous&gt; (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;helper.js\u001b[2m:54:23)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;page.js\u001b[2m:224:33)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Page.goto (\u001b[2mnode_modules&#x2F;playwright-core&#x2F;lib&#x2F;helper.js\u001b[2m:55:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[2m\u001b[0m\u001b[36mtest&#x2F;projects&#x2F;scr&#x2F;scr.test.js\u001b[39m\u001b[0m\u001b[2m:145:29\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.&lt;anonymous&gt; (\u001b[2m\u001b[0m\u001b[36mtest&#x2F;projects&#x2F;scr&#x2F;scr.test.js\u001b[39m\u001b[0m\u001b[2m:127:13)\u001b[2m\u001b[22m\n&quot;,
-      &quot;numFailingTests&quot;: 1,
-      &quot;numPassingTests&quot;: 0,
-      &quot;numPendingTests&quot;: 3,
-      &quot;numTodoTests&quot;: 0,
-      &quot;perfStats&quot;: {
-        &quot;end&quot;: 1602579015311,
-        &quot;start&quot;: 1602578806564
-=======
-  &quot;startTime&quot;: 1602671546720,
-  &quot;success&quot;: false,
-  &quot;testResults&quot;: [
-    {
-      &quot;failureMessage&quot;: null,
-      &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 1,
-      &quot;numPendingTests&quot;: 4,
-      &quot;numTodoTests&quot;: 0,
-      &quot;perfStats&quot;: {
-        &quot;end&quot;: 1602671600933,
-        &quot;start&quot;: 1602671547180
->>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
-      },
-      &quot;snapshot&quot;: {
-        &quot;added&quot;: 0,
-        &quot;fileDeleted&quot;: false,
-        &quot;matched&quot;: 0,
-        &quot;unchecked&quot;: 0,
-        &quot;unmatched&quot;: 0,
-        &quot;updated&quot;: 0,
-        &quot;uncheckedKeys&quot;: []
-      },
-      &quot;testFilePath&quot;: &quot;C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js&quot;,
-      &quot;testResults&quot;: [
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-<<<<<<< HEAD
-          &quot;duration&quot;: 185227,
-          &quot;failureMessages&quot;: [
-            &quot;TimeoutError: While navigating to https:&#x2F;&#x2F;www.milo.co.id&#x2F;sarapan-untuk-raih-lebih: Navigation timeout of 30000 ms exceeded\n    at throwIfError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:329:23)\n    at Frame.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\frames.js:307:9)\n    at C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:145:18\n    at Object.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:127:13)\n  -- ASYNC --\n    at Frame.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:54:23)\n    at Page.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\page.js:224:33)\n    at Page.goto (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\playwright-core\\lib\\helper.js:55:31)\n    at C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:145:29\n    at Object.&lt;anonymous&gt; (C:\\Users\\Fajri\\Documents\\automation\\test\\projects\\scr\\scr.test.js:127:13)&quot;
-          ],
-=======
-          &quot;duration&quot;: 51274,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing TEST CRAWLING&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;TEST CRAWLING&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
->>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
-          &quot;fullName&quot;: &quot;e2e testing optimal ss&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
-          &quot;title&quot;: &quot;optimal ss&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-<<<<<<< HEAD
-          &quot;duration&quot;: 1,
-=======
-          &quot;duration&quot;: 0,
->>>>>>> f5b310f49e40d81b82eda642ebb0c2e2e68493ef
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing test performance in mobile&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;test performance in mobile&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing test performance in desktop&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;test performance in desktop&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;e2e testing&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;e2e testing convert to excel&quot;,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;pending&quot;,
-          &quot;title&quot;: &quot;convert to excel&quot;
-        }
-      ],
-      &quot;skipped&quot;: false,
-      &quot;leaks&quot;: false
-    }
-  ],
+  &quot;testResults&quot;: [],
   &quot;wasInterrupted&quot;: false
 }</div>
         <div class="d-none" id="test-global-config">{
