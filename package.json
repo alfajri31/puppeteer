@@ -64,6 +64,7 @@
     "clear-require": "^3.0.0",
     "got": "^11.7.0",
     "http-parser-js": "^0.5.2",
+    "json-format": "^1.0.1",
     "lighthouse": "^6.4.1",
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",

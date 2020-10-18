@@ -6,6 +6,7 @@
  require('../../initialize').page
  require('../../initialize').browser
  const ndata = [];
+ const jsonFormat = require('json-format');
 
  //request and response
  const cheerio = require('cheerio');
@@ -31,7 +32,7 @@
  const regex3 = /([\b\..])\1/g
 
 
- let source= [{p:[{}]}];
+ let source= '[{"p":[{}]}]';
 
  let dir3,dir4
 
@@ -86,7 +87,6 @@
          
             let lvl = 1;
             let count;
-            let trigger = 0;
 
             function checkRegex(value) {
               try {
@@ -99,7 +99,7 @@
                       //do nothing
                     }
                     else {
-                          tmp.push(target+value) 
+                      tmp.push(target+value) 
                     }
                   }
               }
@@ -108,17 +108,19 @@
               }
             }
 
-            function singleCheckregex(value) {
+            function singleCheckregex(value,p) {
+
               try {
                 if(value.match(regex)=='//') {
+                      // console.log(value)
                       return value
                 }
                 else {
-              
                   if(value.match(regex2)==':') {
                     //do nothing
                   }
                   else {
+                      // console.log(target+value)
                       return target+value 
                   }
                 }
@@ -143,6 +145,28 @@
               //     tmp.splice(index,1)
               //   }
               // }
+            }
+
+            function clearJsonObject(value) {
+              let a = 0;
+              let b = 0;
+              let c = 0
+              count = value.length
+              while(c <= 1) {
+                while(a <= count - 1) {
+                  while(b <= value[a][tmp[a]].length - 1) {
+                    if(JSON.stringify(value[a][tmp[a]][b])=='{}') {
+                      delete value[a][tmp[a][b]]
+                      source[a][tmp[a]].splice(b,1)
+                    }
+                    b++;
+                  }
+                  b = 0;
+                  a++;
+                }
+              c++;
+              }
+            
             }
     
             while(lvl<=crawling_lvl) {
@@ -171,11 +195,13 @@
                     j++;
                 }
                 lvl++;
-                
               }
               else {
+
                 count = tmp.length
-                while(k <= count ) {
+                source = '[{"'+tmp[k]+'":[{}]}]'
+                source = JSON.parse(source)
+                while(k <= count - 1 ) {
                   anchors=[];anchors2=[];i=0;j=0;
                   if (tmp[k].match(regex3)=='..') {
                     // console.log('is have problem? '+tmp[k])
@@ -195,14 +221,14 @@
                       console.log(tmp[k]+' this page maybe 404 not found') 
                     }
                   }
+
                   $ = cheerio.load(response); 
                   $("a").each(function(i, link){
                      anchors[i] = $(link).attr("href");
-                     //{new code} source trace
-                      console.log(k)
-                      source[k].p.push({'href':singleCheckregex(anchors[i])})
-                     ///
+                      // //{new code} source trace
+                      source[k][tmp[k]].push({'href':singleCheckregex(anchors[i])})
                   });
+
                   let bb;
                   $("div").each(function(i, link){
                      anchors2[i] = $(link).attr("data-url");
@@ -211,30 +237,28 @@
                        bb = bb[1]
                        anchors.push(bb)
                        //{new code} source trace
-                       console.log(k)
-                       source[k].p.push({'href': singleCheckregex(bb)})
-                       //
+                       source[k][tmp[k]].push({'href': singleCheckregex(bb)})
                      }
                   });
-                  while(j<=anchors.length-1) {               
+                  // source[k][tmp[k]] = remove_duplicate(source[k][tmp[k]]);
+                  while(j<=anchors.length-1) {  
                       checkRegex(anchors[j])
                       j++;
                   }
-                  source[k].p.splice(0,1)
-                  //{new code} source trace
-                  source.push({p:[{}]})
-                 //
                  k++;
-                 
-                }
+                 source.push(JSON.parse('{"'+tmp[k]+'":[{}]}'))
+                }      
               lvl++;
               }
             }
-
-            console.log(source)
-
-            return remove_duplicate(tmp)
-            // return tmp;
+            clearJsonObject(source)
+             /* using config default, indent with tabs */
+            fs.writeFile(__dirname+'/example_tabs.json', jsonFormat(source), function(err){
+              if (err) throw err;
+                  console.log('saved');
+            });
+            tmp = remove_duplicate(tmp)
+            return tmp
         }
 
         const remove_duplicate = (x) => {
@@ -252,13 +276,14 @@
           return ndata
         }
 
-           test.skip("TEST CRAWLING",async() => {
+           test("TEST CRAWLING",async() => {
             await yy().then(result => {
             console.log(result)
+            
           })
         },3600000)
 
-           test("optimal ss", async() => {
+           test.skip("optimal ss", async() => {
             await yy().then(async (result) => {
      
               //  print all sitemap
