@@ -18,8 +18,8 @@
  //const target = 'https://fortigro.dancow.co.id/id/artikel/bunda-ini-pentingnya-latih-konsentrasi-fokus-si-buah-hati-selama-belajar-di-rumah'
  const target = 'https://onedancow.wtid.dev/'
  const last_path = 'double-dha'
- const folder_name = "fortigroprodarticle"
- const crawling_lvl = 2;
+ const folder_name = "onedancow"
+ const crawling_lvl =1;
 
  const exclude = {
    '1' : 'facebook',
@@ -289,7 +289,7 @@
           return name
         }
 
-           test("TEST CRAWLING",async() => {
+           test.skip("TEST CRAWLING",async() => {
             await yy().then(result => {
                 console.log(result)
             })
@@ -362,7 +362,7 @@
            
            },3600000)
 
-           test.skip("optimal ss", async() => {
+           test("optimal ss", async() => {
             await yy().then(async (result) => {
      
               //  print all sitemap
