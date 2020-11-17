@@ -80,7 +80,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">0 passed, 1 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">1 passed, 1 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">0 passed, 5 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">1 passed, 7 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -115,16 +115,16 @@
   &quot;resultJson&quot;: &quot;jest-results.json&quot;
 }</div>
         <div class="d-none" id="test-results">{
-  &quot;numFailedTestSuites&quot;: 1,
-  &quot;numFailedTests&quot;: 1,
-  &quot;numPassedTestSuites&quot;: 0,
-  &quot;numPassedTests&quot;: 0,
+  &quot;numFailedTestSuites&quot;: 0,
+  &quot;numFailedTests&quot;: 0,
+  &quot;numPassedTestSuites&quot;: 1,
+  &quot;numPassedTests&quot;: 1,
   &quot;numPendingTestSuites&quot;: 0,
-  &quot;numPendingTests&quot;: 4,
+  &quot;numPendingTests&quot;: 6,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
   &quot;numTotalTestSuites&quot;: 1,
-  &quot;numTotalTests&quot;: 5,
+  &quot;numTotalTests&quot;: 7,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -142,18 +142,18 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1603032770117,
+  &quot;startTime&quot;: 1605591218733,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
     {
-      &quot;failureMessage&quot;: &quot;\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › TEST CRAWLING\u001b[39m\u001b[22m\n\n    RequestError: Error: getaddrinfo ENOTFOUND www.milo.co.id\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new RequestError (\u001b[2mnode_modules&#x2F;request-promise&#x2F;node_modules&#x2F;request-promise-core&#x2F;lib&#x2F;errors.js\u001b[2m:14:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.plumbing.callback (\u001b[2mnode_modules&#x2F;request-promise&#x2F;node_modules&#x2F;request-promise-core&#x2F;lib&#x2F;plumbing.js\u001b[2m:87:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.RP$callback [as _callback] (\u001b[2mnode_modules&#x2F;request-promise&#x2F;node_modules&#x2F;request-promise-core&#x2F;lib&#x2F;plumbing.js\u001b[2m:46:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat self.callback (\u001b[2mnode_modules&#x2F;request&#x2F;request.js\u001b[2m:185:22)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.Object.&lt;anonymous&gt;.Request.onRequestError (\u001b[2mnode_modules&#x2F;request&#x2F;request.js\u001b[2m:877:8)\u001b[2m\u001b[22m\n&quot;,
-      &quot;numFailingTests&quot;: 1,
-      &quot;numPassingTests&quot;: 0,
-      &quot;numPendingTests&quot;: 4,
+      &quot;failureMessage&quot;: null,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 1,
+      &quot;numPendingTests&quot;: 6,
       &quot;numTodoTests&quot;: 0,
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1603032786995,
-        &quot;start&quot;: 1603032772865
+        &quot;end&quot;: 1605591285497,
+        &quot;start&quot;: 1605591221176
       },
       &quot;snapshot&quot;: {
         &quot;added&quot;: 0,
@@ -170,15 +170,25 @@
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 111,
-          &quot;failureMessages&quot;: [
-            &quot;RequestError: Error: getaddrinfo ENOTFOUND www.milo.co.id\n    at new RequestError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n    at Request.plumbing.callback (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n    at Request.RP$callback [as _callback] (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n    at self.callback (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request\\request.js:185:22)\n    at Request.emit (events.js:315:20)\n    at Request.Object.&lt;anonymous&gt;.Request.onRequestError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request\\request.js:877:8)\n    at ClientRequest.emit (events.js:315:20)\n    at TLSSocket.socketErrorListener (_http_client.js:426:9)\n    at TLSSocket.emit (events.js:315:20)\n    at emitErrorNT (internal&#x2F;streams&#x2F;destroy.js:92:8)\n    at emitErrorAndCloseNT (internal&#x2F;streams&#x2F;destroy.js:60:3)\n    at processTicksAndRejections (internal&#x2F;process&#x2F;task_queues.js:84:21)&quot;
-          ],
+          &quot;duration&quot;: 50737,
+          &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing TEST CRAWLING&quot;,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 0,
-          &quot;status&quot;: &quot;failed&quot;,
+          &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;TEST CRAWLING&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing form selection url&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;form selection url&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
@@ -196,7 +206,19 @@
           &quot;ancestorTitles&quot;: [
             &quot;e2e testing&quot;
           ],
-          &quot;duration&quot;: 1,
+          &quot;duration&quot;: 0,
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;e2e testing test performance&quot;,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 0,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;title&quot;: &quot;test performance&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;e2e testing&quot;
+          ],
+          &quot;duration&quot;: 0,
           &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;e2e testing test performance in mobile&quot;,
           &quot;location&quot;: null,
@@ -297,7 +319,7 @@
     <hr>
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">&copy; jest-stare 2019</span>
+            <span class="text-muted">jest-stare 2020</span>
         </div>
     </footer>
 </body>

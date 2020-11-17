@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 1,
-  "numPassedTestSuites": 0,
-  "numPassedTests": 0,
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 1,
   "numPendingTestSuites": 0,
-  "numPendingTests": 4,
+  "numPendingTests": 6,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 5,
+  "numTotalTests": 7,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,18 +26,18 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1603032770117,
+  "startTime": 1605591218733,
   "success": false,
   "testResults": [
     {
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[1me2e testing › TEST CRAWLING\u001b[39m\u001b[22m\n\n    RequestError: Error: getaddrinfo ENOTFOUND www.milo.co.id\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat new RequestError (\u001b[2mnode_modules/request-promise/node_modules/request-promise-core/lib/errors.js\u001b[2m:14:15)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.plumbing.callback (\u001b[2mnode_modules/request-promise/node_modules/request-promise-core/lib/plumbing.js\u001b[2m:87:29)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.RP$callback [as _callback] (\u001b[2mnode_modules/request-promise/node_modules/request-promise-core/lib/plumbing.js\u001b[2m:46:31)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat self.callback (\u001b[2mnode_modules/request/request.js\u001b[2m:185:22)\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Request.Object.<anonymous>.Request.onRequestError (\u001b[2mnode_modules/request/request.js\u001b[2m:877:8)\u001b[2m\u001b[22m\n",
-      "numFailingTests": 1,
-      "numPassingTests": 0,
-      "numPendingTests": 4,
+      "failureMessage": null,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 6,
       "numTodoTests": 0,
       "perfStats": {
-        "end": 1603032786995,
-        "start": 1603032772865
+        "end": 1605591285497,
+        "start": 1605591221176
       },
       "snapshot": {
         "added": 0,
@@ -54,15 +54,25 @@
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 111,
-          "failureMessages": [
-            "RequestError: Error: getaddrinfo ENOTFOUND www.milo.co.id\n    at new RequestError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n    at Request.plumbing.callback (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n    at Request.RP$callback [as _callback] (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request-promise\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n    at self.callback (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request\\request.js:185:22)\n    at Request.emit (events.js:315:20)\n    at Request.Object.<anonymous>.Request.onRequestError (C:\\Users\\Fajri\\Documents\\automation\\node_modules\\request\\request.js:877:8)\n    at ClientRequest.emit (events.js:315:20)\n    at TLSSocket.socketErrorListener (_http_client.js:426:9)\n    at TLSSocket.emit (events.js:315:20)\n    at emitErrorNT (internal/streams/destroy.js:92:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)\n    at processTicksAndRejections (internal/process/task_queues.js:84:21)"
-          ],
+          "duration": 50737,
+          "failureMessages": [],
           "fullName": "e2e testing TEST CRAWLING",
           "location": null,
           "numPassingAsserts": 0,
-          "status": "failed",
+          "status": "passed",
           "title": "TEST CRAWLING"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing form selection url",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "form selection url"
         },
         {
           "ancestorTitles": [
@@ -80,7 +90,19 @@
           "ancestorTitles": [
             "e2e testing"
           ],
-          "duration": 1,
+          "duration": 0,
+          "failureMessages": [],
+          "fullName": "e2e testing test performance",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "pending",
+          "title": "test performance"
+        },
+        {
+          "ancestorTitles": [
+            "e2e testing"
+          ],
+          "duration": 0,
           "failureMessages": [],
           "fullName": "e2e testing test performance in mobile",
           "location": null,
