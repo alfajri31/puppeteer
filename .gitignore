@@ -4,5 +4,10 @@
 /photo backup
 /Renders/OneDrive - WPP Cloud
 /Renders/WPP Cloud
-/Renders/Unit
-/Renders/jest-stare
+/Renders/Unit/*
+/Renders/jest-stare/*
+/others
+/codes
+/features/brimo
+/loadtest/
+/backups
