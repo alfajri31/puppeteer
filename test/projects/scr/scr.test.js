@@ -15,10 +15,12 @@
 
 
  //important
- const target = 'https://www.milo.co.id/'
- const last_path = ''
- const folder_name = "miloprod"
+ //const target = 'https://fortigro.dancow.co.id/id/artikel/bunda-ini-pentingnya-latih-konsentrasi-fokus-si-buah-hati-selama-belajar-di-rumah'
+ const target = 'https://onedancow.wtid.dev/'
+ const last_path = 'double-dha'
+ const folder_name = "fortigroprodarticle"
  const crawling_lvl = 2;
+
  const exclude = {
    '1' : 'facebook',
    '2' : 'youtube',
@@ -33,8 +35,10 @@
 
 
  let source= '[{"p":[{}]}]';
+ let name = '';
+ let score;
 
- let dir3,dir4
+ let dir3,dir4,dir5,dir6
 
  dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
   fs.readdir(dir3, (err, files) => {
@@ -51,6 +55,25 @@
         fs.unlink(path.join(dir4, file), err => {
           if (err) throw err;
         });
+    }
+})
+
+
+  dir5 = path.join(__dirname,'/report/mobile')
+  fs.readdir(dir5, (err, files) => {
+   for (const file of files) {
+       fs.unlink(path.join(dir5, file), err => {
+         if (err) throw err;
+       });
+   }
+})
+
+  dir6 = path.join(__dirname,'/report/desktop')
+  fs.readdir(dir6, (err, files) => {
+    for (const file of files) {
+     fs.unlink(path.join(dir6, file), err => {
+       if (err) throw err;
+     });
     }
 })
 
@@ -84,7 +107,6 @@
             let tmp=[];
             let j = 0;
             let k = 0;
-         
             let lvl = 1;
             let count;
 
@@ -130,33 +152,17 @@
               } 
             }
 
-            function getRidExternal(tmp,k) {
-              // let op = tmp
-              // for (let [keyExternal,valueExclude] of Object.entries(exclude)) {
-              //   op = op.filter(x => !x.includes(valueExclude))
-              //   op = op.filter(x => !x.includes(valueExclude))
-              // }
-              // tmp = op
-              // return tmp
-
-              // let index = k; 
-              // for  (let [keyExternal,valueExclude] of Object.entries(exclude)) {
-              //   if(tmp[k].includes(valueExclude)) {
-              //     tmp.splice(index,1)
-              //   }
-              // }
-            }
-
             function clearJsonObject(value) {
               let a = 0;
               let b = 0;
-              let c = 0
+            
+
               count = value.length
-              while(c <= 1) {
+         
                 while(a <= count - 1) {
                   while(b <= value[a][tmp[a]].length - 1) {
-                    if(JSON.stringify(value[a][tmp[a]][b])=='{}') {
-                      delete value[a][tmp[a][b]]
+                    if(JSON.stringify(value[a][tmp[a]][b]) == '{}') {
+                      delete value[a][tmp[a]][b]
                       source[a][tmp[a]].splice(b,1)
                     }
                     b++;
@@ -164,8 +170,6 @@
                   b = 0;
                   a++;
                 }
-              c++;
-              }
             
             }
     
@@ -183,6 +187,7 @@
                 let bb;
                 $("div").each(function(i, link){
                    anchors2[i] = $(link).attr("data-url");
+                   console.log(anchors2[i])
                    if(anchors2[i]!==undefined) {
                      bb = anchors2[i].split(last_path)
                      bb = bb[1]
@@ -197,7 +202,6 @@
                 lvl++;
               }
               else {
-
                 count = tmp.length
                 source = '[{"'+tmp[k]+'":[{}]}]'
                 source = JSON.parse(source)
@@ -248,15 +252,20 @@
                  k++;
                  source.push(JSON.parse('{"'+tmp[k]+'":[{}]}'))
                 }      
-              lvl++;
+                lvl++;
               }
             }
-            clearJsonObject(source)
-             /* using config default, indent with tabs */
-            fs.writeFile(__dirname+'/example_tabs.json', jsonFormat(source), function(err){
-              if (err) throw err;
-                  console.log('saved');
-            });
+
+            if(crawling_lvl >= 2) {
+              clearJsonObject(source)
+              clearJsonObject(source)
+               /* using config default, indent with tabs */
+              fs.writeFile(__dirname+'/example_tabs.json', jsonFormat(source), function(err){
+                if (err) throw err;
+                    console.log('saved');
+              });
+            }
+           
             tmp = remove_duplicate(tmp)
             return tmp
         }
@@ -276,18 +285,88 @@
           return ndata
         }
 
+        function renameHtml(value) {
+          return name
+        }
+
            test("TEST CRAWLING",async() => {
             await yy().then(result => {
-            console.log(result)
-            
-          })
+                console.log(result)
+            })
         },3600000)
+
+           test.skip('form selection url', async() => {
+
+            await yy().then(async (result) => {
+
+              console.log(result) 
+
+              //initialize step
+              let url = [];
+              url = result;
+              let forms = []
+              let nonForms = []
+              let i = 0;
+
+              fs.unlinkSync(path.join(__dirname,'/forms-link'), err => {
+                console.log(err)
+              });
+              fs.unlinkSync(path.join(__dirname,'/non-forms-link'), err => {
+                console.log(err)
+              });
+
+               while(i <= url.length - 1  ) {
+                await page.goto(url[i], {waitUntil: 'domcontentloaded'}).catch(e => void 0)
+                console.log(url[i])
+                try {
+                  await page.waitForSelector('input[type="text"]', {
+                    waitFor: "visible",
+                  }) 
+                  // console.log('that page is have')
+                  forms.push(url[i])
+                }
+                catch(err) {
+                  // console.log('that page is doesnt have');
+                  nonForms.push(url[i])
+                }
+                i++;
+                //visi._remoteObject.type == 'object'
+               }
+               
+
+              console.log(forms)
+              
+              // i=0
+              // while(i<=3) {
+                fs.writeFileSync(__dirname+'/forms-link', forms, (err) => {
+                  if (err) {
+                      console.error(err);
+                  }
+                });
+              //   i++;
+              // }
+              
+              // i=0
+              // while(i<=3) {
+                fs.writeFileSync(__dirname+'/non-forms-link', nonForms, (err) => {
+                  if (err) {
+                      console.error(err);
+                  }
+                });
+              //   i++;
+              // }
+         
+            })
+
+
+           
+           },3600000)
 
            test.skip("optimal ss", async() => {
             await yy().then(async (result) => {
      
               //  print all sitemap
-              //  console.log(result)
+               console.log(result)
      
                //initialize step
                let url = [];
@@ -325,6 +404,28 @@
              })
            
            },3600000)
+
+           test.skip('test performance', async() => {
+            await page.goto('',{waitUntil : 'networkidle2'}) 
+            const report = await lighthouse(page.url(), opts, config).then(results => {
+                return results;
+            });
+            const html = reportGenerator.generateReport(report.lhr, 'html');
+            const json = reportGenerator.generateReport(report.lhr, 'json');
+            
+            //Write report html to the file
+            fs.writeFile(__dirname+'/report.html', html, (err) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
+            //Write report json to the file
+            fs.writeFile(__dirname+'/report.json', json, (err) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
+           })
 
            test.skip("test performance in mobile", async() => {
 
@@ -374,24 +475,27 @@
                  let ndata= [];
               
 
-                  while (i <=url.length) {
-                    await page.goto('https://www.youtube.com/channel/UCJU1oph89LKXryQwUItT1Bw?nohtml5=False',{waitUntil : 'networkidle2'}).catch(e => void 0)
+                  while (i <= url.length) {
+                    await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
                     });
                     const json = reportGenerator.generateReport(report.lhr, 'json');
                     const html = reportGenerator.generateReport(report.lhr, 'html');
                                    
-                    //Write report json to the file                    
+                    //remove old json                
                     fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
                       console.log(err)
                     });
 
+
+                    //Write report json to the file
                     fs.writeFileSync(__dirname+'/report.json', json, (err) => {
                         if (err) {
                             console.error(err);
                         }
                     });
+                    
 
                     fs.readFile(__dirname+'/report.json', {encoding: 'utf8', flag:'r'},function(err,data) {
                       if (err) {
@@ -400,15 +504,25 @@
                       else {
                         output = JSON.parse(data)
                         
-                        // checkMsite(url[i])
+                        // check not 0 perform
 
-                        let score = new pushScore({"no":i, "url":url[i],"mobile performance": output.categories.performance.score * 100})
+                        //push score
+                        score = new pushScore({"no":i, "url":output.finalUrl,"mobile performance": output.categories.performance.score * 100})
                         console.log(score)
-                       
+
+                        //Write report html to the file
+                        name = output.finalUrl;
+                        fs.writeFile(__dirname+'/report/mobile/'+i+name.split(/[,\/:.?]/g)+'mobile-report.html', html, (err) => {
+                          if (err) {
+                              console.error(err);
+                          }
+                        });
+                    
                         chrome.kill
                       }
                     })
 
+          
                   i = i + 1;
                   }
             })
@@ -458,14 +572,7 @@
                   //loop the test
                   i = 0
 
-                  //init report.json
-                  fs.writeFileSync(__dirname+'/report.json', function(err) {
-                    if (err) {
-                      console.log(err);
-                    }
-                  })
-
-                  while (i <=url.length -1) {
+                  while (i <= url.length) {
                     await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
@@ -474,12 +581,13 @@
                     const json = reportGenerator.generateReport(report.lhr, 'json');
                     const html = reportGenerator.generateReport(report.lhr, 'html');
                     
-               
-                    //Write report json to the file                    
+          
+                    // remove old report json                  
                     fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
                       console.log(err)
                     });
 
+                    //Write report json to the file
                     fs.writeFileSync(__dirname+'/report.json', json, (err) => {
                         if (err) {
                             console.error(err);
@@ -492,13 +600,24 @@
                       }
                       else {
                         output = JSON.parse(data)
-                        let score = new pushScore({"no":i, "url":url[i],"desktop performance": output.categories.performance.score * 100})
+
+                        //check push score
+                        score = new pushScore({"no":i, "url":output.finalUrl,"desktop performance": output.categories.performance.score * 100})
                         console.log(score)
-                        chrome.disconnected;
+
+                        //Write report html to the file
+                        name = output.finalUrl;
+                        fs.writeFile(__dirname+'/report/desktop/'+i+name.split(/[,\/:.?]/g)+'desktop-report.html', html, (err) => {
+                          if (err) {
+                              console.error(err);
+                          }
+                        });
+
+                        // chrome.disconnected;
+                      
                         chrome.kill
                       }
                     })
-                    
 
                   i = i + 1;
                   }
@@ -530,9 +649,10 @@
                 XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
                 
                 /* generate an XLSX file */
-                XLSX.writeFile(wb, "performance-score.xlsx");
+                XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
             });            
           },3600000)
+          
           
     })
  
