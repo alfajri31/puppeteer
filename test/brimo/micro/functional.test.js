@@ -4,10 +4,6 @@ require('../../initialize').page
 require('../../initialize').browser
 const moment = require('moment-timezone');
 const playwright = require('playwright');
-<<<<<<< HEAD
-let init = require('../../initialize');
-=======
->>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 
 //initialize function random number
 CHAR_SETS = {
@@ -31,22 +27,15 @@ function randChar(charType) {
 }
 
 //initialize variables
-<<<<<<< HEAD
-=======
 const URL = 'https://brimo.wtid.dev/intro?step=1&token=6aa10b3e9f1482e49b7eb716b8a1a174'
->>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
 const phone = mapString('08AAAAAAAAAA', randChar)
 
 //preapering chromium launch
 beforeAll(async() => {
     browser = await playwright['chromium'].launch({  
         headless: headless,
-<<<<<<< HEAD
-        args: ['--no-sandbox','--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream']
-=======
         args: ['--use-fake-ui-for-media-stream'],
         executablePath: path.join(__dirname,'../','../','../','/node_modules/playwright-core/.local-chromium/linux-740847/chrome-linux/chrome')
->>>>>>> c43c1fff362b2188e252325bc9f2ce0e84ff652a
     });
     const context = await browser.newContext();
     page = await context.newPage();

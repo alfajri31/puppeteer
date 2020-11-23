@@ -1,7 +1,7 @@
  // PREPEARING
  const playwright = require('playwright');
  const {devices} = require('playwright')
- const device = devices['Iphone X'];
+ const device = devices['iPhone 7'];
  let init = require('../../initialize')
  require('../../initialize').page
  require('../../initialize').browser
@@ -11,15 +11,15 @@
  //request and response
  const cheerio = require('cheerio');
  const request = require('request');
- const { fs } = require('../../initialize');
+ const { fs, headless } = require('../../initialize');
 
 
  //important
- //const target = 'https://fortigro.dancow.co.id/id/artikel/bunda-ini-pentingnya-latih-konsentrasi-fokus-si-buah-hati-selama-belajar-di-rumah'
- const target = 'https://onedancow.wtid.dev/'
- const last_path = 'double-dha'
- const folder_name = "onedancow"
- const crawling_lvl =1;
+ const target = 'https://fortigro.dancow.co.id/'
+ const last_path = ''
+ const folder_name = "fortigro"
+ const browser_type = 'chromium'
+ const crawling_lvl = 1;
 
  const exclude = {
    '1' : 'facebook',
@@ -40,50 +40,14 @@
 
  let dir3,dir4,dir5,dir6
 
- dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Landscape')
-  fs.readdir(dir3, (err, files) => {
-     for (const file of files) {
-         fs.unlink(path.join(dir3, file), err => {
-           if (err) throw err;
-         });
-     }
- })
-
- dir4 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/chromium/Potrait')
- fs.readdir(dir4, (err, files) => {
-    for (const file of files) {
-        fs.unlink(path.join(dir4, file), err => {
-          if (err) throw err;
-        });
-    }
-})
-
-
-  dir5 = path.join(__dirname,'/report/mobile')
-  fs.readdir(dir5, (err, files) => {
-   for (const file of files) {
-       fs.unlink(path.join(dir5, file), err => {
-         if (err) throw err;
-       });
-   }
-})
-
-  dir6 = path.join(__dirname,'/report/desktop')
-  fs.readdir(dir6, (err, files) => {
-    for (const file of files) {
-     fs.unlink(path.join(dir6, file), err => {
-       if (err) throw err;
-     });
-    }
-})
 
 
   let i = 0  ;
   beforeAll(async() => {
-    for (browserType of ['chromium']) {
+    for (browserType of [browser_type]) {
       browser = await playwright[browserType].launch({
         headless: headless,
-        args: ['--no-sandbox']
+        args: ['--no-sandbox','--disable-features=ImprovedCookieControls']
       });
       const context = await browser.newContext({
         ...device
@@ -177,7 +141,7 @@
               if(lvl == 1) {
 
                 //crawling level up from only once
-                let response = await request(target);
+                let response = await request(target+last_path);
                 let $ = cheerio.load(response);
  
                 $("a").each(function(i, link){
@@ -289,6 +253,14 @@
           return name
         }
 
+        function arrayMax(array) {
+          return array.reduce((a, b) => Math.max(a, b));
+        }
+        
+        function arrayMin(array) {
+          return array.reduce((a, b) => Math.min(a, b));
+        }
+
            test.skip("TEST CRAWLING",async() => {
             await yy().then(result => {
                 console.log(result)
@@ -362,11 +334,29 @@
            
            },3600000)
 
-           test("optimal ss", async() => {
+           test.skip("optimal screenshot", async() => {
             await yy().then(async (result) => {
+
+              dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Landscape')
+              fs.readdir(dir3, (err, files) => {
+                 for (const file of files) {
+                     fs.unlink(path.join(dir3, file), err => {
+                       if (err) throw err;
+                     });
+                 }
+             })
+            
+              dir4 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Potrait')
+              fs.readdir(dir4, (err, files) => {
+                for (const file of files) {
+                    fs.unlink(path.join(dir4, file), err => {
+                      if (err) throw err;
+                    });
+                }
+            })
      
               //  print all sitemap
-               console.log(result)
+              //  console.log(result)
      
                //initialize step
                let url = [];
@@ -380,7 +370,7 @@
                //loop the test
                i=0
 
-               while(i<=url.length-1) {
+               while(i <= url.length - 1) {
                  console.log(url[i])
                  try {
                   await page.goto(url[i], {waitUntil: 'domcontentloaded'});
@@ -427,7 +417,7 @@
             });
            })
 
-           test.skip("test performance in mobile", async() => {
+           test("test performance in mobile", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -437,11 +427,20 @@
             const request = require('request');
             const util = require('util');
             const fs = require('fs');
-           
+
+            dir5 = path.join(__dirname,'/report/mobile')
+            fs.readdir(dir5, (err, files) => {
+             for (const file of files) {
+                 fs.unlink(path.join(dir5, file), err => {
+                   if (err) throw err;
+                 });
+             }
+          })
+          
             
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito'],
+              chromeFlags: ['--headless','--disable-gpu','--disable-mobile-emulation','--incognito','--disable-extensions'],
               disableDeviceEmulation: true,
             }
           
@@ -473,63 +472,84 @@
                  //excel convert
                  let data = [];
                  let ndata= [];
-              
+                 let compare = [];
 
+               
                   while (i <= url.length) {
-                    await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
-                    const report = await lighthouse(page.url(), opts, config).then(results => {
-                        return results;
-                    });
-                    const json = reportGenerator.generateReport(report.lhr, 'json');
-                    const html = reportGenerator.generateReport(report.lhr, 'html');
-                                   
-                    //remove old json                
-                    fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
-                      console.log(err)
-                    });
+                    // console.log(url[6])
+                    let u = 1;
+                    compare = [];
 
-
-                    //Write report json to the file
-                    fs.writeFileSync(__dirname+'/report.json', json, (err) => {
-                        if (err) {
-                            console.error(err);
-                        }
-                    });
+while(u <= 2) {
+              
+                      try {
                     
+                        await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
+                        const report = await lighthouse(page.url(), opts, config).then(results => {
+                            return results;
+                        });
+                        const json = reportGenerator.generateReport(report.lhr, 'json');
+                        const html = reportGenerator.generateReport(report.lhr, 'html');
+                                       
+                        //remove old json                
+                        fs.unlinkSync(path.join(__dirname,'/report.json'), err => {
+                          console.log(err)
+                        });
+    
+    
+                        //Write report json to the file
+                        fs.writeFileSync(__dirname+'/report.json', json, (err) => {
+                            if (err) {
+                                console.error(err);
+                            }
+                        });
+                        
+    
+                        fs.readFile(__dirname+'/report.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+                          if (err) {
+                            console.log(err)
+                          }
+                          else {
+                            output = JSON.parse(data)
+                            compare.push(output.categories.performance.score * 100)
+                            // console.log(compare)
 
-                    fs.readFile(__dirname+'/report.json', {encoding: 'utf8', flag:'r'},function(err,data) {
-                      if (err) {
+                            // check min and max score
+                            if (u == 2 ) {
+                                min = arrayMin(compare)
+                                max = arrayMax(compare)
+                                // console.log(compare)
+
+                                //push score
+                                score = new pushScore({"no":i, "url":output.finalUrl,"mobile performance": output.categories.performance.score * 100,"min":min,"max":max})
+                                console.log(score)
+
+                                //Write report html to the file
+                                name = output.finalUrl;
+                                fs.writeFile(__dirname+'/report/mobile/'+i+name.split(/[,\/:.?]/g)+'mobile-report.html', html, (err) => {
+                                  if (err) {
+                                      console.error(err);
+                                  }
+                                });
+                            }
+                             chrome.kill
+                             chrome.kill
+                             chrome.kill
+                          }
+                        })
+                      }
+                      catch(err) {
                         console.log(err)
                       }
-                      else {
-                        output = JSON.parse(data)
-                        
-                        // check not 0 perform
-
-                        //push score
-                        score = new pushScore({"no":i, "url":output.finalUrl,"mobile performance": output.categories.performance.score * 100})
-                        console.log(score)
-
-                        //Write report html to the file
-                        name = output.finalUrl;
-                        fs.writeFile(__dirname+'/report/mobile/'+i+name.split(/[,\/:.?]/g)+'mobile-report.html', html, (err) => {
-                          if (err) {
-                              console.error(err);
-                          }
-                        });
-                    
-                        chrome.kill
-                      }
-                    })
-
-          
+u=u+1;}                        
                   i = i + 1;
+                  
                   }
             })
 
            },3600000)
 
-           test.skip("test performance in desktop", async() => {
+           test("test performance in desktop", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -539,11 +559,23 @@
             const request = require('request');
             const util = require('util');
             const fs = require('fs');
+            let compare = [];
+
+          
+            dir6 = path.join(__dirname,'/report/desktop')
+            fs.readdir(dir6, (err, files) => {
+              for (const file of files) {
+               fs.unlink(path.join(dir6, file), err => {
+                 if (err) throw err;
+               });
+              }
+          })
+          
             
   
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito'],
+              chromeFlags: ['--headless','--disable-gpu','--disable-mobile-emulation','--incognito'],
               disableDeviceEmulation: true,
             }
           
@@ -573,6 +605,11 @@
                   i = 0
 
                   while (i <= url.length) {
+                    let u = 1;
+                    compare = [];
+while(u<=2) {
+                    try {
+
                     await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
                     const report = await lighthouse(page.url(), opts, config).then(results => {
                         return results;
@@ -600,26 +637,42 @@
                       }
                       else {
                         output = JSON.parse(data)
+                        compare.push(output.categories.performance.score * 100)
 
-                        //check push score
-                        score = new pushScore({"no":i, "url":output.finalUrl,"desktop performance": output.categories.performance.score * 100})
-                        console.log(score)
+                        // check min and max score
+                        if (u == 2 ) {
+                            min = arrayMin(compare)
+                            max = arrayMax(compare)
+                            // console.log(compare)
+                        
+                            //check push score
+                            score = new pushScore({"no":i, "url":output.finalUrl,"desktop performance": output.categories.performance.score * 100,"min":min,"max":max})
+                            console.log(score)
 
-                        //Write report html to the file
-                        name = output.finalUrl;
-                        fs.writeFile(__dirname+'/report/desktop/'+i+name.split(/[,\/:.?]/g)+'desktop-report.html', html, (err) => {
-                          if (err) {
-                              console.error(err);
-                          }
-                        });
+                            //Write report html to the file
+                            name = output.finalUrl;
+                            fs.writeFile(__dirname+'/report/desktop/'+i+name.split(/[,\/:.?]/g)+'desktop-report.html', html, (err) => {
+                              if (err) {
+                                console.error(err);
+                              }    
+                            });
 
+                        }
                         // chrome.disconnected;
+                         chrome.kill
+                         chrome.kill
+                         chrome.kill
                       
-                        chrome.kill
                       }
                     })
 
+                  }
+                  catch(err) {
+                    console.log(err)
+                  }
+u = u + 1;}
                   i = i + 1;
+                 
                   }
             })
            },3600000)

@@ -223,6 +223,31 @@ module.exports = {
                         console.log(err)
                     });
                 }        
+            }
+
+            if (browserType == 'firefox') {
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder, (err) => {
+                        console.log(err)
+                    });
+                } 
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType, (err) => {
+                        console.log(err)
+                    });
+                }
+    
+                if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation)){
+                    fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder+'/'+res+'/'+browserType+'/'+this.orientation, (err) => {
+                        console.log(err)
+                    });
+                }        
     
             }
         }
@@ -239,6 +264,7 @@ module.exports = {
         await this.src_height().then(async (value)=>{
             await page.setViewportSize({width: default_width,height : value})
             await page.waitFor(5000)
+            name = name.slice(1,100)
             await page.screenshot({
                 path: path.join(__dirname,'../Renders/OneDrive - WPP Cloud/Unit/'+folder+'/'+res+'/'+browserType+'/'+this.orientation+'/'+name+'.png'),
                 fullpage: true,
