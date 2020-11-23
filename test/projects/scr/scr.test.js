@@ -451,7 +451,7 @@
             
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-extensions'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-extensions','--disable-renderer-backgrounding','--enable-automation'],
               disableDeviceEmulation: true,
             }
           
@@ -478,7 +478,7 @@
                   url = remove_duplicate(url)
 
                   //loop the test
-                  i = 0;
+                  i = 5;
                   itr_m = 0;
 
                  //excel convert
@@ -599,7 +599,7 @@ u=u+1;}
     
             opts = {
               args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito'],
+              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-renderer-backgrounding','--enable-automation'],
               disableDeviceEmulation: true,
             }
           
