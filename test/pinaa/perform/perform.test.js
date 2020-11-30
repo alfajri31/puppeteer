@@ -15,10 +15,8 @@ let chrome
 
 beforeAll(async() => {
     opts = {
-        headless: headless,
         args: [ '--ignore-certificate-errors','--no-sandbox'],
-        chromeFlags: ['--headless', '--disable-gpu'],
-        executablePath: path.join(__dirname,'../','../','../','/node_modules/puppeteer/.local-chromium/MacOS/Chromium')
+        chromeFlags: ['--headless', '--disable-gpu']
         
     }
     
@@ -31,18 +29,17 @@ beforeAll(async() => {
     const {webSocketDebuggerUrl} = JSON.parse(resp.body);
     browser = await puppeteer.connect({browserWSEndpoint: webSocketDebuggerUrl});
     page = (await browser.pages())[0]
-    await page.setViewport({ width: 1200, height: 900});
+ 
 },90000)
 
 afterAll(async() => {
-    await browser.disconnect();
     await chrome.kill();
 })
 
 
 describe('E2E Automation Test', () => {
     test('test performance home use lighthouse', async() => {
-        await page.goto('https://nutea.co.id/',{waitUntil : 'networkidle2'}) 
+        await page.goto('https://airhorner.com//',{waitUntil : 'networkidle2'}) 
         const report = await lighthouse(page.url(), opts, config).then(results => {
             return results;
         });

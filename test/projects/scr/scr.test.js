@@ -419,7 +419,7 @@
             });
            })
 
-           test("test performance in mobile", async() => {
+           test.skip("test performance in mobile", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -437,22 +437,26 @@
                    if (err) throw err;
                  });
              }
-          })
+            })
 
-          dir7 = path.join(__dirname,'/json/mobile')
-          fs.readdir(dir7, (err, files) => {
-           for (const file of files) {
+           dir7 = path.join(__dirname,'/json/mobile')
+           fs.readdir(dir7, (err, files) => {
+            for (const file of files) {
                fs.unlink(path.join(dir7, file), err => {
                  if (err) throw err;
                });
            }
-        })
+          })
           
             
             opts = {
-              args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-extensions','--disable-renderer-backgrounding','--enable-automation'],
-              disableDeviceEmulation: true,
+              chromeFlags: ['--headless'],
+              onlyCategories: ["performance"],
+              throttling: {
+                cpuSlowdownMultiplier: 1
+              }
+              // args: ['--ignore-certificate-errors','--no-sandbox'],
+              // chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-extensions','--disable-renderer-backgrounding','--enable-automation','--disable-dev-shm-usage']
             }
           
             // Launch chrome using chrome-launcher
@@ -478,7 +482,7 @@
                   url = remove_duplicate(url)
 
                   //loop the test
-                  i = 5;
+                  i = 0;
                   itr_m = 0;
 
                  //excel convert
@@ -487,12 +491,12 @@
                  let compare = [];
 
                
-                  while (i <= url.length) {
+                  while (i <= url.length ) {
                     // console.log(url[6])
                     let u = 1;
                     compare = [];
 
-while(u <= 2) {
+// while(u <= 2) {
               
                       try {
                     
@@ -523,18 +527,18 @@ while(u <= 2) {
                           }
                           else {
                             output = JSON.parse(data)
-                            compare.push(output.categories.performance.score * 100)
+                            // compare.push(output.categories.performance.score * 100)
                             // console.log(compare)
 
                             // check min and max score
-                            if (u == 2 ) {
+                            // if (u == 2 ) {
                                 
-                                min = arrayMin(compare)
-                                max = arrayMax(compare)
+                                // min = arrayMin(compare)
+                                // max = arrayMax(compare)
                                 // console.log(compare)
 
                                 //push score
-                                score = new pushScore({"no":itr_m, "url":output.finalUrl,"mobile performance": output.categories.performance.score * 100,"min":min,"max":max})
+                                score = new pushScore({"no":itr_m, "url":output.finalUrl,"mobile performance": output.categories.performance.score * 100})
                                 console.log(score)
 
                                 //Write report html to the file
@@ -546,7 +550,7 @@ while(u <= 2) {
                                 });
 
                                 itr_m = itr_m + 1;
-                            }
+                            // }
                              chrome.kill
                              chrome.kill
                              chrome.kill
@@ -556,7 +560,7 @@ while(u <= 2) {
                       catch(err) {
                         console.log(err)
                       }
-u=u+1;}                        
+// u=u+1;}                        
                   i = i + 1;
                   
                   }
@@ -564,7 +568,7 @@ u=u+1;}
 
            },3600000)
 
-           test("test performance in desktop", async() => {
+           test.skip("test performance in desktop", async() => {
 
             const chromeLauncher = require('chrome-launcher');
             const puppeteer = require('puppeteer');
@@ -586,8 +590,8 @@ u=u+1;}
               }
           })
 
-          dir8 = path.join(__dirname,'/json/desktop')
-          fs.readdir(dir8, (err, files) => {
+            dir8 = path.join(__dirname,'/json/desktop')
+            fs.readdir(dir8, (err, files) => {
            for (const file of files) {
                fs.unlink(path.join(dir8, file), err => {
                  if (err) throw err;
@@ -598,9 +602,13 @@ u=u+1;}
           
     
             opts = {
-              args: [ '--ignore-certificate-errors','--no-sandbox'],
-              chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-renderer-backgrounding','--enable-automation'],
-              disableDeviceEmulation: true,
+              chromeFlags: ['--headless '],
+              onlyCategories: ["performance"],
+              throttling: {
+                cpuSlowdownMultiplier: 1
+              }
+              // args: [ '--ignore-certificate-errors','--no-sandbox'],
+              // chromeFlags: ['--disable-gpu','--disable-mobile-emulation','--incognito','--disable-renderer-backgrounding','--enable-automation','--disable-dev-shm-usage']
             }
           
             // Launch chrome using chrome-launcher
@@ -632,7 +640,7 @@ u=u+1;}
                   while (i <= url.length) {
                     let u = 1;
                     compare = [];
-while(u<=2) {
+// while(u<=2) {
                     try {
 
                     await page.goto(url[i],{waitUntil : 'networkidle2'}).catch(e => void 0)
@@ -662,16 +670,16 @@ while(u<=2) {
                       }
                       else {
                         output = JSON.parse(data)
-                        compare.push(output.categories.performance.score * 100)
+                        // compare.push(output.categories.performance.score * 100)
 
                         // check min and max score
-                        if (u == 2 ) {
-                            min = arrayMin(compare)
-                            max = arrayMax(compare)
+                        // if (u == 2 ) {
+                            // min = arrayMin(compare)
+                            // max = arrayMax(compare)
                             // console.log(compare)
                         
                             //check push score
-                            score = new pushScore({"no":itr_d, "url":output.finalUrl,"desktop performance": output.categories.performance.score * 100,"min":min,"max":max})
+                            score = new pushScore({"no":itr_d, "url":output.finalUrl,"desktop performance": output.categories.performance.score * 100})
                             console.log(score)
 
                             //Write report html to the file
@@ -683,7 +691,7 @@ while(u<=2) {
                             });
 
                             itr_d = itr_d + 1;
-                        }
+                        // }
                         // chrome.disconnected;
                          chrome.kill
                          chrome.kill
@@ -696,14 +704,14 @@ while(u<=2) {
                   catch(err) {
                     console.log(err)
                   }
-u = u + 1;}
+// u = u + 1;}
                   i = i + 1;
                  
                   }
             })
            },3600000)
 
-           test.skip("convert to excel", async() => {
+           test("convert to excel", async() => {
 
             const fs = require('fs');
 
@@ -731,55 +739,94 @@ u = u + 1;}
                 wb.Sheets["Overview"] = ws;  
                 XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
 
+                const dir = __dirname+'/json/desktop/';
+                fs.readdir(dir, (err, files) => {
+                  
+                  return files.length
 
+                })
+              
+
+                let j = 0;
+                while(j<=0) {
+                  wb.SheetNames.push(JSON.stringify(j)); 
+                  j=j+1
+                }
+                
+          
                 /////// NEW CODE
                 let i = 0;
-                fs.readFile(__dirname+'/json/mobile/report'+i+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+
+
+               
+  // setTimeout(() => {}, 2000);
+
+                fs.readFile(__dirname+'/json/desktop/report'+i+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
                   if (err) {
                     console.log(err)
                   }
                   else {
-                    const issue = []
-                  
-                    let output  = JSON.parse(data)
-                    issue[0] = output.audits['uses-webp-images'].title
-                    // console.log(webp)
-                    issue[1] = output.audits['uses-optimized-images'].title
-                    // console.log(optimized_img)
-                    issue[2] = output.audits['uses-responsive-images'].title
-                    // console.log(unresponsive_images)
-                    issue[3] = output.audits['uses-rel-preload'].title
-                    // console.log(preload)
-                    issue[4] = output.audits['no-document-write'].title
-                    // console.log(non_doc_write)
-                    issue[5] = output.audits['uses-long-cache-ttl'].title
-                    // console.log(cache_ttl)
-                    issue[6] = output.audits['unsized-images'].title
-                    // console.log(unsized_img)
+    
+                    try {
 
-                    locateissue0(1,output)
-                    locateissue1(2,output)
-                    locateissue2(3,output)
-                    locateissue3(4,output)
-                    locateissue4(5,output)
-                    locateissue5(6,output)
-                    locateissue6(7,output)
-                    
+                      let issue = []
+                      let sdata
+
+                      // while(i <= 2) {
+
+                       
+                        for(let j = 0; j <= 0;j++) {
+                          sdata = fs.readFile(__dirname+'/json/desktop/report'+j+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+                            if (err) {
+                              console.log(err)
+                            }
+                            console.log('data ke '+ j )
+                            let issue = []
+                            let output  = JSON.parse(data)
+                            issue[0] = output.audits['uses-webp-images'].title
+                            // console.log(webp)
+                            issue[1] = output.audits['uses-optimized-images'].title
+                            // console.log(optimized_img)
+                            issue[2] = output.audits['uses-responsive-images'].title
+                            // console.log(unresponsive_images)
+                            issue[3] = output.audits['uses-rel-preload'].title
+                            // console.log(preload)
+                            issue[4] = output.audits['no-document-write'].title
+                            // console.log(non_doc_write)
+                            issue[5] = output.audits['uses-long-cache-ttl'].title
+                            // console.log(cache_ttl)
+                            issue[6] = output.audits['unsized-images'].title
+                            // console.log(unsized_img)
+    
+                            locateissue0(1,output)
+                            locateissue1(2,output)
+                            locateissue2(3,output)
+                            locateissue3(4,output)
+                            locateissue4(5,output)
+                            locateissue5(6,output)
+                            locateissue6(7,output)
+                                       
+                            ws = XLSX.utils.json_to_sheet(issues);
+                            wb.Sheets[JSON.stringify(j)] = ws;  
+                            issues = []
+                        
+    
+                            //write excel
+                            XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
+
+                          })     
+                        }
+                        // i = i + 1;
+                      // }
+                    }catch(err) {
+                      console.log(err)
+                    }
                  
-                    
-                    wb.SheetNames.push("1"); 
-                    ws = XLSX.utils.json_to_sheet(issues);
-                    wb.Sheets["1"] = ws;  
-                    //colums with style
-
-                    //write excel
-                    XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
-
-
+            
                   }
                 })   
                 //////////////////////////////////NEW CODE
-                
+
             });            
           },3600000)
           
@@ -813,7 +860,7 @@ u = u + 1;}
            },3600000)
            
            function locateissue0(j,output) {  
-             
+try { 
             issues.push({"no":j,"issue title": output.audits['uses-webp-images'].title,"location": output.audits['uses-webp-images'].details.items[0].url,
               "total in MB" : (output.audits['uses-webp-images'].details.items[0].totalBytes) / 125000,
               "wasted in MB" : (output.audits['uses-webp-images'].details.items[0].wastedBytes) / 125000,
@@ -830,10 +877,13 @@ u = u + 1;}
               issues.push({})
            
               return issues
+}catch(err) {
+              //do nothing
+}
            }
 
            function locateissue1(j,output) {  
-             
+try {      
             issues.push({"no":j,"issue title": output.audits['uses-optimized-images'].title,"location": output.audits['uses-optimized-images'].details.items[0].url,
             "total in MB" : (output.audits['uses-optimized-images'].details.items[0].totalBytes) / 125000,
             "wasted in MB" : (output.audits['uses-optimized-images'].details.items[0].wastedBytes) / 125000,
@@ -848,12 +898,15 @@ u = u + 1;}
                 l++;
               }
               issues.push({})
-           
+
               return issues
+}catch(err) {
+  //do nothing
+}
            }
 
            function locateissue2(j,output) {  
-             
+            try {              
             issues.push({"no":j,"issue title": output.audits['uses-responsive-images'].title,"location": output.audits['uses-responsive-images'].details.items[0].url,
             "total in MB" : (output.audits['uses-responsive-images'].details.items[0].totalBytes) / 125000,
             "wasted in MB" : (output.audits['uses-responsive-images'].details.items[0].wastedBytes) / 125000,     
@@ -870,10 +923,13 @@ u = u + 1;}
               issues.push({})
            
            return issues
+          }catch(err) {
+            //do nothing
+          }
            }
 
            function locateissue3(j,output) {  
-             
+            try { 
               issues.push({"no":j,"issue title": output.audits['uses-rel-preload'].title,"location": output.audits['uses-rel-preload'].details.items[0].url,
               "wasted in second" : (output.audits['uses-rel-preload'].details.items[0].wastedMs) / 1000
             })
@@ -888,10 +944,13 @@ u = u + 1;}
                 issues.push({})
              
              return issues
+            }catch(err) {
+              //do nothing
+            }
            }
 
            function locateissue4(j,output) {  
-             
+            try { 
             //  let j = 0;
             //  while(j <= 7 - 1) {
               issues.push({"no":j,"issue title": output.audits['no-document-write'].title,"location": output.audits['no-document-write'].details.items[0].url,
@@ -911,10 +970,13 @@ u = u + 1;}
              console.log(issues)
              issues.push({})
              return issues
+            }catch(err) {
+              //do nothing
+            }
            }
 
            function locateissue5(j,output) {  
-             
+            try {   
             issues.push({"no":j,"issue title": output.audits['uses-long-cache-ttl'].title,"location": output.audits['uses-long-cache-ttl'].details.items[0].url,
             "total in MB" : (output.audits['uses-long-cache-ttl'].details.items[0].totalBytes) /  125000,
             "wasted in MB" : (output.audits['uses-long-cache-ttl'].details.items[0].wastedBytes) /  125000,
@@ -933,24 +995,30 @@ u = u + 1;}
               issues.push({})
            
            return issues
+          }catch(err) {
+            //do nothing
+          }
            }
 
            function locateissue6(j,output) {  
-             
+            try {  
             issues.push({"no":j,"issue title": output.audits['unsized-images'].title,"location": output.audits['unsized-images'].details.items[0].url,
-            "snippet" : output.audits['unsized-images'].details.items[0].snippet
+            "snippet" : output.audits['unsized-images'].details.items[0].node.snippet
           })
          
               let l = 1
               while (l <= output.audits['unsized-images'].details.items.length - 1 ) {
                 issues.push({"location" :output.audits['unsized-images'].details.items[l].url,
-                "snippet" : output.audits['unsized-images'].details.items[l].snippet
+                "snippet" : output.audits['unsized-images'].details.items[l].node.snippet
               })
                 l++;
               }
               issues.push({})
            
            return issues
+          }catch(err) {
+            //do nothing
+          }
            }
 
           
