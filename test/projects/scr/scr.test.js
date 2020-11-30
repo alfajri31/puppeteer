@@ -739,94 +739,73 @@
                 wb.Sheets["Overview"] = ws;  
                 XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
 
-                const dir = __dirname+'/json/desktop/';
+                const dir = __dirname+'/json/mobile/';
                 fs.readdir(dir, (err, files) => {
-                  
-                  return files.length
 
-                })
-              
-
-                let j = 0;
-                while(j<=0) {
-                  wb.SheetNames.push(JSON.stringify(j)); 
-                  j=j+1
-                }
-                
-          
-                /////// NEW CODE
-                let i = 0;
-
-
-               
-  // setTimeout(() => {}, 2000);
-
-                fs.readFile(__dirname+'/json/desktop/report'+i+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
-                  if (err) {
-                    console.log(err)
+                  let j = 0;
+                  while(j<=files.length - 1) {
+                    wb.SheetNames.push(JSON.stringify(j)); 
+                    j=j+1
                   }
-                  else {
-    
-                    try {
 
-                      let issue = []
-                      let sdata
-
-                      // while(i <= 2) {
-
-                       
-                        for(let j = 0; j <= 0;j++) {
-                          sdata = fs.readFile(__dirname+'/json/desktop/report'+j+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
-                            if (err) {
-                              console.log(err)
-                            }
-                            console.log('data ke '+ j )
-                            let issue = []
-                            let output  = JSON.parse(data)
-                            issue[0] = output.audits['uses-webp-images'].title
-                            // console.log(webp)
-                            issue[1] = output.audits['uses-optimized-images'].title
-                            // console.log(optimized_img)
-                            issue[2] = output.audits['uses-responsive-images'].title
-                            // console.log(unresponsive_images)
-                            issue[3] = output.audits['uses-rel-preload'].title
-                            // console.log(preload)
-                            issue[4] = output.audits['no-document-write'].title
-                            // console.log(non_doc_write)
-                            issue[5] = output.audits['uses-long-cache-ttl'].title
-                            // console.log(cache_ttl)
-                            issue[6] = output.audits['unsized-images'].title
-                            // console.log(unsized_img)
-    
-                            locateissue0(1,output)
-                            locateissue1(2,output)
-                            locateissue2(3,output)
-                            locateissue3(4,output)
-                            locateissue4(5,output)
-                            locateissue5(6,output)
-                            locateissue6(7,output)
-                                       
-                            ws = XLSX.utils.json_to_sheet(issues);
-                            wb.Sheets[JSON.stringify(j)] = ws;  
-                            issues = []
-                        
-    
-                            //write excel
-                            XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
-
-                          })     
-                        }
-                        // i = i + 1;
-                      // }
-                    }catch(err) {
+                  /////// NEW CODE
+                  let i = 0;
+                  fs.readFile(__dirname+'/json/mobile/report'+i+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+                    if (err) {
                       console.log(err)
                     }
-                 
-            
-                  }
-                })   
-                //////////////////////////////////NEW CODE
+                    else {
+      
+                      try {
+                        let issue = []
+                        let sdata
+                          for(let j = 0; j <= files.length-1;j++) {
+                            sdata = fs.readFile(__dirname+'/json/mobile/report'+j+'.json', {encoding: 'utf8', flag:'r'},function(err,data) {
+                              if (err) {
+                                console.log(err)
+                              }
+                              console.log('data ke '+ j )
+                              let issue = []
+                              let output  = JSON.parse(data)
+                              issue[0] = output.audits['uses-webp-images'].title
+                              // console.log(webp)
+                              issue[1] = output.audits['uses-optimized-images'].title
+                              // console.log(optimized_img)
+                              issue[2] = output.audits['uses-responsive-images'].title
+                              // console.log(unresponsive_images)
+                              issue[3] = output.audits['uses-rel-preload'].title
+                              // console.log(preload)
+                              issue[4] = output.audits['no-document-write'].title
+                              // console.log(non_doc_write)
+                              issue[5] = output.audits['uses-long-cache-ttl'].title
+                              // console.log(cache_ttl)
+                              issue[6] = output.audits['unsized-images'].title
+                              // console.log(unsized_img)
+      
+                              locateissue0(1,output)
+                              locateissue1(2,output)
+                              locateissue2(3,output)
+                              locateissue3(4,output)
+                              locateissue4(5,output)
+                              locateissue5(6,output)
+                              locateissue6(7,output)
+                                        
+                              ws = XLSX.utils.json_to_sheet(issues);
+                              wb.Sheets[JSON.stringify(j)] = ws;  
+                              issues = []
+                        
+                              //write excel
+                              XLSX.writeFile(wb, 'performance-score-'+folder_name+'.xlsx');
 
+                            })     
+                          }
+                    
+                      }catch(err) {
+                        console.log(err)
+                      }
+                    }
+                  })  
+                })
             });            
           },3600000)
           
