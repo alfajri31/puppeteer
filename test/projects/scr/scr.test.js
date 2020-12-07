@@ -16,9 +16,9 @@
 
 
  //important
- const target = 'http://fortigro.dancow.co.id/'
+ const target = 'http://cerelac.co.id/'
  const last_path = ''
- const folder_name = "fortigo"
+ const folder_name = "cerelac"
  const browser_type = 'chromium'
  const crawling_lvl = 1;
 
@@ -44,8 +44,8 @@
  let dir3,dir4,dir5,dir6,dir7,dir8
 
 
-  let i = 0  ;
-  beforeAll(async() => {
+   let i = 0  ;
+   beforeAll(async() => {
     for (browserType of [browser_type]) {
       browser = await playwright[browserType].launch({
         headless: headless,
@@ -90,6 +90,7 @@
                       tmp.push(target+value) 
                     }
                   }
+                  tmp = remove_duplicate(tmp)
               }
               catch(e) {
                   // console.log(e)
@@ -160,7 +161,7 @@
                      anchors.push(bb)
                    }
                 });
-        
+              
                 while(j<=anchors.length-1) {
                     checkRegex(anchors[j])
                     j++;
@@ -220,6 +221,7 @@
                 }      
                 lvl++;
               }
+              
             }
 
             if(crawling_lvl >= 2) {
@@ -232,8 +234,86 @@
               });
             }
            
-            tmp = remove_duplicate(tmp)
             return tmp
+        }
+
+        function create_folder() {
+
+          dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Landscape')
+
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name)){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name, (err) => {
+                  console.log(err)
+              });
+          }
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name)){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name, (err) => {
+                  console.log(err)
+              });
+          }
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type)){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type, (err) => {
+                  console.log(err)
+              });
+          }
+
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type+'/'+'Landscape')){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type+'/'+'Landscape', (err) => {
+                  console.log(err)
+              });
+          }  
+
+          fs.writeFileSync(dir3+'/test.txt','', (err) => {
+            if (err) {
+                console.error(err);
+            }
+          });
+
+          fs.readdir(dir3, (err, files) => {
+             for (const file of files) {
+                 fs.unlink(path.join(dir3, file), err => {
+                   if (err) throw err;
+                 });
+             }
+         })
+        
+          dir4 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Potrait')
+
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name)){
+            fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name, (err) => {
+                console.log(err)
+            });
+          }
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name)){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name, (err) => {
+                console.log(err)
+              });
+          }
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type)){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type, (err) => {
+                  console.log(err)
+              });
+          }
+
+          if (!fs.existsSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type+'/'+'Potrait')){
+              fs.mkdirSync('Renders'+'/OneDrive - WPP Cloud'+'/Unit'+'/'+folder_name+'/'+device.name+'/'+browser_type+'/'+'Potrait', (err) => {
+                  console.log(err)
+            });
+          }   
+
+          fs.writeFileSync(dir4+'/test.txt', '', (err) => {
+            if (err) {
+                console.error(err);
+            }
+          });
+
+          fs.readdir(dir4, (err, files) => {
+            for (const file of files) {
+                fs.unlink(path.join(dir4, file), err => {
+                  if (err) throw err;
+                });
+            }
+          })
         }
 
         const remove_duplicate = (x) => {
@@ -339,23 +419,7 @@
            test.skip("optimal screenshot", async() => {
             await yy().then(async (result) => {
 
-              dir3 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Landscape')
-              fs.readdir(dir3, (err, files) => {
-                 for (const file of files) {
-                     fs.unlink(path.join(dir3, file), err => {
-                       if (err) throw err;
-                     });
-                 }
-             })
-            
-              dir4 = path.join(__dirname,'../../../Renders/OneDrive - WPP Cloud/Unit/'+folder_name+'/'+device.name+'/'+browser_type+'/Potrait')
-              fs.readdir(dir4, (err, files) => {
-                for (const file of files) {
-                    fs.unlink(path.join(dir4, file), err => {
-                      if (err) throw err;
-                    });
-                }
-            })
+              create_folder()
      
               //  print all sitemap
               //  console.log(result)
